@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+use Biblio::Isis;
+
+  my $isis = new Biblio::Isis(
+  	isisdb => '../repert/data/',
+  );
+
+  for(my $mfn = 1; $mfn <= $isis->count; $mfn++) {
+	print $isis->to_ascii($mfn),"\n";
+  }
+
