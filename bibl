@@ -1,11 +1,9 @@
 #!/usr/bin/perl
 use Biblio::Isis;
+use Data::Dumper;
 
-  my $isis = new Biblio::Isis(
-  	isisdb => '../repert/data/',
-  );
+my $isis = new Biblio::Isis( isisdb => '../repert/data/', );
 
-  for(my $mfn = 1; $mfn <= $isis->count; $mfn++) {
-	print $isis->to_ascii($mfn),"\n";
-  }
-
+for ( my $mfn = 1 ; $mfn <= $isis->count ; $mfn++ ) {
+    print Dumper($isis->to_hash($mfn)), "\n";
+}
