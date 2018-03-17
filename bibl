@@ -1,9 +1,32 @@
 #!/usr/bin/perl
 use Biblio::Isis;
+use JSON;
+use Modern::Perl;
 use Data::Dumper;
+# use utf8;
+# use charnames qw(:full :short);
+
+binmode STDOUT, ':encoding(ascii)';
 
 my $isis = new Biblio::Isis( isisdb => '../repert/data/', );
 
-for ( my $mfn = 1 ; $mfn <= $isis->count ; $mfn++ ) {
-    print Dumper($isis->to_hash($mfn)), "\n";
-}
+my $rec_hash = $isis->to_hash(2);
+
+my $json_text = to_json( $rec_hash, { latin1 => 1, pretty => 1 } );
+
+# TODO: use the hex values to replace the correct unicode char
+# $json_text =~ s/\N{U+00a0}/á/g;
+# $json_text =~ s/\N{U+0082}/é/g;
+# $json_text =~ s/\N{U+00a2}/ó/g;
+# $json_text =~ s/\N{U+0094}/ö/g;
+# $json_text =~ s/\N{U+00a3}/ú/g;
+# $json_text =~ s/\N{U+0096}/ű/g;
+
+
+printf "\n %s \n", $json_text;
+
+# for ( my $mfn = 1 ; $mfn <= $isis->count ; $mfn++ ) {
+#   my $rec_hash = $isis->to_hash($mfn);
+#   my $json_text = to_json( $rec_hash, { latin1 => 1, pretty => 1 } );
+#   printf "\n %s \n", $json_text;
+# }
