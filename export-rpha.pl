@@ -19,10 +19,13 @@ sub replace_tag_name {
     my $fdt = '../repert/data/data.fdt';
 
     # open( my $fh, '<:encoding(utf8)', $fdt )
-    open( my $fh, '<:encoding(Latin1)', $fdt )
+    open( my $fh_read_fdt, '<:encoding(Latin1)', $fdt )
       or die "Could not open file '$fdt' $!";
 
-    while ( my $row = <$fh> ) {
+    open( my $fh_to_json, '>>', './tag_names.json' );
+    print $fh_to_json "{";
+
+    while ( my $row = <$fh_read_fdt> ) {
         chomp $row;
 
         # Charcode replacements in UTF-8
@@ -56,19 +59,29 @@ sub replace_tag_name {
         # Skip empty lines
         $row =~ /^$/ and next;
 
-        # Pair tag names with numbers
-        $row =~ s/(.+?)(\s{2,}.*)\s(\d{1,}(?=(\s\d{1,}){3}))(.*)/$1,$3/g;
+        # Pair tag names with numbers in json
+        $row =~ s/(.+?)(\s{2,}.*)\s(\d{1,}(?=(\s\d{1,}){3}))(.*)/"$3":"$1"/g;
 
-        print "$row\n";
-        close $fh;
-    }
+        if ( !eof ) {
+            print $fh_to_json "$row,";
+        }
+        elsif (eof) {
+            # this is added because to_hash creates a '000' key by default
+            print $fh_to_json '"000": "$MFN",';
+            print $fh_to_json "$row}";
+        }
+
+    }    # while
+
+    close $fh_read_fdt;
+    close $fh_to_json;
 }
 
 sub convert_to_utf8_json {
 
     # TODO: Implement in hash filter
-    open( my $fh, '>>', './repert_array.json' );
-    print $fh "[";
+    open( my $fh_read_fdt, '>>', './repert_array.json' );
+    print $fh_read_fdt "[";
     for ( my $mfn = 1 ; $mfn <= $isis->count ; $mfn++ ) {
 
         my $rec_hash = $isis->to_hash($mfn);
@@ -110,14 +123,14 @@ sub convert_to_utf8_json {
           s/\N{U+00c2}\N{U+009a}/Ü/g;    # Â + SINGLE CHARACTER INTRODUCER
 
         # printf "$json_text";
-        # open( my $fh, '>>', './repert_array.json' );
-        print $fh "$json_text";
+        open( my $fh_read_fdt, '>>', './repert_array.json' );
+        print $fh_read_fdt "$json_text";
         if ( $mfn <= $isis->count - 1 ) {
-            print $fh ",";
+            print $fh_read_fdt ",";
         }
     }
-    print $fh "]";
-    close $fh;
+    print $fh_read_fdt "]";
+    close $fh_read_fdt;
     print "done with printing\n";
 }
 
@@ -155,6 +168,6 @@ sub convert_to_utf8_dump {
     }
 }
 
-# replace_tag_name();
+replace_tag_name();
 # convert_to_utf8_json();
 # convert_to_utf8_dump();
