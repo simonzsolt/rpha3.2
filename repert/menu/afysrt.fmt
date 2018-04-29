@@ -1,0 +1,16 @@
+ 15 1  930
+  1  1  3  7  7  8 11 11 12 15 15 16 19 19 20
+  1 35  1  1 35  1  1 35  1  1 35  1  1 35  1
+  1  1  3  7  7  8 11 11 12 15 15 16 19 19 20
+ 26 55 17 26 60 26 26 60 26 26 60 26 26 60 26
+ 1 1 0 1 1 0 1 1 0 1 1 0 1 1 0
+ 2 0 0 2 2 0 2 2 0 2 2 0 2 2 0
+  18  18  15  24  23  24  22  24  22  22  24  22  22  24  22
+     1     6  -224     3     1  -135     3     1  -135     3     1  -135     3     1  -135
+   0 107   0   0   0   0   0   0   0   0   0   0   0   0   0
+    1    0    0    0    1    0    0    1    0    0    1    0    0    1    0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Nombre d'en-tˆtes Nom fichier filtreFormat en-tˆte:Longueur 1‚re cl‚ de triSimple (0) Multiple (1)TSC pour 1‚re cl‚ de triLongueur 2e
+ cl‚ de triSimple (0)  Multiple (1)TSC pour 2e cl‚ de triLongueur 3e cl‚ de triSimple (0)  Multiple (1)TSC pour 3e cl‚ de triLongueur
+ 4e cl‚ de triSimple (0)  Multiple (1)TSC pour 4e cl‚ de triDans le cas d'une extraction de clefs sur mots, il faut filtrer les clefs
+ par rapport … un anti-vocabulaire10000

@@ -1,0 +1,46 @@
+'@1 = <MB>'f(val(v1.4),1,0)," "v2,"<D>"d2," -- <MI>"d3,(|; |+d3,if v3.2='Ps' the
+n v3.3,f(val(v3*3.3),1,0),'=',f(val(v3*7.3),1,0) else v3 fi),"<D>"d3,'###','@2 =
+ Histoire littÇraire###','@3 = ',if p(v5) then &codep('v24='v24) fi,(|,|+d5,| |v
+5^3,| |v5^1,| |v5^2),"Poäme anonyme"n5,", dÇdiÇ Ö "d31,|, |+v31,", sans dÇdicace
+"n31,'. ','Modäle de lan<->gue Çtrangäre:',(if a(v13) then |; |+d12 else |; |+d1
+3 fi,| |v15^3,| |v15^2,| |v15^1,if p(v12) or p(v13) then |:|d15 fi,if v13.2='Ps'
+ then " <MI>"v13.3,f(val(v13*3.3),1,0),'=',f(val(v13*7.3),1,0),'<D>' else| <MI>|
+v13|<D>| fi,if p(v13) then | <MI>(|v12|)<D>| else | <MI>|v12|<D>| fi),if v11='3'
+ then ' non identifiÇ' fi,if v11='1' then ' improbable' fi,if a(v12) and a(v13) 
+then if v11='2'then ' probable mais non identifiÇ' fi,fi,'. ',if p(v14) then (|,
+ |+d14,&hymnp(v14)),'. ' fi,"Vide: <MI>"d162,(|, |+d162,ref(l(v162),if p(v2) the
+n v2 else v3 fi,| (|d1,f(val(v1.4),1,0),|)|d1)),".<D> "d162,&codep('v33='v33),":
+ "v34, if val(v33)=3 then " ? "d34,"."n34 else "."d33 fi,' ',&codep('v30='v30),(
+|; le lieu: <MI>|v32^l|<D>|,|; le temps: <MI>|v32^d|<D>|,|; l'au<->teur: <MI>|v3
+2^1|<D>|),'.',if p(v21) then ' ComposÇ ',&codep('v22='v22),v21+| ou | else ' La 
+date de la com<->po<->si<->tion est inconnue' fi,'.',if p(v161) then "Cf. encore
+: <MI>"d161,(|, |+d161,ref(l(v161),v2| (|,f(val(v1.4),1,0),|)|d1)),".<D>"d161 fi
+,'###','@4 = Mätre et genre###''@5 = ',&codep('v44='v44),if v44='15' then (ref(l
+(v165),if v1*4='a' then if v44='1' then 'stro<->phi<->que syl<->la<->bo-to<->ni<
+->que ' else 'quan<->ti<->ta<->tif ' fi fi)) fi,if p(v44) then &codep('v23='v23)
+ else &codep('v23=',f(val(v23)+3,1,0)) fi,if p(v61) then if rsum((|1,|d61))>1 th
+en 'Ses modäles mÇ<->lo<->di<->ques: ' else 'Son modäle mÇ<->lo<->di<->que: ' fi
+,'<MI>',(|, |+d61,ref(l(v61),if p(v2) then v2 else v3 fi,| (|d1,f(val(v1.4),1,0)
+,|)|d1)),'.<D> ' fi,if p(v65) then if rsum((|1,|d65))>1 then 'Modäle mÇ<->lo<->d
+i<->que des poämes suivants: ' else 'Modäle mÇ<->lo<->di<->que du poäme suivant:
+ ' fi,'<MI>',(|, |+d65,ref(l(v65),if p(v2) then v2 else v3 fi,| (|d1,f(val(v1.4)
+,1,0),|)|d1)),'.<D> ' fi,&codep('v41='v41),'com<->pre<->nant ',|, |+v42,if val(v
+43)=1 then if val(v42)>1 then ' stro<->phes.' else ' stro<->phe.' fi,fi,if val(v
+43)=2 then ' vers.' fi,if val(v43)=3 then if val(v42)>1 then ' pa<->ra<->gra<->p
+hes.' else ' pa<->ra<->gra<->phe.' fi,fi," Vers en Çcho."d164," Re<->frain."d163
+,if v44='15' then (ref(l(v165),if v1*4='a' then if p(v45) then ' Structure stro<
+->phi<->que:' fi fi)) else if v43='1' and p(v45) then ' Structure stro<->phi<->q
+ue:' fi,if v43='2' and p(v45) then ' Structure mät<->ri<->que:' fi fi,'###',if v
+44='15' then (ref(l(v165),"@6 = "d45,&metrp(v45),"###"d45)) else "@6 = "d45,&met
+rp(v45),"###"d45 fi,"@7 = "d28,if rsum((|1,|d28))>1 then 'Qualifications postÇri
+ures: ' else 'Qualification postÇrieure: ' fi,(|; |+d28,if v28.2='00' then &muf1
+p(v28) else &muf2p(v28) fi),'.###',if p(v51) or p(v52) or p(v53) or p(v54) then 
+'@8 = Bibliographie###' fi,if rsum((|1,|d52),(|1,|d51))>1 then '@12 = ',&megop(v
+48),'###' fi,if p(v52) then '@9 = ' if rsum((|1,|d52))>1 then 'Sources manuscrit
+es: ' else 'Source manuscrite: ' fi,(|, |+d52,&bookp(mfn(4),|v52=|v52.19)),'.###
+',fi,if p(v51) then '@10 = ' if rsum((|1,|d51))>1 then 'êditions: ' else 'êditio
+n: ' fi,(|, |+d51,&bookp(mfn(4),|v51=|v51.19)),'.###' fi,if p(v53) or p(v54) the
+n '@11 = ' fi,if p(v54) then if rsum((|1,|d54))>1 then 'êditions modernes: ' els
+e 'êdition moderne: ' fi,|, |+v54,'.' fi,if p(v53) then " "d54,if rsum((|1,|d53)
+)>1 then 'êditions' else 'êdition' fi,' de la mÇlodie: ',(|, |+d53,&rmdt(v53)),'
+.' fi,if p(v53) or p(v54) then '###' fi

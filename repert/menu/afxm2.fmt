@@ -1,0 +1,15 @@
+ 13 1  871
+  2  2  2  4  7  8  9 10 11 12 13 15 17
+  1 25 72  2 25 25 25 25 25 25 25 38  1
+  2  2  2  4  7  8  9 10 11 12 13 15 17
+ 11 25 77  2 29 29 29 29 29 29 29 41  2
+ 1 1 1 2 1 1 1 1 1 1 1 1 2
+ 5 5 5 5 4 4 4 4 4 4 4 0 5
+  10   0   4   0   3   3   3   3   3   3   3   2   0
+     7    30     4    78    25    25    25    25    25    25    25     1    78
+   0   0   0   0   1   1   1   1   1   1   1   1   1
+    7   29    4   68   25   25   22   19   22   20   15    0   77
+   0   0   0   0   0   0   0   0   0   0   0   0   0
+Programme MenuC -S -R -E -D -F -X - ?XXXXXXXCCISISUTLEditeur de Bordereaux SystŠmeFXM2        Ce menu sert … modifier uniquement des 
+bordereaux du syst‚meCr‚. un nouveau bordereauSel. un nouveau bordereauRest. le bord. courantEditer un bordereauDupliquer un borderea
+uEffacer un bordereausortie ("eXit")ATTENTION! UTILISER ISISDEF pour cr‚er/MAJ les bordereaux d'entr‚e de donn‚es

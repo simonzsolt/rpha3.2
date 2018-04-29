@@ -1,0 +1,571 @@
+INSTRUCTIONS POUR L'UTILISATEUR DE LA VERSION 3.0 DU REPERTOIRE INFORMATISE DE LA POESIE HONGROISE ANCIENNE
+
+par Istv n Vadai
+
+
+0. INTRODUCTION
+
+Le r‚pertoire de la po‚sie hongroise ancienne a d‚j… ‚t‚ publi‚ sous forme de livre; cependant, c'est la base de donn‚es informatique qui en constitue une pr‚sentation vraiment appropri‚e, conforme … l'usage r‚el. Au cours de l'‚laboration de cette base de donn‚es, nous avons essay‚ plusieurs systŠmes d'exploitation, nous avons travaill‚ d'abord sur un systŠme primitif avec des cartes perfor‚es, ensuite sur de gros ordinateurs, et finalement sur les microordinateurs actuels. Le fait que, au cours de notre travail, nous ayons d– passer de l'un de ces outils … l'autre, illustre bien la vitesse vertigineuse du d‚veloppement de l'informatique, et de l'application de celle-ci aux sciences humaines.
+
+Actuellement, on peut acc‚der aux donn‚es de notre r‚pertoire grƒce au systŠme d'exploitation de bases de donn‚es CDS/ISIS 3.0, ‚labor‚ par l'UNESCO. L'utilisation d'ISIS n'est pas trŠs compliqu‚e, il a ‚t‚ con‡u … l'origine pour la gestion d'informations textuelles (avant tout des r‚f‚rences bibliographiques), en plusieurs langues. Ainsi, ses menus sont accessibles en plusieurs langues, et l'utilisation des caractŠres sp‚cifiques, munis d'accents ou d'autres signes diacritiques, ne pose pas de problŠmes. Par cons‚quent, notre r‚pertoire, bien qu'il contienne des donn‚es de r‚f‚rence hongroise, peut ˆtre consult‚ sans difficult‚s en plusieurs langues. C'est notamment grƒce … cette possibilit‚ d'usage international que le r‚pertoire publi‚ sous forme de livre a pu paraŒtre aussi en fran‡ais, et que les utilisateurs ne parlant pas hongrois ont pu ainsi acc‚der aux informations concernant les poŠmes.
+
+L'utilisation d'ISIS n'est pas trŠs compliqu‚e, nous venons de le dire, cependant, elle ne va pas non plus de soi. Elle demande une explication, en tout cas sur trois points. Tout d'abord, en ce qui concerne la structure de la base de donn‚es, car cette structure n'est pas inh‚rente … ISIS, mais relŠve uniquement de la logiqueÿÄ ou de l'illogismeÿÄ des auteurs de la base de donn‚es. C'est notamment la maniŠre dont les donn‚es sont stock‚es qu'est cens‚e ‚claircir la premiŠre partie du mode d'emploi qui suit.
+
+Le deuxiŠme point … expliquer est relatif … la recherche parmi les donn‚es. A ce sujet, il faut d'abord comprendre la technique de recherche d'ISIS. Il n'est pas de notre tƒche de la pr‚senter iciÄmˆme en d‚tails, nous proposons cependant un modŠle, avec quelques exemples, pour aider les utilisateurs dans leurs d‚marches. Dans cette partie-l… nous pr‚sentons aussi le glossaire actuel qui a ‚t‚ ‚labor‚ pour faciliter la recherche dans la base de donn‚es, ainsi que le logiciel utilitaire rattach‚.
+
+Le troisiŠme point qui demande un ‚claircissement concerne l'affichage des informations. En effet, le systŠme n'est pas seulement capable d'afficher des fiches d'information entiŠres de la mˆme maniŠre dont elles se pr‚sentent dans le r‚pertoire paru sous forme de livre, mais aussi, bien entendu, de r‚organiser ces donn‚es selon n'importe quel critŠre d‚sir‚, ou d'apporter des restrictions aux r‚sultats affich‚s. Autrement dit, tandis que dans le livre la totalit‚ des informations, concernant tous les poŠmes qui figurent dans le r‚pertoire, est imprim‚e, dans la version informatique il nous est possible de s‚lectionner, de n'afficher … l'‚cran ou de n'imprimer sur papier que des informations choisies dans un ensemble de textes choisis, selon des critŠres choisisÿ; par exemple, de s‚lectionner uniquement les premiers vers des poŠmes de Sebesty‚n Tin¢di. Or, pour faire apparaŒtre … l'‚cran ce que nous voulons y voir, il nous faut connaŒtre non seulement la logique de la base de donn‚es, mais aussi les ‚tiquettes informatiques attribu‚es aux informations stock‚es. La troisiŠme partie des instructions, qui comprend une brŠve description des logiciels utilitaires, traite en effet des problŠmes li‚s … l'affichage.
+
+
+1. La structure du r‚pertoire
+
+1.0. Le r‚pertoire se compose de fiches d'information, avec les donn‚es relatives d'une part aux poŠmes hongrois ant‚rieurs … 1601, d'autre part aux imprim‚s et manuscrits, ant‚rieurs … 1701, dans lesquels se trouvent les poŠmes. Ces fiches d'information sont en fait ce qu'on appelle des "records" dans l'informatique, mais nous pr‚f‚rons garder ici le terme "fiche d'information". Ces fiches contiennent des rubriques ("fields"ÿÄ champsÿÄ dans le langage informatique), qui peuvent ˆtre subdivis‚es en sousÄrubriques selon le besoin. Par exemple, la fiche nø1129 contient les informations concernant le c‚lŠbre poŠme d'adieu de P‚ter Bornemissza, celui qui commence parÿ: "Siralmas ‚nn‚kem tet”led megv lnom". Parmi les rubriques de cette fiche nous trouvons, par exemple, celles du premier vers, du titre, du nom de l'auteur, et … l'int‚rieur de la rubrique "nom de l'auteur", le nom et le pr‚nom qui constituent des sousÄrubriques. Le r‚pertoire est en fait l'ensemble des fiches d'information.
+
+Une partie des informations stock‚es par la base de donn‚es figurent bien entendu sous forme cod‚e, ce qui implique que nous devions aussi livrer aux usagers les cl‚s du d‚codage, d‚crire le systŠme de signes dont nous nous sommes servis. D'autant plus que, … c“t‚ des fiches d'information principales, d'autres types de fiches figurent dans la base de donn‚es, celles par exemple des poŠmes post‚rieurs … 1600 qui sont des modŠles m‚lodiques, ou celles, appel‚es "fiches compl‚mentaires", des poŠmes en plusieurs parties. La description et l'explication de la structure de ces fiches est ‚galement indispensable dans la pr‚sentation de la base de donn‚es.
+
+1.1. Nous pr‚sentons par la suite, dans l'ordre, les diff‚rentes rubriques des fiches d'information avec leurs contenus possibles. (Sur l'ordinateur, en appuyant sur la touche F1ÿÄ le curseur ‚tant plac‚ sur la rubrique choisieÿÄ, ces renseignements sont accessibles sous forme abr‚g‚e, rubrique par rubrique.) Nous pr‚cisons le signe et l'appellation abr‚g‚e de chaque rubrique, tels qu'ils apparaissent sur les fichesÿ; nous nous y r‚f‚rerons plus bas, dans la partie 2.
+
+1.1.1. Les fiches d'information des poŠmes ant‚rieurs … 1600 contiennent les rubriques suivantesÿ:
+
+v1ÿÄ Le num‚ro d'identification du poŠmeÿ(R). C'est un num‚ro de r‚f‚rence utilis‚ par le systŠme informatique, pour rechercher et identifier les poŠmes. Nous avons voulu en faire un outil d'identification rapide, pratique pour faire des listes, ou pour distinguer des poŠmes dont plusieurs mots successifs des premiers vers sont identiques. Pour l'ordinateur, ce num‚ro est toujours compos‚ de quatre chiffres, ainsi le tout premier dans l'ordre estÿ: 0001. Au cours de l'affichage, les z‚ros initiaux peuvent naturellement ˆtre supprim‚s. La longueur de la rubrique est de 5 caractŠres, les 4 chiffres ‚tant suivis d'un espace pr‚vu pour une lettre, qui apparaŒt sur les fiches compl‚mentaires, pr‚sent‚es plus loin.
+
+La distribution des num‚ros R suivait … l'origine l'ordre alphab‚tique dans le corpus, mais avec l'‚largissement de celuiÄci, la correspondance a cess‚ d'ˆtre syst‚matique. De mˆme, il existe un certain parall‚lisme entre les num‚ros d'enregistrement des fiches et les num‚ros d'identification, mais si ce parall‚lisme ‚tait cons‚quent … l'origine, avec les suppressions, les rajouts et les r‚organisations des fiches il a ‚t‚ boulevers‚. Les num‚ros d'enregistrement des fiches d'information, appel‚s MFN (Master File Number), sont arbitraires … nos yeux, ils ne restent pas forc‚ment les mˆmes au cours de l'histoire de la base de donn‚es, ils peuvent changer ou disparaŒtre. C'est donc le num‚roÿR qui sert … identifier les fiches, car il est d‚finitif, mais il n'a pas de signification suppl‚mentaire.
+
+v2ÿÄ Le premier vers (incipit) du poŠme (INC). Les incipit des poŠmes sont transcrits suivant les pratiques phon‚tiques et orthographiques de la langue hongroise actuelleÿ; nous indiquons, si possible, l'int‚gralit‚ du premier vers, selon le mŠtre du poŠme. Dans les cas o— plusieurs poŠmes commencent par le mˆme vers, les textes continuent … ˆtre indiqu‚s jusqu'… la premiŠre divergence. Si le premier vers d'un poŠme est inconnu, nous indiquons le dernier vers … cet endroit, avec la mention "explicit!". Le mot "explicit" signifie dans la base de donn‚es le dernier vers m‚trique d'un poŠme. Si le poŠme est … tel point fragmentaire que ni le premier ni le dernier vers n'en est connu, c'est alors le d‚but du texte existant qui apparaŒt ici. Si le texte du poŠme n'est pas connu du tout, cette rubrique reste vide. Dans ce cas, c'est le titre du poŠme qui apparaŒt … l'affichage … c“t‚ du num‚roÿR. La longueur maximale de cette rubrique est de 500 caractŠres.
+
+v3ÿÄ Le titre du poŠme (TITRE). Il s'agit du titre du poŠme tel qu'il est cit‚ dans l'histoire litt‚raire, ou … d‚faut du titre logique suivant le genre du poŠme, orthographi‚ selon les normes actuelles. Si le poŠme s'inscrit dans un cycle ou une s‚rie, la rubrique indique aussi le nom du cycle ou son abr‚viation, avec le num‚ro … l'int‚rieur du cycle (p.ex. Celiaÿ4, ou MKIKÿ61 c'estÄ…Ädireÿ: le poŠme nø61 du cycle appel‚ "Maga kez‚vel ¡rt k”nyve"). Si le poŠme est la traduction d'un psaume, le titre est normalis‚ÿ: y figure d'abord le sigle Ps, suivi d'un blanc, d'un num‚ro de trois chiffres (dont les premiers peuvent ˆtre remplac‚s d'espaces s'il le faut), d'un signe d'‚galit‚ et d'un second num‚ro de trois chiffres, conform‚ment aux num‚rotations catholique et protestante des psaumes. Si le poŠme est la traduction d'une traduction (p.ex. en allemand) d'un psaume, le signe suit le titre d'origine. La longueur de la rubrique est de 500 caractŠres.
+
+v5ÿÄ L'auteur du poŠme (AUT). Si l'auteur est inconnu, et s'il ne figure pas autrement dans l'histoire litt‚raire, (p.ex. Pataki N‚vtelen, "Anonyme de Patak"), la rubrique reste vide. Si l'auteur est connu, la rubrique contient le nom, en trois sousÄrubriquesÿ: aprŠs le signe ^1, le nom patronymique de l'auteur (le nom patronymique ‚tant d‚fini comme celui sous lequel l'auteur est class‚ dans l'ordre alphab‚tique)ÿ; aprŠs le signe ^2, le pr‚nom de l'auteurÿ; aprŠs le signe ^3, un point d'interrogation ‚ventuel, qui signale le caractŠre incertain de l'attribution. Si le nom de l'auteur n'est connu qu'en partie (pr‚nom), ou par monogramme, ce sont alors ces informationsÄci, logiquement, qui figurent dans cette rubrique. La rubrique peut ˆtre r‚p‚t‚e, c'estÄ…Ädire plusieurs noms peuvent ˆtre indiqu‚s, s‚par‚s les uns des autres par des signes de pourcentage (%), dans le cas de plusieurs auteurs, ou si l'attribution du poŠme est ind‚cidable (si l'on ne peut pas trancher entre plusieurs auteurs). La longueur de la rubrique est de 500 caractŠres. 
+
+v11ÿÄ ModŠle litt‚raire identifiable (TRAD). C'est un code en un seul chiffre, dont les valeurs et leurs significations possibles sont les suivantesÿ:
+1ÿÄ Le poŠme est original, sans modŠle litt‚raire.
+2ÿÄ Le poŠme suit un modŠle litt‚raire identifiable.
+3ÿÄ Le poŠme suit un modŠle litt‚raire, mais ce dernier n'a pas pu ˆtre identifi‚.
+4ÿÄ Nous ne savons pas si le poŠme suit un modŠle litt‚raire ou pas.
+
+Si le poŠme est une traduction, les informations sur son original figurent dans la rubrique suivante (v12).
+
+v12ÿÄ Le premier vers du poŠme-modŠle (INCOR). Si le poŠme est une traduction, ou si certaines parties du poŠme le sont, on trouve ici l'incipit de l'oeuvre d'origine, en langue d'origine. Naturellement, s'il s'agit d'une traduction en vers d'une oeuvre en prose, nous n'indiquons pas d'incipit … cet endroit.  La rubrique peut ˆtre r‚p‚t‚e, c'estÄ…Ädire plusieurs incipit peuvent ˆtre indiqu‚s, s‚par‚s les uns des autres par des signes de pourcentage (%). Cette rubrique est ‚troitement li‚e aux rubriques v13 et v15, qui peuvent ˆtre r‚p‚t‚es, elles aussi, or les donn‚es correspondantes doivent se suivre toujours dans le mˆme ordre d'une rubrique … l'autre. Cela demande une attention accrue dans le cas o— un des ‚l‚ments est absent, car il ne peut y avoir d'espace entre les rubriques r‚p‚t‚es. Ainsi, si parmi plusieurs originaux il existe un en prose Ä et n'a pas d'incipitÿÄ, celui-ci est class‚ en dernier, pour des raisons pratiques. La longueur de la rubrique en question est de 500 caractŠres.
+
+v13ÿÄ Le titre du modŠle (TITOR). Si le poŠme est une traduction, ou si certaines parties du poŠme le sont, on trouve ici le titre de l'oeuvre d'origine, en langue d'origine. Si la source est la Bible, nous indiquons autant que possible le lieu exact, avec des abr‚viations. La rubrique peut ˆtre r‚p‚t‚e, c'estÄ…Ädire plusieurs titres peuvent ˆtre indiqu‚s, s‚par‚s les uns des autres par des signes de pourcentage (%). Si le poŠme est la traduction d'un psaume, le titre est normalis‚ÿ: y figure d'abord le sigle Ps, suivi d'un blanc, d'un num‚ro de trois chiffres (dont les premiers peuvent ˆtre remplac‚s d'espaces s'il le faut), d'un signe d'‚galit‚ et d'un second num‚ro de trois chiffres, conform‚ment aux num‚rotations catholique et protestante des psaumes. Si le poŠme est la traduction d'une traduction (p.ex. en allemand) d'un psaume, le signe suit le titre d'origine. Cette rubrique est ‚troitement li‚e aux rubriques v12 et v15, qui peuvent ˆtre r‚p‚t‚es, elles aussi, or les donn‚es correspondantes doivent se suivre toujours dans le mˆme ordre d'une rubrique … l'autre. La longueur de la rubrique est de 500 caractŠres.
+
+v14ÿÄ Num‚ro de r‚f‚rence des hymnes (HYMNUS). Si le poŠme est la traduction d'un hymne publi‚ dans les volumes de l'Annalecta Hymnica, ou ayant un num‚ro dans le r‚pertoire Chevalier, ces informations sont alors indiqu‚es ici, s‚par‚es les unes des autres par des signes de pourcentage (%).
+
+v15ÿÄ L'auteur du modŠle (AUTET). Si le poŠme est une traduction, ou s'il suit un modŠle litt‚raire, c'est le nom de l'auteur de l'oeuvre servant de modŠle qui figure ici, en langue d'origine. Ce sont les sousÄrubriques d‚crites … propos de la rubrique v3, ^1, ^2 et ^3, qui contiennent les ‚l‚ments du nom de l'auteur. La rubrique peut ˆtre r‚p‚t‚e, c'estÄ…Ädire plusieurs noms peuvent ˆtre indiqu‚s, s‚par‚s les uns des autres par des signes de pourcentage (%). Cette rubrique est ‚troitement li‚e aux rubriques v12 et v13, qui peuvent ˆtre r‚p‚t‚es, elles aussi, or les donn‚es correspondantes doivent se suivre toujours dans le mˆme ordre d'une rubrique … l'autre. La longueur de la rubrique est de 500 caractŠres.
+
+v18ÿÄ La langue d'origine de la traduction (LANOR). C'est une rubrique qui est en train d'ˆtre d‚velopp‚e. Pour l'instant (dans la version 3.0), elle n'est compl‚t‚e que quand le poŠme est une traduction et nous en connaissons la langue d'origine dont ne nous informent pourtant pas les donn‚es habituelles (INCOR, TITOR, AUTET). Cela arrive par exemple quand l'original ne peut ˆtre identifi‚ avec exactitude (comme dans le cas de "Argirus hist¢ri ja"ÿÄ "Histoire d'Argirus"ÿÄ d'Albert Gergei). La rubrique est cod‚e, les codes possibles avec leurs significations sont les suivantsÿ:
+allÿÄ allemand
+greÿÄ grec
+croÿÄ croate
+honÿÄ hongrois
+latÿÄ latin
+
+Ce qui explique l'apparition de la langue hongroise parmi les autres, c'est le fait que dans certains cas l'auteur suit, avec ‚vidence, des modŠles hongrois. C'est une n‚gation de l'existence de sources en langues ‚trangŠres. La rubrique, sauf si elle est vide, doit contenir un code compos‚ de trois lettres.
+
+v21ÿÄ La date de la composition du poŠme (AN). Une ou plusieurs dates (ann‚es) peuvent figurer ici. Bien entendu, il est rare qu'on puisse indiquer une date pr‚cise pour d‚crire le moment de la genŠse d'un poŠmeÿ; g‚n‚ralement, on ne peut fixer que des termes ante quem ou post quem. C'est la date (l'ann‚e) des repŠres qui figure alors dans cette rubrique. C'est la rubrique suivante qui pr‚cise le cas dont il s'agit. Par cons‚quent, au moment de la consultation de ces informations, il est n‚cessaire de traiter la rubrique v21 ensemble avec la rubrique v22, car celleÄl…, en soi, peut induire en erreur. Elle est longue de 200 caractŠres et peut ˆtre r‚p‚t‚e.
+
+v22ÿÄ Pr‚cisions compl‚mentaires … la date de la composition du poŠme (PREC). On trouve ici un code en un seul chiffre, dont les valeurs et significations possibles sont les suivantesÿ:
+1ÿÄ La seule date figurant … la rubrique v21 correspond … l'ann‚e exacte de la genŠse du poŠme en question.
+2ÿÄ Le poŠme n'est pas post‚rieur … la date (l'ann‚e) figurant seule … la rubrique v21.
+3ÿÄ Le poŠme n'est pas ant‚rieur … la date (l'ann‚e) figurant seule … la rubrique v21.
+4ÿÄ La genŠse du poŠme est situ‚e autour de la date (l'ann‚e) figurant seule … la rubrique v21.
+5ÿÄ La genŠse du poŠme est situ‚e avant la date (l'ann‚e) approximative figurant seule … la rubrique v21.
+6ÿÄ La genŠse du poŠme est situ‚e entre les deux dates (ann‚es) qui figurent, s‚par‚es par un tiret (Ä), … la rubrique v21.
+7ÿÄ Une des ann‚es indiqu‚es dans la rubrique v21, s‚par‚es les unes des autres par des signes de pourcentage (%), doit correspondre … la date exacte de la genŠse du poŠme.
+
+v23ÿÄ PoŠme chant‚ ou non chant‚? (CHANS) On trouve ici un code en un seul chiffre, dont les valeurs et significations possibles sont les suivantesÿ:
+1ÿÄ Le poŠme n'a pas ‚t‚ chant‚.
+2ÿÄ Le poŠme a ‚t‚ chant‚.
+3ÿÄ Il est ind‚cidable si le poŠme a ‚t‚ chant‚ ou pas.
+
+v24ÿÄ  Forme de l'attribution du poŠme … son auteur (SIGNE). On trouve ici un code en un seul chiffre, dont les valeurs et significations possibles sont les suivantesÿ:
+1ÿÄ Le poŠme a ‚t‚ sign‚ par son auteur luiÄmˆme. 
+2ÿÄ L'auteur du poŠme est inconnu (poŠme anonyme).
+3ÿÄ Le poŠme a ‚t‚ attribu‚ … son auteur peu aprŠs sa genŠse (attribution par la post‚rit‚ imm‚diate).
+4ÿÄ Le poŠme a ‚t‚ attribu‚ … son auteur par la recherche moderne (attribution par la post‚rit‚ tardive). 
+5ÿÄ Le poŠme luiÄmˆme n'a pas ‚t‚ sign‚, mais il figure dans un recueil publi‚ sous le nom de l'auteur (poŠme sign‚ au niveau du recueil). 
+6ÿÄ Le poŠme est sign‚ anagrammatiquement, c'estÄ…Ädire que ce n'est pas le nom de l'auteur qui figure auÄdessus du poŠme, mais l'anagramme de ce nom.
+
+Cette rubrique est ‚troitement li‚e … la rubrique v3.
+
+v28ÿÄ Le genre du poŠme (GENRE). Ce sont des codes selon un certain classement des genres litt‚raires. Ces codes se composent toujours de trois chiffres (compl‚t‚s, s'il le faut, par des 0 initiaux). Ils sont s‚par‚s les uns des autres par des virgules. Les valeurs et les significations possibles des codes sont … voir dans le Manuel de correction d'erreurs dans la base de donn‚es, pp. xv-xviii.
+
+Le systŠme de classification des genres est repr‚sent‚ par une structure arborescente, o— certains termes peuvent se r‚p‚ter. Le dessin illustrant cette classification a ‚t‚ publi‚ dans le r‚pertoire paru sous forme de livre (loc. cit.). Etant donn‚ que, dans la plupart des cas, les poŠmes correspondent … des critŠres de plusieurs genres … la fois, la rubrique peut contenir plusieurs chaŒnes de genres, s‚par‚es les unes des autres par des signes de pourcentage (%). La rubrique est longue de 300 caractŠres. Selon nos projets de d‚veloppement, la version 3.1. contiendra un nouveau systŠme de classification des genres, capable de rendre compte des cat‚gories historiques.
+
+v30ÿÄ Le poŠme aÄtÄil un colophon? (COLO) On trouve ici un code en un seul chiffre, dont les valeurs et leurs significations possibles sont les suivantesÿ:
+1ÿÄ PoŠme avec colophon.
+2ÿÄ Sans colophon.
+3ÿÄ L'existence du colophon est douteuse.
+Ce dernier cas peut arriver quand le poŠme est en ‚tat de fragments et que la fin est absente. Cette rubrique est en liaison avec la rubrique v32, cette derniŠre ne pouvant ˆtre compl‚t‚e, logiquement, que quand la valeur de v30 est 1.
+
+v31ÿÄ A qui le poŠme aÄtÄil ‚t‚ d‚di‚? (DEDIE) Conform‚ment aux normes de la description des noms de personnes, explicit‚es … propos de la rubrique v2, un ou plusieurs noms de personnes peuvent figurer dans cette rubrique. Dans la plupart des cas, les d‚dicaces sont en acrosticheÿ; cependant il est souvent impossible de d‚finir avec certitude si le nom en acrostiche est celui de l'auteur ou du d‚dicataireÿ; dans pareil cas, et v2 et v31 comportent le point d'interrogation (^3). La rubrique v31 est longue de 300 caractŠres.
+
+v32ÿÄ Les informations enregistr‚es dans le colophon (DONCOLO). Le colophon peut contenir des informations concrŠtes concernant l'auteur ou les circonstances de la genŠse du poŠmeÿ; ce sont ces informations qui figurent dans la rubrique v32. Cette rubrique est divis‚e en sousÄrubriquesÿ: ^1 est suivi des informations concernant la personne de l'auteur (en g‚n‚ral son nom, ou, … d‚faut, d'autres appellations), ^d de celles relatives … la date de la composition du poŠme, et ^l des remarques qui concernent le lieu de la composition. La rubrique peut ˆtre r‚p‚t‚e, car il arrive que les diff‚rentes copies ou versions d'un mˆme poŠme contiennent des informations diff‚rentes. Dans ce cas, les informations provenant des diverses variantes sont toutes signal‚es. Il est important de comprendre que ce ne sont pas les sousÄrubriques qui se r‚pŠtent, mais la rubrique entiŠre avec sa structure complŠte de sousÄrubriques. Elle est longue de 300 caractŠres.
+
+v33ÿÄ Le poŠme aÄtÄil un acrostiche? (ACR) On trouve ici un code en un seul chiffre, dont les valeurs et significations possibles sont les suivantesÿ:
+1ÿÄ PoŠme … acrostiche.
+2ÿÄ Sans acrostiche.
+3ÿÄ L'existence de l'acrostiche est douteuse.
+Ce dernier cas peut arriver quand le poŠme est en ‚tat de fragments, ou quand il subsiste des doutes … savoir si le texte en acrostiche doit ˆtre compris comme tel ou pas. La rubrique est en liaison avec les rubriques v34 et v35.
+
+v34ÿÄ L'acrostiche du poŠme (ACR). Si le poŠme a un acrostiche, ou si l'on peut en supposer l'existence, on trouve le texte de l'acrostiche dans cette rubrique, suivant la transcription habituelleÿ: les lettres simples sont en majuscules, les seconds caractŠres des lettres doubles en minuscules, les mots sont s‚par‚s les uns des autres par des espaces, les lettres manquantes et restitu‚es figurent entre crochets. Si l'acrostiche luiÄmˆme est en vers, chacun des vers est suivi d'une barre oblique (/). La rubrique est d'une longueur de 1650 caractŠres.
+
+v35ÿÄ Les informations enregistr‚es dans l'acrostiche (DONACR). L'acrostiche peut contenir des informations concrŠtes concernant l'auteur ou les circonstances de la genŠse du poŠmeÿ: la partie significative du texte figure dans la rubrique v35. Cette rubrique est divis‚e en sousÄrubriquesÿ: ^1 est suivi des informations concernant la personne de l'auteur (en g‚n‚ral son nom, ou, … d‚faut, d'autres appellations), ^d de celles relatives … la date de la composition du poŠme, et ^l des remarques qui concernent le lieu de la composition. La rubrique peut ˆtre r‚p‚t‚e, car il arrive que les diff‚rentes copies ou versions d'un mˆme poŠme contiennent des informations diff‚rentes. Dans ce cas, les informations provenant des diverses variantes sont toutes signal‚es. Il est important de comprendre que ce ne sont pas les sousÄrubriques qui se r‚pŠtent, mais la rubrique entiŠre avec sa structure complŠte de sousÄrubriques. Elle est longue de 1650 caractŠres.
+
+v39ÿÄ Remarques (COMMENT). Cette rubrique est pr‚vue pour abriter diverses remarques relatives au poŠme. Il s'agit d'informations qui ont ‚t‚ utiles au cours du traitement des donn‚es, et qui peuvent int‚resser l'utilisateur sans ˆtre directement destin‚es … l'usage de ce dernier. C'est une rubrique de texte, de structure libre. Sa longueur maximale est de 600 caractŠres. C'est l… qu'ont ‚t‚ rang‚es, avec divers questions et messages, les donn‚es qui n'ont pas pu ˆtre enregistr‚es dans les autres rubriques de la fiche d'information.
+
+v41ÿÄ Le texte du poŠme figureÄtÄil dans son int‚gralit‚? (INT) On trouve ici un code en un seul chiffre, dont les valeurs et significations possibles sont les suivantesÿ:
+1ÿÄ Le texte du poŠme est int‚gral, l'information concernant sa longueur est pr‚cise.
+2ÿÄ Le texte est en fragments, l'information relative … sa longueur correspond … celle du (des) fragment(s).
+3ÿÄ Le texte est en fragments, mais nous connaissons la longueur du texte int‚gral, et l'information la concernant est pr‚cise.
+4ÿÄ Il nous est impossible de d‚cider si le texte figure dans son int‚gralit‚ ou pas, l'information concernant sa longueur est donc douteuse.
+
+v42ÿÄ La longueur du poŠme (LON). Cette rubrique n'est intelligible que consid‚r‚e ensemble avec la rubrique suivante (v43), car des chiffres y figurent sans unit‚s de mesure. Cela peut induire en erreur au cours des recherches effectu‚es selon des critŠres de longueur! La rubrique peut ˆtre r‚p‚t‚e, plusieurs chiffres peuvent se suivre, s‚par‚s les uns des autres par des signes de pourcentage (%), et cela parce que, trŠs souvent, les poŠmes varient en longueur d'une source … l'autre, sans que nous puissions choisir l'unique information juste. La longueur des fragments n'est pas indiqu‚e si la longueur du texte int‚gral est connu. Une valeur 0 peut figurer dans cette rubrique, quand un poŠme n'est connu que de mentions ‚parses.
+
+v43ÿÄ L'unit‚ de mesure de la longueur du poŠme (PRE). Cette rubrique pr‚cise les donn‚es de la rubrique pr‚c‚dente (v42). On trouve ici un code en un seul chiffre, dont les valeurs et leurs significations possibles sont les suivantesÿ:
+1ÿÄ La longueur du poŠme doit ˆtre comprise en strophes.
+2ÿÄ La longueur du poŠme doit ˆtre comprise en vers.
+3ÿÄ La longueur du poŠme doit ˆtre comprise en paragraphes.
+
+Logiquement, la strophe ne peut ˆtre l'unit‚ de longueur que pour les poŠmes isostrophiques (qui se composent de strophes identiques). Les textes dont la longueur peut ˆtre mesur‚e en vers sont les poŠmes ‚crits en hexamŠtres, en distiques, en mŠtres dont l'unit‚ est le vers, mais aussi les chants dont nous ne connaissons qu'un seul vers en tant que modŠle m‚lodique, et dont la longueur est par cons‚quent ‚gale … un vers. Le paragraphe peut aussi servir d'unit‚ de longueur, surtout dans les cas o— le mŠtre ne peut ˆtre identifi‚ … cause du caractŠre fragmentaire ou la versification ind‚cise du poŠme. 
+
+v44ÿÄ Le type du mŠtre du poŠme (TYPME). Notre classification peut ˆtre discut‚e, nous ‚tions pourtant contraints, … force de viser l'exhaustivit‚, d'attribuer une ‚tiquette … chacun des poŠmes hongrois anciens. C'est une rubrique qui est en train d'ˆtre d‚velopp‚eÿ; le systŠme actuel des codes est le r‚sultat de th‚ories, plus ou moins d‚finitives, sur la versification. Les valeurs possibles des codes compos‚s d'un ou deux chiffres et leurs significations sont les suivantesÿ:
+1ÿÄ MŠtre syllabo-tonique, isostrophique.
+3ÿÄ Il est ind‚cidable s'il s'agit de vers ou de prose.
+4ÿÄ MŠtre quantitatif impr‚cis.
+5ÿÄ MŠtre syllabo-tonique, isostrophique, impr‚cis.
+6ÿÄ HexamŠtre.
+7ÿÄ Distique.
+8ÿÄ MŠtre quantitatif autre que l'hexamŠtre ou le distique.
+10ÿÄ MŠtre tonique, non strophique, non syllabique, non rim‚.
+11ÿÄ Il est ind‚cidable s'il s'agit de vers ou de prose rythm‚.
+12ÿÄ Alternance de vers et de prose.
+15ÿÄ MŠtres altern‚s (cf. La description des fiches compl‚mentaires!).
+16ÿÄ MŠtre … tendance syllabique, mais non syllaboÄtonique au sens propre. MŠtre sp‚cifique utilis‚ par G bor Pesti. (C'est une cat‚gorie bas‚e sur une th‚orie d‚j… ‚labor‚e mais non encore publi‚e).
+17ÿÄ MŠtre syllabique.
+18ÿÄ MŠtre bas‚ sur le nombre des mots.
+19ÿÄ MŠtre imitant les s‚quences victoriennes.
+30ÿÄ ModŠle m‚lodique (mŠtre identifi‚ par d‚duction, d'aprŠs d'autres vers).
+
+v45ÿÄ Le mŠtre du vers (METR). Si le mŠtre du vers peut ˆtre d‚crit par le nombre des syllabes et/ou par les rimes, c'est cette formule-l… qui figure ici. La rubrique peut ˆtre r‚p‚t‚eÿ: non pas pour rendre compte des mŠtres altern‚s (ce … quoi servent les fiches compl‚mentaires), mais pour pouvoir faire suivre les formules des vers successifs d'une mˆme structure strophique, s‚par‚es les unes des autres par des signes de pourcentage (%). Vient d'abord une lettre majuscule, symbole de la rime (ind‚pendamment du fait si le poŠme a des refrains ou pas), ensuite, aprŠs un blanc, le nombre des syllabes du vers, en deux caractŠres (le premier pouvant ˆtre un blanc, dans le cas d'un nombre en un seul chiffre), suivi du nombre des syllabes par mesure, avec une c‚sure ‚ventuelle, en deux fois deux caractŠres (dont les premiers peuvent ˆtre des blancs dans le cas de nombres en un seul chiffre), sans aucune s‚paration. Ainsi, la strophe compos‚e de quatre vers monorim‚s de 12 syllabes, dont chacun des vers est coup‚ en deux, est d‚crite de la maniŠre suivanteÿ:
+A 12 6 6%A 12 6 6%A 12 6 6%A 12 6 6
+
+La mesure ne peut diviser le vers en plus de quatre parties. Les rimes sont repr‚sent‚es, dans l'ordre de leurs apparitions, par les lettres de l'alphabŠte, les vers sans rime ‚tant symbolis‚s par la lettre X. Dans des cas exceptionnels, les rimes peuvent ˆtre signal‚es sans l'indication du nombre des syllabes. Cette rubrique est ‚troitement li‚e d'une part … celle, v44, qui rend compte du type du mŠtre, d'autre part aux rubriques suivantes, v46 et v47. En r‚alit‚, ce sont ces deux derniŠres qui permettent la recherche parmi les fiches, car les formules m‚triques int‚grales sont difficiles … g‚rer. La longueur maximale de la rubrique v45 est de 600 caractŠres.
+
+v46ÿÄ La formule des rimes du poŠme (RIME). Il s'agit d'une chaŒne compos‚e des lettres majuscules symbolisant les rimes dans les formules de la rubrique v45. L'objectif est de permettre de poser les questions relatives aux rimes et … leurs combinaisons, sans devoir s'occuper de la segmentation d'une formule m‚trique int‚grale. Pour les principes de la description des rimes, voir la rubrique v45. La rubrique v46 est d'une longueur de 60 caractŠres.
+
+v47ÿÄ Le nombre des syllabes de la formule m‚trique (SYLL). Il s'agit d'une chaŒne compos‚e des chiffres d‚signant le nombre des syllabes dans un vers selon les formules de la rubrique v45. Chaque ‚l‚ment de la chaŒne est un chiffre en deux caractŠres (le premier pouvant ˆtre un blanc, dans le cas d'un nombre en un seul chiffre). L'objectif est, d'une part, de permettre de poser les questions concernant le nombre des syllabes dans les vers, sans devoir en mˆme temps s'occuper de la segmentation d'une formule m‚trique int‚grale, et, d'autre part, de faciliter cette segmentation grƒce au traitement … part du nombre des syllabes par mesure. La rubrique v46 est d'une longueur de 120 caractŠres.
+
+v48ÿÄ La r‚partition des sources du poŠme selon leur appartenance aux diff‚rentes confessions religieuses (RELSE). C'est une rubrique g‚r‚e par un des logiciels utilitaires de la base de donn‚es. Pour permettre un affichage rapide, nous avons rassembl‚ dans cette rubrique les informations concernant l'appartenance confessionnelle des sources (manuscrites et imprim‚es) qui contiennent le poŠme. La rubrique est divis‚e en sousÄrubriques, dont les signes et leurs significations sont les suivantsÿ:
+^kÿÄ catholique
+^pÿÄ protestant
+^r Ä calviniste
+^eÿÄ luth‚rien
+^sÿÄ sabbathien
+^uÿÄ unitarien
+^mÿÄ musulman
+^vÿÄ profane
+^xÿÄ non d‚termin‚
+
+Le signe de la sousÄrubrique est toujours suivi d'un chiffre, qui d‚signe le nombre des sources appartenant … la confession religieuse en question. Sans chiffre, il ne faut pas non plus faire apparaŒtre le signe de la sousÄrubrique en question. La rubrique est longue de 500 caractŠres. Elle n'est pas compl‚t‚e automatiquement, c'estÄ…Ädire que si les informations relatives aux sources changent (p. ex. quand on d‚couvre un imprim‚ nouveau), il faut ou bien modifier la rubrique manuellement et poŠme par poŠme, ou bien calculer … nouveau les chiffres concernant les confessions religieuses sur la totalit‚ du corpus de la base de donn‚es, … l'aide de logiciels appropri‚s.
+
+v51ÿÄ Les sources imprim‚es du poŠme (RMNY). La liste des codes des sources imprim‚es ant‚rieures … 1701, contenant le poŠme. La rubrique peut ˆtre r‚p‚t‚e, les diff‚rentes attestations du poŠme sont s‚par‚es les unes des autres par des signes de pourcentage (%). La structure des codes est normalis‚e de la maniŠre suivante. C'est d'abord un chiffre en deux caractŠres qui indique le volume bibliographique o— figure l'imprim‚ en questionÿ; les imprim‚s ne figurant dans aucun des volumes, sont d‚sign‚s par les lettres HHÿ:
+27ÿÄ titre du RMK I.
+28ÿÄ titre du RMNY.
+29ÿÄ titre sur la liste HH.
+
+Ce code est suivi d'un deuxÄpoints (:) et du num‚ro dans le volume bibliographique d‚sign‚, en quatre caractŠres. Si ce num‚ro est compl‚t‚ d'autres chiffres, derriŠre une barre oblique (/) ou un tiret (Ä), ceux-ci viennent aprŠs les quatre caractŠres. A d‚faut, ils sont remplac‚s par quatre blancs. Viennent ensuite la lettre P, deuxÄpointsÿ(:), et le num‚ro de page ou de feuille de l'imprim‚ en question, ou, … d‚faut, l'indication du folio avec la lettre d'identification et le num‚ro de feuille ; dans tous les cas, il faut remplir un espace ‚gale … quatre caractŠres (au besoin avec des z‚ros initiaux). Enfin, aprŠs un tiret (Ä), figure la lettre a ou b correspondant … la position recto ou verso, ceci dans le cas o— il s'agissait d'un num‚ro de feuille ou d'une indication de folioÿ; … d‚faut, l'espace des deux caractŠres ne doit pas ˆtre rempli de blancs. Ainsi, les formes correctes se pr‚sentent de la maniŠre suivanteÿ:
+27:0001    P:0100
+28:0353/1  P:0222ÄA
+27:1789/2ÄAP:00A2
+
+Le logiciel d'affichage recherche, au cours du traitement de ces codes, des fiches d'information qui contiennent les donn‚es des publications d‚sign‚es. CellesÄci sont d‚crites plus loin dans la partie intitul‚e "Fiches d'information des sources". Les codes se suivent dans l'ordre des volumes bibliographiques et des num‚ros des titres … l'int‚rieur de ces volumes. Cela reflŠte, approximativement, l'ordre chronologique de la parution des imprim‚s. Si un poŠme a paru plusieurs fois dans une mˆme publication, chacune des parutions est signal‚e distinctement dans la rubrique. CelleÄci est d'une longueur de 1000 caractŠres.
+
+v52ÿÄ Les sources manuscrites du poŠme (MKVB). La liste des codes des sources manuscrites ant‚rieures … 1701, qui contiennent le poŠme. La rubrique peut ˆtre r‚p‚t‚e, les diff‚rentes attestations du poŠme sont s‚par‚es les unes des autres par des signes de pourcentage (%). La structure des codes est normalis‚e de la maniŠre suivante. C'est d'abord un chiffre en deux caractŠres qui indique si le manuscrit en question figure ou pas dans la Bibliographie des recueils manuscrits de poŠmes et de chansons hongrois (A magyar k‚ziratos ‚nekesk”nyvek ‚s versgyjtem‚nyek bibliogr fi ja, soit MKVB), ‚tablie par B‚la Stoll. (Les manuscrits qui n'y figurent pas sont d‚sign‚s par la lettre H.)ÿ:
+18ÿÄ titre de la bibliographie MKVB,
+19ÿÄ titre sur la liste H.
+
+Ce code est suivi d'un deuxÄpoints (:) et du num‚ro dans la bibliographie, en quatre caractŠres. Si ce num‚ro est compl‚t‚ d'autres chiffres ou lettres, derriŠre une barre oblique (/) ou un tiret (Ä), ceux-ci viennent aprŠs les quatre caractŠres. A d‚faut, ils sont remplac‚s par quatre blancs. Viennent ensuite la lettre P, deuxÄpointsÿ(:), et le num‚ro de page ou de feuille du manuscrit en question ; dans tous les cas, il faut remplir un espace ‚gale … quatre caractŠres (au besoin avec des z‚ros initiaux). Enfin, aprŠs un tiret (Ä), figure la lettre a ou b correspondant … la position recto ou verso, ceci dans le cas o— il s'agissait d'un num‚ro de feuilleÿ; … d‚faut, l'espace des deux caractŠres ne doit pas ˆtre rempli de blancs. Ainsi, les formes correctes se pr‚sentent de la maniŠre suivanteÿ:
+17:0001    P:0100
+18:0047/1  P:0222ÄA
+
+Le logiciel d'affichage recherche, au cours du traitement de ces codes, des fiches d'information qui contiennent les donn‚es des publications d‚sign‚es. CellesÄci sont d‚crites plus loin dans la partie "Fiches d'information des sources". Les codes se suivent dans l'ordre des codes des bibliographies et des num‚ros des titres. Cela reflŠte, approximativement, l'ordre chronologique de la composition des manuscrits. Si un poŠme figure plusieurs fois dans un mˆme manuscrit, chacune des apparitions est signal‚e distinctement dans la rubrique. CelleÄci est d'une longueur de 1000 caractŠres.
+
+v53ÿÄ Les ‚ditions de la m‚lodie du poŠme (EDÄMEL). On se r‚fŠre ici avant tout aux m‚lodies publi‚es par K lm n Csomasz T¢th dans le recueil intitul‚ R‚gi Magyar Dallamok T ra I. (Recueil de M‚lodies Hongroises Anciennes I.). Dans ce cas de ces m‚lodies, le sigle RMDT1 est suivi, aprŠs un espace, du num‚ro de la m‚lodie dans le recueil, en trois caractŠres (au besoin avec des blancs initiaux). Imm‚diatement aprŠs, le sigle SZ indique qu'il s'agit d'un num‚ro d'enregistrement. Si l'information relative … la m‚lodie n'est pas li‚e … un num‚ro d'enregistrement, les chiffres signifient des num‚ros de pages, et donc le sigle SZ est absent.
+
+Bien entendu, les sigles d'autres publications peuvent figurer … la place du celui de RMDT1. La structure des codes RMDT2 (R‚gi Magyar Dallamok T raÿII.ÿ: Recueil de M‚lodies Hongroises AnciennesÿII.) est identique … celle des codes RMDT1. Quand on renvoie … d'autres publications, le sigle et les num‚ros des volumes et des pages sont s‚par‚s les uns des autres par des tiretsÿ(Ä). La rubrique peut ˆtre r‚p‚t‚e, les diff‚rentes publications ou attestations d'une m‚lodie sont s‚par‚es les unes des autres par des signes de pourcentage (%). La rubrique est d'une longueur de 1000 caractŠres.
+
+v54ÿÄ Edition moderne du poŠme (EDÄCR). Si le poŠme a une ‚dition critique, c'est dans cette rubrique que nous faisons apparaŒtre le sigle de la publication, le num‚ro de volume et le num‚ro de page de cette ‚dition, s‚par‚s les uns des autres par des tirets (Ä). A d‚faut d'‚dition critique, nous indiquons d'autres ‚ditions, si possible r‚centes, sous forme abr‚g‚e.  La rubrique peut ˆtre r‚p‚t‚e, plusieurs ‚ditions du poŠme peuvent ˆtre ‚num‚r‚es, s‚par‚es les unes des autres par des signes de pourcentage (%). La rubrique est d'une longueur de 1000 caractŠres.
+
+v55ÿÄ Edition facÄsimil‚ du poŠme (FACS). C'est une rubrique qui est compl‚t‚e avant tout sur les fiches d'information des sources (voir … cet endroit!), mais l'‚dition facÄsimil‚ peut ˆtre signal‚e aussi sur les fiches des poŠmes. Notamment dans le cas o— c'est le poŠme qui a une ‚dition facÄsimil‚, et non pas une de ses sources. Cela arrive par exemple quand on publie une photo d'une feuille d'un manuscrit dans une revue, mais c'est le cas aussi du poŠme intitul‚ "Omagyar M riaÄsiralom" (Plainte de Marie en ancien hongrois), qui est publi‚ en ‚dition facÄsimil‚, dans un livre autonome, ind‚pendamment du manuscrit o— figure le poŠme (Leuweni k¢dex) et qui n'a pas d'‚dition facÄsimil‚. La rubrique peut ˆtre r‚p‚t‚e, plusieurs ‚ditions peuvent ˆtre ‚num‚r‚es, s‚par‚es les unes des autres par des signes de pourcentage (%). La rubrique est d'une longueur de 1000 caractŠres.
+
+v61ÿÄ ModŠles m‚lodiques du poŠme (DALÄCON). Dans cette rubrique figurent, s‚par‚s les uns des autres par des signes de pourcentage (%), les num‚ros d'identification (R) des poŠmes qui sont mentionn‚s dans une des sources comme modŠles m‚lodiques du poŠme en question. Il s'agit d'une liaison entre deux fiches d'information du r‚pertoire si le poŠme qui sert de modŠle m‚lodique est luiÄmˆme ant‚rieur … 1600. En revanche, si celuiÄci est post‚rieur … 1600, ou s'il n'est pas hongrois, son num‚ro R ne renvoie pas … une fiche d'information principale. Tout de mˆme, chacun des poŠmes de ce type a une fiche d'information, donc aussi un num‚ro R (g‚n‚ralement sup‚rieur … 3000), mais ce sont des fiches o— ne figurent qu'un num‚ro d'identification et un incipit (INC). Ce type des fiches a ‚t‚ introduit pour permettre, dans les ‚num‚rations des modŠles m‚lodiques, de renvoyer pareillementÿÄ avec des num‚ros RÿÄ … des incipit de poŠmes d'avant et d'aprŠs 1600. Cette rubrique, d'une longueur de 300 caractŠres, peut ˆtre r‚p‚t‚e.
+
+v65ÿÄ Les autres poŠmes auxquels le poŠme en question sert de modŠle m‚lodique (DALÄMOD). Il s'agit d'une inversion de la rubrique pr‚c‚dente (v61). C'est dans cette rubrique que sont ‚num‚r‚s, s‚par‚s les uns des autres par des signes de pourcentage (%), les num‚ros d'identification (R) des poŠmes qui renvoient au poŠme en question. Comme le poŠme auquel les autres renvoient aussi bien que les poŠmes qui y renvoient doivent ˆtre ant‚rieurs … 1600, cette rubrique relie entre elles les fiches d'information principales du r‚pertoire. Si un poŠme n'est connu que notamment par des renvois de ce genre, il figure tout de mˆme de plein droit dans la base de donn‚es, avec une fiche autonome, mˆme si sur celle-ci ne sont compl‚t‚es que certaines rubriques (INC, TITRE, COMMENT, TYPME, METR, RIME, SYLL, EDÄMEL), dont le contenu a pu ˆtre trouv‚ par d‚duction. Cette rubrique, d'une longueur de 300 caractŠres, peut ˆtre r‚p‚t‚e.
+
+v91ÿÄ Le type de la fiche d'information (RECTYP). Les rubriques pr‚sent‚es jusqu'ici ‚taient presque toujours celles des fiches d'information principales. Or il existe d'autres types de fiches d'information dans la base de donn‚es. Celles-ci sont distingu‚es les unes des autres … l'aide de codes, en un chiffre. Les codes possibles et leurs significations sont les suivantsÿ:
+0ÿÄ Fiche d'information contenant les donn‚es d'un poŠme hongrois ant‚rieur … 1601 (fiche d'information principale). Son num‚ro R est toujours en quatre caractŠres.
+6ÿÄ Fiche d'information qui contient les donn‚es d'un poŠme hongrois ant‚rieur … 1601, et qui complŠte une fiche de type 0 (fiche d'information compl‚mentaire). Son num‚ro R est commence par celui de la fiche de type 0, et il est compl‚t‚ d'une lettre (a, b, c...). Ces fiches sont utilis‚es dans le cas de poŠmes o— s'alternent diff‚rents mŠtres ou modŠles m‚lodiques. La structure de la fiche (le gabarit de l'affichage … l'‚cran) est identique … celle des fiches principales, mais les rubriques qui sont compl‚t‚es l…Ädessus sont uniquement celles qui concernent sp‚cifiquement la partie en question du poŠme, et qui diffŠrent par rapport … la mˆme rubrique d'une autre fiche compl‚mentaire.
+8ÿÄ Fiche d'information d'un poŠme ‚tranger qui sert de modŠle m‚lodique, ou d'un poŠme hongrois post‚rieur … 1600. La structure de la fiche (le gabarit de l'affichage … l'‚cran) est identique … celle des fiches principales, mais uniquement les rubriques R et INC sont compl‚t‚es dessus.
+9ÿÄ Fiche d'information contenant les donn‚es des documentsÄsources (manuscrits, imprim‚s) qui contiennent les poŠmes (Fiche d'information des sources). Ces fiches sont d‚crites en d‚tail plus loin.
+
+v161ÿÄ Renvoi … d'autres poŠmes ant‚rieurs … 1601, en cas de rapport contenant/contenu (CF.ENCORE). Il arrive que certains poŠmes du r‚pertoire en contiennent d'autres. Par exemple, l'Aeneis de P‚ter Huszti contient le poŠme qui commence par "Oly b£val, b nattal az Aene s kir ly" et qui apparaŒt de fa‡on autonome au XVIe siŠcle. Dans ces cas, la rubrique v161 sert … ‚num‚rer les num‚ros d'identification (R) des fiches d'informations li‚es. La rubrique peut ˆtre r‚p‚t‚e, les num‚ros R doivent ˆtre s‚par‚s les uns des autres par des signes de pourcentage (%). La rubrique est longue de 200 caractŠres. 
+
+v162ÿÄ Renvoi … d'autres poŠmes ant‚rieurs … 1601 (VIDE). Ici figurent les num‚ros d'identification (R) d'autres poŠmes qui suivent le mˆme modŠle que le poŠme en question, par exemple quand ils sont les diff‚rentes traductions du mˆme original. La rubrique peut ˆtre r‚p‚t‚e, les num‚ros R doivent ˆtre s‚par‚s les uns des autres par des signes de pourcentage (%). La rubrique est longue de 200 caractŠres. 
+
+v163ÿÄ La structure des refrains du poŠme (REFRN). C'est une rubrique qui est en train d'ˆtre d‚velopp‚e. Elle sert … nuancer le systŠme de classification m‚triqueÿ; nous y ajouterons plus de d‚tails dans les versions … venir de la base de donn‚es. La rubrique n'est pas compl‚t‚e si le poŠme n'a pas de refrain. Par contre, s'il a un (des) refrain(s), la rubrique s'aligne sur celles qui d‚crivent la structure m‚trique (METR, RIME, SYLL). Deux caractŠres correspondent … une unit‚ m‚trique, et les signes suivants peuvent y figurerÿ:
+ÄÄ Ä Sans refrain.
+R0ÿÄ Avec refrain.
+R1ÿÄ Refrains altern‚s de fa‡on r‚guliŠre, rim‚s.
+R2ÿÄ Parfois avec refrain.
+R3ÿÄ Refrains altern‚s de fa‡on irr‚guliŠre.
+R4ÿÄ Impossible d'identifier le mŠtre, mais le poŠme avait probablement une structure … refrain.
+I0ÿÄ Vers r‚p‚t‚.
+
+La rubrique est longue de 200 caractŠres. 
+
+v164 Ä Le poŠme aÄtÄil une structure en ‚cho? (ECHO) C'est un code en un seul chiffre. Si la rubrique n'est pas compl‚t‚e, la structure du poŠme n'est pas en ‚cho. Sinon, les valeurs et significations possibles des codes sont les suivantesÿ:
+1ÿÄ La structure du poŠme est en ‚cho, les rimes en echo sont … la fin des strophes.
+2ÿÄ La structure du poŠme est en ‚cho, la rime en echo est … la fin du poŠme.
+C'est une rubrique qui est en train d'ˆtre d‚velopp‚e, nous envisageons de reprendre, … cause du petit nombre des poŠmes en echo ant‚rieurs … 1601, la classification structurale des poŠmes en echo du XVIIe siŠcle.
+
+v165ÿÄ Renvoi int‚rieur de la fiche d'information du poŠme (BELS™ CF.). Tandis que la rubrique CF.ENCORE sert … faire apparaŒtre, … c“t‚ des donn‚es du poŠme, des renvois … d'autres fiches d'information, il s'agit ici de relier la fiche du poŠme … d'autres fiches, sans que celles-ci apparaissent … l'affichage. Par exemple, pour stocker les diff‚rentes formules m‚triques d'un  poŠme … mŠtres altern‚s, nous avons besoin de plusieurs fiches distinctes. Dans ce cas, sur la fiche principale (RECTYP=0), la rubrique du type de mŠtre nous renseigne qu'il s'agit d'un poŠme … mŠtres altern‚s (TYPME=15), et la rubrique BELS™ CF. indique le nombre et les num‚ros des fiches compl‚mentaires (RECTYP=6), o— figurent les informations relatives … chacun des mŠtres. Les informations relatives aux modŠles m‚lodiques altern‚s sont stock‚es de la mˆme maniŠre. Cf. pour plus de d‚tails la description des fiches compl‚mentaires (v91, RECTYP=6, RECTYP=8). La rubrique peut ˆtre r‚p‚t‚e, elle est longue de 200 caractŠres. 
+
+
+
+Ce sont donc les rubriques des fiches d'information des poŠmes. Quand nous voulons consulter ou modifier les informations contenues dans les rubriques, nous pouvons le faire sur une fiche qui apparaŒt en trois ‚crans. Pour prendre un exemple, voici comment compl‚ter les rubriques de la ficheÿÄ nomm‚e DATAÿÄ du c‚lŠbre poŠme d'adieu, d‚j… mentionn‚, de P‚ter Bornemissza.
+
+Page d'‚cran nø1
+Page d'‚cran nø2
+Page d'‚cran nø3...
+!!!!!!!!!!!!!!!!!!!!!!
+
+
+1.1.2.  Les fiches d'information des sources (manuscrites et imprim‚es) ant‚rieures … 1701 contiennent les rubriques suivantesÿ:
+
+v101ÿÄ Le type du document (TIPUS). L'abr‚viation de la r‚f‚rence bibliographique du document. Les sigles possibles avec leurs interpr‚tations sont les suivantsÿ:
+MKVB0ÿÄ Source manuscrite ant‚rieure … 1565, ou manuscrit (‚ventuellement texte manuscrit rajout‚) introuvable dans la bibliographie MKVB1. La liste de ces sources est publi‚e dans le version imprim‚e du r‚pertoire.
+MKVB1ÿÄ Manuscrit figurant dans la Bibliographie des recueils manuscrits de poŠmes et de chansons hongrois (A magyar k‚ziratos ‚nekesk”nyvek ‚s versgyjtem‚nyek bibliogr fi ja, soit MKVB), ‚tablie par B‚la Stoll. 
+RMNYÿÄ Imprim‚ figurant dans la bibliographie intitul‚ Imprim‚s anciens de Hongrie 1473-1600 (R‚gi Magyarorsz gi Nyomtatv nyok 1473-1600).
+RMK1ÿÄ Imprim‚ figurant dans la bibliographie intitul‚ BibliothŠque hongroise ancienne I. (R‚gi magyar k”nyvt r I.), ‚tablie par K roly Szab¢, et ne figurant pas dans le volume RMNY.
+RMGÿÄ Imprim‚ ne figurant ni dans la bibliographie RMNY, ni dans la bibliographie RMK1. La liste de ces sources est ‚galement publi‚e dans la version imprim‚e du r‚pertoire.
+
+La rubrique est d'une longueur de 20 caractŠres.
+
+v111ÿÄ Le num‚ro du document dans la bibliographie (SORSZAM). C'est le num‚ro enregistr‚ dans la bibliographie d‚sign‚e par la rubrique TIPUS qui figure ici en cinq caractŠres, dont quatre sont obligatoirement des chiffres (au besoin avec des z‚ros initiaux), et le cinquiŠmeÿun chiffre ou une lettre qui correspond au compl‚ment du num‚ro bibliographique. Ainsi, par exempleÿ:
+RMNY 353/2 = RMNYÄ03532
+RMK I. 256A = RMK1Ä0256A
+Dans ces exemples, nous avons fait apparaŒtre, … droite, les informations des rubriques TIPUS et SORSZAM, s‚par‚es par des tirets.
+
+v112ÿÄ L'auteur du document (SZERZ™). Si nous connaissons l'auteur de l'imprim‚ en question, son nom figure dans cette rubrique, non pas dans la forme divis‚e en sous-rubriques, habituelle sur les fiches principales, mais dans une forme traditionnelle. Si la publication contient plusieurs oeuvres (par exemple deux histoires), et la bibliographie indique plusieurs titres et auteurs, nous prenons en consid‚ration le premier des titres et le premier des auteurs, mˆme si ce poŠme ne figure pas dans le r‚pertoireÿ: il s'agit ici d'identifier le volume. Le chiffre ou la lettre qui est en cinquiŠme position dans la rubrique SORSZAM nous donne les renseignements relatifs aux diff‚rentes parties du document. 
+La rubrique est d'une longueur de 80 caractŠres.
+
+v113ÿÄ Le traducteur du document (FORDITO). Si le manuscrit ou l'imprim‚ n'est pas un original mais une traduction, le nom du traducteur figure dans cette rubrique, pr‚sent‚ selon les normes de la rubrique SZERZ™. 
+La rubrique est d'une longueur de 80 caractŠres.
+
+v121ÿÄ Le nouveau titre du document (CIM_UJ). Le titre du manuscrit ou de l'imprim‚, selon l'usage dans l'histoire litt‚raire. C'est cette information qui d‚signe le document si la rubrique suivante, CIM_ER, n'est pas compl‚t‚e. C'est une rubrique qui est en train d'ˆtre d‚velopp‚e. En effet, la d‚signation des manuscrits se fait g‚n‚ralement dans cette rubrique, car il est rare qu'un manuscrit ait un titre originalÿ; ce sont les oeuvres qu'il contient qui ont d'embl‚e des titres. A l'‚tat actuel du d‚veloppement de la base de donn‚es, ces d‚signations figurent en fran‡ais, comme dans le r‚pertoire publi‚ en fran‡ais, mais nous avons l'intention de modifier ce systŠme par la suite, d'introduire des d‚signations en hongrois avec la possibilit‚ d'un affichage en plusieurs langues, qui sera g‚r‚ par un logiciel utilitaire. La rubrique est longue de 200 caractŠres.
+
+v122ÿÄ Titre original du document (CIM_ER). Les trois premiers mots, dans l'orthographe originale, du titre original du manuscrit ou de l'imprim‚. Pour avoir une r‚f‚rence bibliographique concise, le titre apparaŒt sous une forme tronqu‚eÿ: ici, il s'agit seulement d'identifier le document. C'est une rubrique qui est en train d'ˆtre d‚velopp‚e, nous avons l'intention d'y introduire par la suite le titre int‚gral, tout en permettant, … l'aide d'un logiciel utilitaire, un affichage r‚duit en trois mots. Etant donn‚ qu'au cours de l'affichage c'est le contenu de la rubrique CIM_ER qui apparaŒt si celleÄci est compl‚t‚e, il arrive que la rubrique CIM_UJ donne une forme plus complŠte du titre. Si la publication contient plusieurs oeuvres (par exemples deux histoires), et la bibliographie indique plusieurs titres et auteurs, nous prenons en consid‚ration, dans tous les cas, le premier des titres et le premier des auteurs, mˆme si ce poŠme ne figure pas dans le r‚pertoireÿ: il s'agit ici d'identifier le volume. Le chiffre ou la lettre qui est en cinquiŠme position dans la rubrique SORSZAM nous renseigne quant aux diff‚rentes parties du document. 
+La rubrique est longue de 200 caractŠres.
+
+v131ÿÄ La localisation de l'imprimerie (NYOMDAHELY). Logiquement, il s'agit de la localit‚ o— la publication a ‚t‚ imprim‚eÿ; les noms des villes figurent en hongrois. En cas de plusieurs villes, les noms de localit‚s sont s‚par‚s les uns des autres par des virgules. La rubrique est longue de 80 caractŠres.
+
+v132ÿÄ La date de la composition du document (ID™PONT). Il s'agit de la date o— le manuscrit ou l'imprim‚ a ‚t‚ compos‚. Si possible, nous indiquons l'ann‚e exacte, suivi ‚ventuellement de compl‚ments en hongrois. La partie textuelle est normalis‚e, car les informations de cette rubrique sont aussi traduites en langue ‚trangŠre (en fran‡ais, dans le cas du volume d‚j… paru) par un logiciel utilitaire. La rubrique est longue de 80 caractŠres.
+
+v133ÿÄ L'imprimeur responsable de l'imprim‚ (NYOMDASZ). C'est une rubrique qui est en train d'ˆtre d‚velopp‚e. Dans certains cas, elle est d‚j… compl‚t‚e. Logiquement, c'est le nom de l'imprimeur qui figure ici, en 200 caractŠres.
+
+v141ÿÄ Le genre du document (MFAJ). C'est une rubrique qui est en train d'ˆtre d‚velopp‚e. Dans certains cas, elle est d‚j… compl‚t‚e. Logiquement, c'est la d‚signation du genre de l'ensemble du manuscrit ou de l'imprim‚ qui peut figurer ici, en 80 caractŠres.
+
+v142ÿÄ L'appartenance du document … l'une des diff‚rentes confessions religieuses (FELEKEZET). Si l'appartenance du manuscrit ou de l'imprim‚ peut ˆtre d‚finie, c'est la d‚signation de la confession religieuse qui figure ici en hongrois ("katolikus", catholiqueÿ; "protest ns", protestantÿ; "reform tus", calvinisteÿ; "evang‚likus", luth‚rienÿ; "szombatos", sabbathienÿ; "unit rius", unitarienÿ; "mohamed n", musulmanÿ; "vil gi", profane). Sinon, la rubrique n'est pas compl‚t‚e. La rubrique RELSE sur les fiches des poŠmes r‚sume ces donn‚es des sources. La rubrique v142 est longue de 80 caractŠres.
+
+v151ÿÄ La localit‚ o— le document est conserv‚ (VAROS). S'il s'agit d'un manuscrit ou d'un imprim‚ en un seul exemplaire, le nom de la ville o— il est conserv‚ figure ici dans l'orthographe originale. La rubrique est longue de 80 caractŠres.
+
+v152ÿÄ Le nom de la bibliothŠque o— le document est conserv‚ (K™NYVTAR). Le nom de la bibliothŠque qui conserve le manuscrit ou l'imprim‚ en un seul exemplaire, dans l'orthographe originale. Le nom de la ville peut ˆtre suivi de la mention (olim.) si le document est aujourd'hui introuvable … l'endroit d‚sign‚. La rubrique est longue de 80 caractŠres.
+
+v153ÿÄ La collection qui intŠgre le document (GYJTEMNY). Si le document figure dans une collection sp‚cifique … l'int‚rieur de la bibliothŠque d‚sign‚e dans la rubrique pr‚c‚dente, le nom de cette collection est ici indiqu‚, dans l'orthographe originale. La rubrique est longue de 80 caractŠres.
+
+v154ÿÄ Le cote du volume qui contient le document (K™TET JELZET). Dans le cas de rajouts manuscrits dans des imprim‚s, cette rubrique renvoie … la r‚f‚rence bibliographique de l'imprim‚. (Par exemple, dans le cas du poŠme inscrit dans la chronique universelle de Istv n Szil gyiÿ: RMNY 156). La rubrique est longue de 80 caractŠres.
+
+v155ÿÄ  La d‚signation du volume qui contient le document (SZ™VEGES FELOLDASA). La pr‚sentation textuelle de l'imprim‚ d‚sign‚ dans la rubrique pr‚c‚denteÿ; l'ordre des informations est le suivantÿ: auteur, titre, lieu et date de parution, place de la partie manuscrite … l'int‚rieur du volume. La rubrique est longue de 200 caractŠres.
+
+v156ÿÄ Le cote de d‚p“t (RAKTARI JELZET). C'est le cote de d‚p“t, attribu‚ … l'int‚rieur de la bibliothŠque ou de la collection, qui peut figurer ici (s'il est connu), en 12 caractŠres. Si le cote est plus long, il peut ‚ventuellement figurer dans la rubrique suivanteÿ: MEGJEGYZS.
+
+v157ÿÄ Remarques (MEGJEGYZS). C'est la place pr‚vue pour d'autres informations ‚ventuelles. A part le cote de d‚p“t trop long, on peut faire apparaŒtre ici les num‚ros d'identification ou ‚ventuellement les incipits des poŠmes que contient le document. On peut pr‚ciser si la description du document est complŠte ou non, et si non, pourquoi. Les remarques peuvent s'‚taler sur 200 caractŠres.
+
+
+
+Ce sont donc les rubriques des fiches d'information des sources. Quand nous voulons consulter les informations contenues dans les rubriques, ou porter des modifications … ces informations, nous pouvons le faire sur l'‚cran, sur une fiche nomm‚e FORR. Les rubriques se suivent dans l'ordre suivantÿ:
+
+!!!!!!!!!!!!!!!!
+
+
+
+
+2. Recherche
+
+Les informations inscrites sur les fiches peuvent ˆtre consult‚es … l'‚cran une par une, tout comme dans la version imprim‚e du r‚pertoire, o— les informations se suivent dans un ordre donn‚. L'ordre des fiches est ‚tabli dans le livre selon l'ordre alphab‚tique des incipitÿ; dans la version informatique, il suit les num‚ros d'enregistrement (MFN). Pour rechercher la fiche d'un poŠme, ou pour s‚lectionner un ensemble de poŠmes dont les rubriques correspondantes contiennent les mˆmes informations, nous devons appliquer les m‚thodes de recherche d'ISIS. La description d‚taill‚e de ces m‚thodes se trouvent dans le manuel de l'utilisateur d'ISIS. Il s'agit de deux m‚thodes, avec une diff‚rence dans leur rapidit‚ d'ex‚cution. La recherche textuelle libre est lente, quoiqu'elle permette  d'acc‚der … la totalit‚ des informations stock‚es sur la ficheÿ; la recherche avec le fichier inverse, plus rapide, ne peut concerner en revanche que les informations stock‚es dans les rubriques pr‚par‚es … ce type de recherche. Cela dit, presque toutes nos rubriques sont trait‚es ainsi. Nous pr‚sentons ci-dessous les deux m‚thodes … l'aide de quelques exemples, accompagn‚s d'un dictionnaire des mots de recherche.
+
+
+2.1. Recherche textuelle libre
+
+Dans le chapitre pr‚c‚dent, nous avons pass‚ en revue les rubriques des fiches d'information des poŠmes et des documents-sources, avec les num‚ros d'identification des rubriques. En choisissant la fonction Recherche (S) dans le menu de recherche d'ISIS, nous pouvons consulter les informations de n'importe quelle rubrique, en passant par le num‚ro d'identification de la rubrique. La recherche textuelle libre commence toujours par un point d'interrogation (?), suivi du num‚ro d'identification de la rubrique en question. AprŠs un deuxÄpoints (:), nous pouvons indiquer une combinaison de lettres ou de chiffres, entre apostrophes ('), pour d‚signer les donn‚es recherch‚es.
+
+Nous avons d‚j… vu comme exemple le poŠme d'adieu de P‚ter Bornemissza. Supposons qu'… propos de ce poŠme, nous voudrions connaŒtre les autres poŠmes compos‚s … Huszt. En sachant que cette information peut figurer au colophon, nous pouvons rechercher les fiches dont la rubrique DONCOLO contient la s‚rie de lettres 'Huszt'. Sur la fiche de recherche, apparaŒt la question suivanteÿ:
+
+? v32:'Huszt'
+
+A ce moment-l…, l'ordinateur parcourt la totalit‚ des fiches d'information, dans l'ordre des num‚ros d'enregistrement, et compare le contenu de chaque rubrique v32 avec la combinaison recherch‚e des signes. S'il trouve des fiches conformes, il le signale. AprŠs avoir termin‚ la recherche (qui peut durer plusieurs minutes, … cause des dimensions de la base de donn‚es), ou bien il affiche … l'‚cran les fiches trouv‚es (D), ou bien il les imprime, … moins qu'on ne lui demande de les stocker … part en vue d'une impression diff‚r‚e (P). Dans notre exemple, il aura s‚lectionn‚ trois poŠmes. Au lieu de l'affichage de la fiche entiŠre, pour permettre une pr‚sentation plus claire, choisissons une formule plus conciseÿ:
+
+v1,x1,v2,c6,v5^1,""v5^2,':',v3,c6,v32^l
+
+La structure des formules de ce type est expliqu‚e dans le chapitre suivant. Les informations sur les trois poŠmes apparaissent … l'‚cran de la maniŠre suivanteÿ:
+
+0032 n mostan besz‚lem a r¢maiakat
+Huszti P‚ter: Aeneis
+
+1171 Panaszolkodunk most orsz gunknak ily nagy pusztas g n
+Bornemissza P‚ter: Cantio Szent J nos l t s r¢l
+Husztnak v r ban
+
+1233 Siralmas ‚nn‚kem tet”led megv lnom
+Bornemissza P‚ter: Cantio optima
+j¢ Husztnak v r ban
+
+Il y a, parmi les trois poŠmes, un qui n'a pas ‚t‚ compos‚ … Huszt, mˆme si la combinaison de lettres 'Huszt' figure dans son colophon, faisant partie du nom de l'auteur. Notre question n'‚tait donc pas assez pr‚cise. Nous aurions pu ‚viter de faire figurer parmi les r‚ponses le poŠme qui est de trop, en ‚crivant non pas "v32", mais "v32^l" dans la question de recherche.
+
+Cet exemple illustre bien que, en effet, n'importe quelle question peut ˆtre pos‚e au cours d'une recherche textuelle libre, … partir du moment o— la question est formul‚e dans le langage d'ISIS. Nous pouvons combiner plusieurs questions, avec les op‚rations logiques suivantesÿ: 'et' (*), 'ou' (+), 'non' (^). Nous avons vu l'exemple d'une r‚duction parmi les informations de la rubrique, mais nous pouvons aussi proc‚der de la maniŠre inverse, nous pouvons r‚unir plusieurs rubriques … l'aide de la fonction S.
+
+La proc‚dure qu'on vient de pr‚senter est pratique pour r‚pondre … quelques questions, mais si on r‚pŠte l'op‚ration plusieurs fois, la proc‚dure devient lente, ‚tant donn‚ que pour chaque nouvelle question, l'ordinateur doit recommencer … parcourir la totalit‚ des fiches. Pour une recherche plus rapide, il faut donc faire appel au "fichier inverse". 
+
+
+
+2.2. Recherche … l'aide du fichier inverse
+
+Nos questions relatives … la base de donn‚es concernent en g‚n‚ral le contenu d'une seule rubrique, sinon, elles s'obtiennent par la combinaison de plusieurs questions simples, … l'aide d'op‚rations logiques. Il suffit donc d'‚tablir des index diff‚rents … partir du contenu des rubriques, pour pouvoir rechercher les fiches d‚sir‚es sans devoir les parcourir toutes … chaque reprise. Le fichier inverse utilis‚ par ISIS n'est autre chose qu'un index de ce type, qui r‚unit un grand nombre de critŠres.
+
+En effet, un tableau indicatif pourrait ˆtre ‚tabli d'aprŠs chaque rubrique, mais cela n'a pas toujours d'int‚rˆt. Par exemple, il serait sans doute inutile de classer dans l'ordre alphab‚tique les informations de la rubrique COMMENT. C'est l'utilisateur qui juge de l'importance des rubriques et de la n‚cessit‚ d'en ‚tablir des index. En ce qui nous concerne, au moment de la conception de ce r‚pertoire, nous avons consid‚r‚ presque toutes les rubriques comme significatives.
+
+ISIS stocke les diff‚rents tableaux indicatifs en une seule liste, appel‚e "fichier inverse". Pour distinguer les divers critŠres dans la recherche, nous avons attribu‚ des pr‚fixes diff‚rents aux informations issues de diff‚rentes rubriques. Par exemple, le nom de l'auteur du poŠme est pr‚c‚d‚ du signe AUT=, le nom de l'auteur de l'original d'aprŠs lequel le poŠme a ‚t‚ compos‚ est pr‚c‚d‚ du signe AUTET=, les noms des personnes figurant en d‚dicace sont pr‚c‚d‚s de DEDIE=. Dans ISIS, ces signes introducteurs sont appel‚s "pr‚fixes". Le plus souvent, ils sont identiques aux d‚signations des rubriques sur les fiches, mais pas dans tous les cas, et ils ne sont pas forc‚ment suivis du mˆme type d'information. Ceci s'explique d'une part par le fait que les critŠres de la recherche ne sont pas exactement les mˆmes que ceux du stockage. D'autre part, les questions peuvent concerner des informations de plusieurs rubriques … la fois, ou au contraire, des unit‚s plus petites qu'une rubrique. Voici une liste des pr‚fixes utilis‚sÿ:
+
+INC=ÿÄ Pr‚cŠde les incipit des poŠmes. Il existe une l‚gŠre diff‚rence par rapport au contenu de la rubrique v2ÿ: ici nous avons supprim‚ les signes de ponctuation, pour faciliter la recherche. Ne figurent ici que les incipit des fiches principales, sans ceux des fiches compl‚mentaires et des fiches des modŠles m‚lodiques. Si un poŠme n'a pas d'incipit, il est d‚sign‚ sur la liste par son titre.
+
+TITRE=ÿÄ Introduit les titres des poŠmes. Ne figurent ici que les titres des fiches principales, sans ceux des fiches compl‚mentaires. Les signes de ponctuation ont ‚t‚ supprim‚s ici aussi.
+
+AUT=ÿÄ Pr‚cŠde les noms d'auteurs des poŠmes. Les noms figurent ici dans leur forme traditionnelle, suivant l'ordre nom patronymique, pr‚nom. Le point d'interrogation qui signale l'incertitude est supprim‚ (pour ‚viter l'ambigu‹t‚ dans les questions), mais la question le concernant peut tout de mˆme ˆtre pos‚e, sans nom (AUT=?). Les noms des auteurs des oeuvres collectives peuvent ˆtre obtenus en plusieurs questions s‚par‚es. 
+
+NJ=ÿÄ Pr‚cŠde les incipit des modŠles m‚lodiques. Si l'incipit est inconnu, il est remplac‚ par le titre. Les signes de ponctuation ont ‚t‚ supprim‚s. 
+
+TRAD=ÿÄ Pr‚fixe du code relatif … la traduction.
+
+INCOR=ÿÄ Pr‚cŠde les incipit des oeuvres modŠles.
+
+TITOR=ÿÄ Pr‚cŠde les titres des oeuvres modŠles.
+
+HYMNUS=ÿÄ Introduit les donn‚es des catalogues des hymnes.
+
+AUTET=ÿÄ Pr‚cŠde les noms des auteurs des oeuvres modŠles. Les noms figurent ici dans leur forme traditionnelle, suivant l'ordre nom patronymique, pr‚nom. Le point d'interrogation qui signale l'incertitude est supprim‚ (pour ‚viter l'ambigu‹t‚ dans les questions), mais la question le concernant peut tout de mˆme ˆtre pos‚e, sans nom (AUTET=?). Les noms des auteurs des oeuvres collectives peuvent ˆtre obtenus en plusieurs questions s‚par‚es. 
+
+LANOR=ÿÄ Pr‚cŠde les abr‚viations des langues d'origine, desquelles les poŠmes ont ‚t‚ traduits.
+
+AN=ÿÄ Introduit l'ann‚e figurant comme date de composition des poŠmes. Il est pr‚f‚rable de consid‚rer cette information ensemble avec les pr‚cisions suivantes, et donc de formuler l…-dessus des questions combin‚es.
+
+PREC=ÿÄ Pr‚cŠde les codes qui ajoutent des pr‚cisions … la date de composition.
+
+CHANS=ÿÄ Pr‚fixe du code relatif au caractŠre chant‚ ou non chant‚ des poŠmes.
+
+SIGNE=ÿÄ Pr‚cŠde les codes relatifs … la forme de l'attribution des poŠmes … leurs auteurs. 
+
+LEVEL=ÿÄ Pr‚cŠde les derniers codes de la chaŒne qui d‚crit le genre des poŠmes. Ainsi, les ‚l‚ments de dernier niveau du systŠme des genres, les "feuilles" de la structure arborescente illustrant ce systŠme, peuvent ˆtre obtenus ind‚pendamment du reste.
+
+GENRE=ÿÄ Pr‚cŠde n'importe lesquels des codes de la chaŒne qui d‚crit le genre des poŠmes. Ainsi, les ‚l‚ments de n'importe quel niveau du systŠme des genres, les "racines", les carrefours, ou les "feuilles" de la structure arborescente illustrant ce systŠme, peuvent ˆtre obtenus ind‚pendamment du reste.
+
+COLO=ÿÄ Pr‚cŠde le code relatif … l'existence d'un colophon. Quant aux informations enregistr‚es dans les colophons, nous ne pouvons les obtenir que par la recherche textuelle, car il serait insens‚ de vouloir classer dans des tableaux des informations qui sont structur‚es tout … fait diff‚remment de l'une … l'autre.
+
+DEDIE=ÿÄ Pr‚fixe des noms figurant en d‚dicace.
+
+ACR=ÿÄ  Pr‚cŠde le code relatif … l'existence d'un acrostiche. En ce qui concerne les textes des acrostiches et les donn‚es (lieu, date, auteur) qui y sont enregistr‚es, nous ne pouvons les obtenir que par la recherche textuelle, car il serait insens‚ de vouloir classer dans des tableaux des informations qui sont structur‚es tout … fait diff‚remment de l'une … l'autre.
+
+INT=ÿÄ Pr‚cŠde le code relatif au caractŠre fragmentaire ou int‚gral des poŠmes.
+
+LON=ÿÄ Pr‚cŠde les chiffres relatifs … la longueur des poŠmes. Une information correcte ne peut ˆtre obtenue que si l'on considŠre ces donn‚es ensemble avec les suivantes, qui concernent les unit‚s de mesureÿ; il est donc n‚cessaire de poser des questions combin‚es.
+
+PRE=ÿÄ Pr‚cŠde les codes d‚signant les unit‚s de mesure.
+
+TYPME=ÿÄ Pr‚cŠde les codes des diff‚rents types de mŠtres. On ne peut pas poser des questions directement sur les formules m‚triques, car cellesÄci ont des structures diff‚rentes de l'une … l'autre. Par contre, si le type de mŠtre est tel qu'on peut identifier des rimes et des syllabes, les questions peuvent ˆtre pos‚es sur ces derniŠres et le groupe des poŠmes recherch‚s peut ˆtre obtenu par l'op‚ration logique 'et'.
+
+RIME=ÿÄ Introduit les lettres qui symbolisent les rimes dans la formule m‚trique des poŠmes.
+
+SYLL=ÿÄ Introduit les chiffres qui indiquent le nombre des syllabes dans la formule m‚trique des poŠmes.
+
+MEL=ÿÄ Introduit les informations concernant la m‚lodie des poŠmes.
+
+CR=ÿÄ Introduit les informations concernant les ‚ditions modernes des poŠmes.
+
+FACS=ÿÄ Introduit les donn‚es bibliographiques des ‚ditions fac-simil‚ des poŠmes ou des documents.
+
+DALÄCON=ÿÄ Pr‚cŠde les num‚ros R des modŠles m‚lodiques ant‚rieurs … 1600.
+
+RECTYP=ÿÄ Pr‚fixe du code qui d‚signe le type de la fiche d'information. C'est un critŠre de premiŠre importance. C'est avec la question sur la valeur 0 que nous pouvons distinguer les fiches principales des autres fiches. Ceci est important d'une part pour obtenir des r‚ponses correctes, d'autre part pour gagner du temps, car cette op‚ration diminue de moiti‚ le nombre des fiches … examiner. De la mˆme fa‡on, nos questions peuvent ne concerner que les fiches des documents etc.
+
+TIP=ÿÄ Pr‚cŠde les abr‚viations des types de documents.
+
+HELY=ÿÄ Pr‚cŠde le lieu de la composition des documents.
+
+ID™=ÿÄ Pr‚cŠde la date de la composition des documents.
+
+FEL=ÿÄ Pr‚cŠde la d‚signation de l'appartenance confessionnelle des documents.
+
+CF.=ÿÄ Pr‚cŠde les num‚ros R qui figurent … la rubrique CF.ENCORE des poŠmes, indiquant des rapports contenant/contenu.
+
+VIDE=ÿÄ Pr‚cŠde les num‚ros R qui figurent … la rubrique VIDE des poŠmes, indiquant des modŠles communs.
+
+REFR=ÿÄ Pr‚cŠde le code indiquant l'existence d'une structure … refrain.
+
+ECHO=ÿÄ Pr‚cŠde le code indiquant l'existence d'une structure en ‚cho.
+
+BCF.=ÿÄ Pr‚cŠde les num‚ros R des poŠmes figurant sur plusieurs fiches.
+
+
+Les num‚ros R des poŠmes n'ont pas du tout de pr‚fixes. Ils figurent dans le dictionnaire du fichier inverse, mais sans aucun signe d'introduction, juste le contenu de la rubrique v1 est indiqu‚. Il est pratique de stocker les num‚ros d'identification de cette maniŠre, car c'est sur la rubrique v1 que les questions portent le plus fr‚quemmentÿ; en outre, les num‚ros R sont utilis‚s dans d'autres rubriques, ils peuvent figurer sur diff‚rentes listes, dans des ‚num‚rations. Dans le cas de renvois (CF.ENCORE, BCF., VIDE) et de modŠles m‚lodiques (DAL-MOD, DAL-CON), les logiciels utilitaires qui effectuent l'affichage des donn‚es s'adressent au fichier inverse pour y faire une recherche selon les num‚ros R.
+
+Les donn‚es bibliographiques des attestations des poŠmes, les informations (types et num‚ros) relatives … l'identification des documents figurent elles aussi sans pr‚fixes. En effet, elles sont utilis‚es surtout par les logiciels utilitaires qui effectuent l'affichage des donn‚es, et qui ‚tablissent des liens entre les poŠmes et les documents … travers le fichier inverse.
+
+Pour aider la recherche rapide (p.ex. une s‚lection selon les num‚ros R), deux touches de fonction sont … la disposition de l'utilisateur de la base de donn‚es. Dans n'importe quel menu, en appuyant sur la touche F9, nous pouvons appeler l'‚cran "Formuler la question de recherche", et avec la touche F10, nous pouvons g‚rer nos fiches.
+
+Le contenu du fichier inverse peut ˆtre consult‚ de trois maniŠres. Nous pouvons en demander une liste dans le menu "Gestion du fichier inverse", mais cela n'est guŠre recommand‚, car la liste complŠte est trŠs longue, et elle contient en grande partie des informations sans int‚rˆt du point de vue de l'utilisateur. Il est plus pratique d'utiliser la commande d'affichage du menu "Recherche, affichage", qui nous permet, une fois le pr‚fixe d‚fini, d'avancer et de reculer dans le dictionnaire, de consulter les codes et les parties textuelles. Ces derniŠres ne peuvent d‚passer la longueur de 30 caractŠres (c'est la raison pour laquelle nous avons employ‚ des pr‚fixes relativement courts). Nous pouvons aussi utiliser le dictionnaire pour formuler des questions de recherche, de la maniŠre d‚crite dans le manuel de l'utilisateur d'ISIS. La troisiŠme possibilit‚ consiste … utiliser un logiciel utilitaire sp‚cial.
+
+
+2.3. L'utilisation du logiciel SYLL
+
+Pour d‚marrer le logiciel appel‚ SYLL, nous devons choisir la commande "Utilitaires" (A), puis la fonction "Ex‚cution" (R), et taper le nom SYLL. A ce moment-l…, nous pouvons choisir parmi les pr‚fixes ‚num‚r‚s ci-dessus, suite … quoi l'ordinateur nous affiche la partie dictionnaire du fichier inverse, ainsi que, aprŠs chaque entr‚e, l'illustration graphique de la quantit‚ des fiches d'information correspondantes. Chacune des barres de l'illustration symbolise cinq poŠmes ou documents, ainsi les proportions des unit‚s du dictionnaire sont visibles sous forme de colonnes. Il est int‚ressant d'essayer ce programme, car s'il ne permet pas de synth‚tiser plusieurs critŠres au cours d'une recherche, il est tout de mˆme beaucoup plus rapide que de passer par la formulation des questions. En outre, il permet d'obtenir rapidement des comparaisons quantitatives parmi les poŠmes, selon des critŠres donn‚s. Par exempleÿ: Quel est la formule de rimes ou de syllabes la plus r‚pandue? Qui a ‚crit le plus de poŠmes? De qui aÄtÄon traduit des textes, et de qui en aÄtÄon traduit le plus? Quel est le poŠme le plus long? Etc.
+
+Quand nous utilisons ce programme, nous devons aussi savoir que la m‚thode o— l'on ne prend en compte qu'un seul critŠre, a ses limitesÿ; notamment, quand nous passons en revue les dates de composition des poŠmes (pr‚fixeÿ: AN), nous trouvons des chiffres qui n'ont pas de signification valable sans ˆtre accompagn‚s des codes de pr‚cision, diff‚rents les uns des autres. AprŠs ou pendant une consultation, nous pouvons interrompre la pr‚sentation graphique en appuyant sur la touche Xÿ; c'est ainsi que nous pouvons aussi sortir du programme.
+
+
+
+2.4. Recherches selon plusieurs critŠres
+
+L'utilisation par excellence de la base de donn‚es consiste … prendre en compte plusieurs critŠres … la fois et … effectuer une recherche cibl‚e. Il s'agit donc de formuler des s‚ries de questions permettant de r‚duire peu … peu le nombre des poŠmes qui r‚pondent aux critŠres donn‚s, jusqu'… ce qu'on arrive … un groupe restreint de poŠmes. En effet, il est difficile de passer en revue les donn‚es d'un millier de poŠmes, mais mˆme celles d'une vingtaine peuvent s'av‚rer trop quand on prend en compte plus d'un critŠre. En revanche, une recherche qui ne s‚lectionne que quelques poŠmes grƒce … des questions bien formul‚es, peut aboutir … des r‚sultats trŠs instructifs.
+
+Dans le cas de donn‚es num‚riques, une base de donn‚es peut ˆtre d‚crite … travers une ‚tude statistique de corr‚lations. Dans le cas de donn‚es textuelles et mixtes, comme les n“tres, la tƒche de celui qui cherche … relever des corr‚lations, est bien plus compliqu‚e. En fait, la recherche par restrictions dont nous venons de parler, sert … mettre en valeur des correspondances faibles, non ‚videntes. Nous en proposons ici deux exemples, pour attirer l'int‚rˆt, et pour compl‚ter la partie pr‚sentant des strat‚gies de recherche dans le manuel de l'utilisateur d'ISIS.
+
+Nous savons que le genre hymne ‚tait trŠs fr‚quent parmi les poŠmes hongrois d'avant 1600. En formulant une question avec le code du genre (LEVEL=016), nous pouvons d‚couvrir qu'au total 137 poŠmes du r‚pertoire ont ‚t‚ class‚s dans ce genre. Nous savons aussi que la forme la plus r‚pandue parmi les hymnes est celle des strophes compos‚es de quatres vers de 8 syllabes. Nous avons dans la base de donn‚es 119 poŠmes ayant cette structure strophique (NUMSE= 8 8 8 8). Et il y a 74 poŠmes qui correspondent aux deux critŠres en mˆme temps (#1ÿ*ÿ#2). Ce chiffre est donc trŠs ‚lev‚, la corr‚lation est forte, l'information peut ˆtre devin‚e … l'avance, par cons‚quent elle est, pour ainsi dire, sans int‚rˆt. Par contre, si nous posons la questions inverse, c'est-…-dire si nous cherchons … savoir quel est le nombre des hymnes qui sont compos‚s non pas en strophes de 8 syllabes, mais en strophes de, disons, quatre fois 12 syllabes (NUMSE=12121212), nous arrivons tout de suite … des r‚sultats int‚ressants. Le nombre des poŠmes compos‚s en strophes de quatre fois 12 syllabes est lui-mˆme assez ‚lev‚ (115 poŠmes), car c'est une forme r‚pandue des chants historiques. Mais l'ensemble des hymnes et celui des poŠmes en strophes de quatre fois 12 syllabes ne se recouvrent que fort peu! Il suffit donc de poser la question
+
+LEVEL=016ÿ*ÿNUMSE=12121212
+
+pour que l'ordinateur nous signale l'existence d'un seulÿ(!) poŠme hongrois de ce type, d'avant 1600. Nous pouvons acc‚der aux donn‚es de ce poŠme en appuyant sur la touche D.
+
+Dans notre second exemple, c'est encore le nombre des syllabes qui joue un r“le primordial. Examinons un instant une des formes pr‚f‚r‚es de B lint Balassi, la chanson de Palk¢ ("Palk¢ n¢t ja"). Le nombre des syllabes des vers y sont respectivement de 12, 12, 6, 12. Comme nous savons que Balassi a ‚crit plusieurs poŠmes dans cette forme, il sera plus int‚ressant de poser notre question en excluant de la liste des r‚ponses, d'embl‚e, les poŠmes de cet auteurÿ:
+
+NUMSE=1212 612 ^AUT=Balassi B lint
+
+Les r‚ponses ainsi obtenues nous renseignent du fait suivantÿ: sans compter la chanson de Palk¢ ("Palk¢ n¢t ja"), qui figure parmi les modŠles m‚lodiques des poŠmes de Balassi, il n'existe que deux auteurs, en dehors de Balassi, qui se servent dans leur po‚sie de cette formeÿ; il s'agit de J nos Rimay et de Mih ly Ujv ry. Nous pouvions nous attendre … l'apparition du premier de ces deux noms, celle du second, par contre, est surprenanteÿ; elle nous permet de supposer l'existence des influences de Balassi aussi dans la po‚sie de cet auteur.
+
+Bien entendu, ces deux exemples ne sont que des ‚chantillons, d'autres correspondances jusqu'ici cach‚es, entre poŠmes, auteurs, genres et formes, pourront ˆtre d‚couvertes, grƒce … des questions formul‚es par l'utilisateur.
+
+
+
+3. Affichage et organisation des donn‚es
+
+3.1. Affichage
+
+Les informations stock‚es dans le r‚pertoire peuvent ˆtre consult‚es simplement si on les affiche … l'‚cran, sur les fiches d'ISIS. Nous avons d‚j… d‚crit ces fiches en d‚tail. Cependant, si l'affichage … l'‚cran est assez rapide, il a l'inconv‚nient de pr‚senter les informations dans une forme brute, peu lisible. Nous pouvons aussi acc‚der aux donn‚es des poŠmes sous la forme connue de la version imprim‚e du r‚pertoire. Pour avoir cette pr‚sentation, nous devons choisir, dans le menu "Recherche, affichage", les fonctions D, puis B. Sauf si nous avons modifi‚ auparavant le format d'affichage, c'est le format DATA qui est en usage. Il permet d'obtenir une description quasi complŠte des poŠmes, en langue fran‡aise, dans une pr‚sentation bien articul‚e, structur‚e. Pour prendre un exemple d‚j… cit‚, voici comment le poŠme d'adieu de P‚ter Bornemissza se pr‚sente … l'‚cranÿ:
+
+1233 !!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+Cela est visible … l'‚cran, et peut ˆtre aussi imprim‚, ou bien directement par ISIS, ou bien … partir d'une copie manipul‚e par un autre logiciel de traitement de texte. Pour imprimer, il nous faut aller d'abord dans le menu Impression/Organisation, puis dans la rubrique "fiche d'impression", ensuite pr‚ciser le code @DATA et suivre la proc‚dure d'impression d'ISIS. Cependant, une telle pr‚sentation peut ˆtre lourde, sans compter la surcharge en informations (avoir trop d'informations peut ˆtre gˆnant aussi). De plus, rechercher la totalit‚ des informations, surtout quand il s'agit de renvois d'une fiche … l'autre (modŠles m‚lodiques, documents-sources, rubriques de fiches compl‚mentaires), est une d‚marche lenteÿ; or il est possible de gagner du temps, dans le cas d'un grand nombre des poŠmes, avec une pr‚sentation simplifi‚e. D'autre part, dans le cas d'une ‚num‚ration de plusieurs poŠmes, il est plus pratique de pr‚senter ceux-ci sur une liste o— le contenu de quelques rubriques seulement apparaŒt. 
+
+A pr‚sent, nous proposons un modŠle d'aprŠs lequel de nouveaux formats pourront ˆtre d‚finis, en vue de la pr‚sentation r‚duite des fiches d'information.
+
+Supposons que nous n'avons besoin, au moment de l'affichage des donn‚es, que des informations suivantesÿ: num‚ro d'identification, incipit, acrostiche. Ces informations figurent respectivement dans les rubriques v1, v2, v34, intitul‚es R, INC et ACR. Tout d'abord, allons dans le menu "Recherche, affichage", puis choisissons la commande "Modification du format d'affichage". Il nous faut maintenant effacer le format DATA (F6) pr‚sent … l'‚cran, et le remplacer par un autre formatÿ:
+
+v1,x1,v2/,v34//
+
+Cette formule contient les rubriques … afficher, accompagn‚es d'autres signesÿ: x1 signifie un blanc, et la barre oblique (/) permet d'aller … la ligne. AprŠs avoir indiqu‚ le format d'affichage, ISIS n'affiche … l'‚cran ou n'imprime que le contenu des rubriques demand‚es. Par exemple, dans le cas du poŠme de B lint Balassi, qui commence par "Csak b£b nat imm r", voici ce qui apparaŒt … l'‚cranÿ:
+
+0220 Csak b£b nat imm r hagyatott ‚nnekem, kiben elfogy ‚letem
+CHAK BORBALAERT
+
+Bien entendu, notre exemple est parmi les plus simples possibles. L'affichage des donn‚es contenant des codes et des abr‚viations est effectu‚ par des logiciels d'affichage. Nous ne pouvons pas traiter … cet endroit du fonctionnement de ceux-ci, mais leur mode d'utilisation peut ˆtre examin‚ en consultant le format DATA. Ces logiciels sont install‚s dans le sous-r‚pertoire PROG, et ils ont ‚t‚ ‚crits en langage Pascal. Voici seulement leur liste, avec la mention de leurs paramŠtres. A l'utilisation, il faut savoir qu'ils ne produisent de r‚sultats corrects que dans le cas de rubriques compl‚t‚es, il faut donc v‚rifier dans le format l'existence du contenu de la rubrique, avant le lancement des logiciels.
+
+BOOKDÿÄ Ce programme recherche, d'aprŠs les codes figurant aux rubriques v51 (RMNY) et v52 (MKEVB), la fiche d'information demand‚e, et affiche le titre court du document, son lieu et sa date de composition, son appartenance confessionnelle, le nombre de ses pages, et sa r‚f‚rence bibliographique avec, ‚ventuellement, mention de l'‚dition fac-simil‚. Comme les donn‚es des documents peuvent figurer dans deux rubriques (RMNY, RMKEVB), et comme celles-ci peuvent ˆtre r‚p‚t‚es, le logiciel doit ˆtre lanc‚ pour chacun des deux champs et pour chacune des attestations. Au moment du lancement du programme, il faut pr‚ciser le num‚ro d'identification de la fiche en question, le signe de la rubrique en question, et les premiers 19 caractŠres du contenu du titre en question. Mode d'application recommand‚ÿ:
+
+(³, ³+d52,&bookd(mfn(4),³v52=³v52.19))
+(³, ³+d51,&bookd(mfn(4),³v51=³v51.19))
+
+La premiŠre ligne concerne les r‚f‚rences bibliographiques des manuscrits, et la secondeÿÄ celles des imprim‚s.
+
+CODEDÿÄ Programme utilitaire g‚n‚ral pour l'interpr‚tation des codes. Il transforme les codes figurant aux rubriques v22 (PREC), v23 (CHANS), v24 (SIGNE), v30 (COLO), v33 (ACR), v41 (TEXT), v44 (TYPME) en texte fran‡ais. Les programmes sont adapt‚s aux exigences du format DATA, ils g‚nŠrent par cons‚quent une ‚criture conforme … celui-ci (premiŠres lettres en majuscule/minuscule, signes de ponctuation, ‚ventuellement structure grammaticalement incomplŠte, etc.). Il nous faut donc, en utilisant ces programmes, ou bien nous conformer au format DATA, ou bien modifier les programmes. Au moment du lancement du programme, il faut pr‚ciser le signe et le contenu de la rubrique en question. Mode d'application recommand‚ÿ:
+
+&coded('v24='v24)
+
+HYMNDÿÄ Transforme les codes de la rubrique v14 (HYMN) en abr‚viations habituelles dans les r‚pertoires impim‚es des hymnes. Comme la rubrique peut ˆtre r‚p‚t‚e, il faut lancer le programme pour chaque attestation diff‚rente. Mode d'application recommand‚ÿ:
+
+(³, ³+d14,&hymnd(v14))
+
+MEGODÿÄ G‚nŠre des phrases fran‡aises qui rendent compte de la r‚partition des sources du poŠme selon leur appartenance aux diff‚rentes confessions religieuses, d'aprŠs la rubrique v48 (RELSE), si le nombre des sources est sup‚rieur … un. Avec la modification de la partie textuelle du logiciel d'origine, et en retraduisant le logiciel conform‚ment aux rŠgles d'ISIS, cette phrase peut ˆtre transpos‚e dans d'autres langues. Mode d'application recommand‚ÿ:
+
+&megod(v48)
+
+METRDÿÄ Transforme la transcription de la formule m‚trique de la rubrique v45 (METR) en une transcription habituelle (lettres minuscules, s‚parations par virgules, mesures entre parenthŠses). Ce programme prend en compte aussi les informations de la rubrique v163 (REFR), car si le poŠme a un refrain, celui-ci est signal‚ par des majuscules. En utilisant ce programme, il ne faut pas perdre de vue que la rubrique METR peut ne pas ˆtre compl‚t‚e non seulement quand il n'y a pas de formule m‚trique, mais aussi dans le cas de mŠtres altern‚s, car ceux-ci sont d‚crits non pas sur la fiche principale, mais sur des fiches compl‚mentaires. La structure complŠte peut ˆtre consult‚e dans le format DATA. La forme recommand‚e pour l'affichage simple d'une formule m‚trique existanteÿ:
+
+&metrd(v45)
+
+MUF1DÿÄ Effectue le d‚codage d'une chaŒne de genres de la rubrique v28 (GENRE), dans le cas de genres religieux (dont le premier code est toujours 001). Comme la rubrique v28 peut ˆtre r‚p‚t‚e, il faut lancer le programme chaque fois qu'apparaŒt le code 001. Pour le mode d'application recommand‚, voir le programme MUF2D!
+
+MUF2DÿÄ Effectue le d‚codage d'une chaŒne de genres de la rubrique v28 (GENRE), dans le cas de genres profanes (dont le premier code est toujours 048). Comme la rubrique v28 peut ˆtre r‚p‚t‚e, il faut lancer le programme chaque fois qu'apparaŒt le code 048. Mode d'application recommand‚ÿ:
+
+(³; ³+d28, if v28.2='00' then &muf1d(v28)
+	else &muf2d(v28) fi)
+
+RMDTÿÄ Effectue la transcription des codes (num‚ros d'enregistrement et num‚ros de pages) de la rubrique v53 (ED-MEL). Comme la rubrique peut ˆtre r‚p‚t‚e, il faut lancer le programme pour chaque attestation. Mode d'application recommand‚ÿ:
+
+(³; ³+d53,&rmdt(v53))
+
+
+Les autres logiciels stock‚s dans le sous-r‚pertoire PROG sont, d'une part, des logiciels standards de format, d'ISIS (CENTER, CHKPWD, DBSSEL, PFTSEL, WSNSEL, WSTSEL), ou, d'autre part, des programmes utilis‚s dans l'‚laboration ou la modification des fiches et dans la constitution du fichier inverse (COMMA, DALMO, PICI).
+
+Avec une connaissance minimale du langage d'ISIS et avec l'utilisation du format DATA (ou avec de petites parties s‚lectionn‚es dans ce format), nous pouvons effectuer un affichage partiel des informations relatives aux poŠmes. Cependant, si cette m‚thode s'avŠre infructueuse, nous pouvons toujours obtenir des r‚sultats acceptables en faisant apparaŒtre les donn‚es, les codes, les abr‚viations tels quels, comme ils se pr‚sentent dans les rubriques, laissant les tƒches de la transformation et de l'interpr‚tation … l'utilisateur ou … son traitement de texte. C'est aussi une des raisons pour laquelle nous avons pr‚sent‚ en d‚tail chacune des rubriques, dans la premiŠre partie de ce mode d'emploi.
+
+
+3.2. Organisation
+
+L'organisation des donn‚es, leur impression sur des listes ‚tablies selon divers critŠres est un travail assez compliqu‚ … l'int‚rieur d'ISIS. Le manuel de l'utilisateur du logiciel fournit les renseignements indispensables … ce sujet. D'aprŠs notre description, l'utilisateur de la base de donn‚es peut r‚organiser les informations selon ses propres critŠres, mˆme s'il rencontre des difficult‚s … cause de la structure complexe des donn‚es. Les fiches d'organisation que nous avons utilis‚es au cours de notre travail sont stock‚es dans le sousÄr‚pertoire MENUÿ; elles peuvent servir de modŠle … d'autres fiches que chacun peut cr‚er pour ses recherches.
+
+Dans le menu PRINT, nous pouvons d‚finir une fiche d'utilisateur, en choisissantÿ:
+
+EYNYO pour imprimer une fiche principaleÿ; le gabarit d'organisation EYRENÿÄ organisation selon les incipitÿÄ est appel‚ de fa‡on automatique.
+
+EYMUT pour la constitution d'un indexÿ; le gabarit d'organisation EYMUFÿÄ organisation selon les genresÿÄ est appel‚ automatiquement mais il peut aussi ˆtre remplac‚.
+
+Dans le gabarit EYMUT, … la rubrique fiche d'organisation, peuvent figurerÿ:
+
+EYMUF pour une organisation selon les genres
+EYAUO pour une organisation selon des auteurs ‚trangers (sans virgule)
+EYAUO pour une organisation selon des auteurs ‚trangers
+(avec virgules)
+EYTIO pour une organisation selon des titres ‚trangers
+EYMET pour une organisation selon des formules de rimes/nombres de syllabes
+EYME1 pour une organisation selon des formules de rimes
+EYME2 pour une organisation selon des nombres de syllabes/formules de rimes
+EYME3 pour une organisation selon des nombres de syllabes
+EYME4 pour une organisation selon des nombres de syllabes/mesures
+EYME5 pour une organisation selon des mesures
+
+Le problŠme des caractŠres hongrois avec accents peut ˆtre r‚solu … l'int‚rieur d'ISIS, un tableau annexe (ISISUC.HUN, ISISAC.HUN) se trouve ci-joint.
+
+
+
+4. Remarques
+
+Pour toute information compl‚mentaire concernant la base de donn‚es (pr‚sentation, installation de logiciels, stages d'apprentissage, documentations, enregistrements, recherches parmi les donn‚es, constitution de listes organis‚es, cr‚ation de logiciels utilitaires sp‚ciaux, etc.), vous pouvez vous adresser …
+
+Istv n VADAI
+6721 Szeged, Egyetem u. 2-6.
+Tel.: (62)-321-111/106
+
+Nous attendons ‚galement, … cette mˆme adresse, toute proposition cherchant … modifier, compl‚ter, am‚liorer la base de donn‚es. Nous remercions d'avance tous ceux qui nous auront fait parvenir leurs remarques concernant les ‚ventuelles erreurs, impr‚cisions ou lacunes, car nous comptons sur la collaboration des utilisateurs pour le perfectionnement de notre base de donn‚es.
+

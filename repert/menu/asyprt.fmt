@@ -1,0 +1,26 @@
+ 17 1 2351
+  1  1  1  3  5  7 10 14 14 14 16 16 16 18 18 18 20
+  1 30 55  1  1  1  1  1 25 54  1 25 54  1 25 54 54
+  1  1  1  3  5  7 10 14 14 14 16 16 16 18 18 18 20
+ 18 41 71 14 15 14 18 16 44 74 16 44 75 18 43 74 71
+ 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1
+ 0 0 0 0 0 0 0 2 2 2 2 0 2 2 1 0 0
+  17  10  15  13  14  13  17  11  18  13  13  18  20  16  12  18  17
+     6    10     6   132   132   132  -227     3     1     3     3     4     2     2     1     5    10
+   0  53 117 100 123 123 130  58  95 108 127 108 116  91  62 107  68
+    0    7    0    0    0    0    0    2    1    2    2    1    1    1    1    0    0
+   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
+Nombre Base DatosLimite MFNGuardar en archPrimer TituloSegundo TituloTercer TituloFormato impresionAncho lineaNumero de columnasAncho
+ columnaLineas/paginaPrimer nro. paginaMin. lineas fin pag.Sangria de datosClasificado?Hoja trab. clasif.Archivo de salidaEnter lowes
+t and highest MFN of records to be printedSi usted esta imprimiendo los resultados de una buesqueda ingrese el nombre del archivo sal
+vaguardado en el programa El titulo sera impreso al comienzo del listado. Los titulos que comienzan con * seran repetidos al cEl titu
+lo sera impreso al comienzo del listado. Los titulos que comienzan con * seran repetidos al comienzo de cada pagina.El titulo sera im
+preso al comienzo del listado. Los titulos que comienzan con * seran repetidos al comienzo de cada pagina.1. Formato actual (ej. V01,
+V02)                2. Formato predefinido (ej. @XYZ)3. * para indices (ver III.2.6 del Manual de ReferNumero de posiciones a imprimi
+r en cada columna de salida.Numero de columnas por pagina. Si son mas de una especificar correctamente el ancho de columna.Ancho de c
+ada columna. Debe ser mayor que el ancho de linea. La diferencia entreel ancho de columna y el de Maximo numero de lineas por pagina.
+ Si las paginas son numeradas, las lineas del pie de pagina seran usadas para la numeracion.(a) >0  primer numero de pagina          
+ (b) =0  salta de pag. sin numerar     (c) N   no salta de pagina yMinimo numero de lineas que deben estar disponibles al final de ca
+da pagina antes de imprimir un registro. Si es menSangria del mayor nivel de encabezamiento y de los registros bajo el ultimo encabez
+amiento.Y si se quiere clasificar los registros antes de la impresion.Nombre de la hoja de trabajo de clasificacion del usuario (solo
+ aplicable si se requirio la clasificacion).(a) blanco: la salida sera PRINT.LST     (b) nombre archivo: la sali1/320007017060130N

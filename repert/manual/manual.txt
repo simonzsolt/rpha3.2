@@ -1,0 +1,1712 @@
+                               Hasznalati utmutato
+
+               A regi magyar vers szamitogepes repertoriumanak
+                 (Repertoire de la poesie hongroise ancienne)
+                     3.2-es [(c) 1979-1999] verziojahoz
+
+   ----------------------------------------------------------------------------
+
+   * Bevezeto
+   * A repertorium felepitese
+        * Alapfogalmak
+        * Adatlapok
+             * Az 1601 elotti versek adatlapjainak rovatai
+             * A adaturlap mintaval kito:ltve
+             * Az 1701 elotti forrasok (keziratok es nyomtatvanyok) adatlapjainak
+               felepitese
+             * A forrasurlap mintaval kito:ltve
+        * A mufajfa
+             * A vallasos ag
+             * A vilagi ag
+   * Kereses
+        * Szabad szo:veges kereses
+        * Kereses az inverz file hasznalataval
+        * A SYLL program hasznalata
+        * To:bbszempontu keresesek
+   * Az adatok megjelenitese, rendezese, nyomtatasa
+        * Megjelenites
+        * Rendezes
+   * Repertorium-bibliografia
+
+   ----------------------------------------------------------------------------
+
+0. Bevezeto
+
+ A regi magyar vers szamitogepes repertoriumat keziko:nyvkent is kiadtak, de a
+ repertorium valodi, igazan hasznalhato, a kutato igenyeihez rugalmasan
+ alkalmazkodo formaja a szamitogepes adatbazis, melynek tovabbfejlesztese sem
+ szu:netel. Az adatbazis elkeszitesenek folyaman to:bbfele keszu:leket
+ hasznaltunk, a peremlyukkartyas kezdetleges megoldastol a nagyszamitogepen, majd
+ a szemelyi szamitogepen keresztu:l a modern halozati megoldasokig. A munka soran
+ beko:vetkezett eszko:zvaltasok jol mutatjak, milyen viharos fejlodesen ment
+ keresztu:l a szamitastechnika irodalomtudomanyi alkalmazasa. Jelenleg
+ ketfelekeppen, reszben (5.0, (c) ContentWare, 2000) az Interneten keresztu:l, a
+ Linuxos MySQL adatbaziskezelo rendszeren, reszben (3.2, (c) 1999) az UNESCO
+ altal a szemelyi szamitogepekre kifejlesztett microCDS/ISIS 3.8-as
+ adatbaziskezelo rendszeren keresztu:l erhetoek el a repertorium adatai. Ez az
+ utmutato az ISIS-es verzio felhasznaloi szamara keszu:lt.
+
+ Elore kell bocsatanunk nehany figyelmeztetest. A Repertoire de la poesie
+ hongroise ancienne szemelyi szamitogepes valtozatanak hordozoja, az ISIS csak az
+ UNESCO tagorszagaiban ingyenes hozzaferesu. Az adatbazis hajlekony-, ill.
+ optikai lemezes valtozatat mi is ingyenesen bocsatjuk a felhasznalo
+ rendelkezesere. (Ez nem vonatkozik a hordozo, a masolas es a postai szallitas
+ ko:ltsegeire.) A ko:nyvtarak szamara javasoljuk azonban a teljes valtozat
+ beszerzeset, mely az adatbazison kivu:l ketko:tetes, francia nyelvu (elsosorban
+ hibajavitast, az adatbazis to:keletesbiteset szolgalo) keziko:nyvet is
+ tartalmaz: Ivan HORVATH (direction), Gabriella H. HUBERT (assiste par), Zsuzsa
+ FONT, Janos HERNER, Etelka SZONYI, Istvan VADAI (avec la cooperation de), Tamas
+ RUTTNER (responsable de l'enregistrement textuel), Gyo:rgy GAL (responsable en
+ matiere de mathematiques et de logiciel), Repertoire de la poesie hongroise
+ ancienne. Manuel de corrections d'erreurs, I-II, megjelent a Centre de Poetique
+ Comparee AD CORPUS POETICARUM c. sorozataban, sorozatszerkeszto Leon ROBEL,
+ kiadta az Editions du Nouvel Objet (96, bd. des Batignolles, 75017 Paris), 1992,
+ Magyarorszagon terjeszti a Librairie Le Pont (1011 Budapest, Fo u. 17., tel.:
+ 202-1133/155).
+
+ Az adatbazis fizeto vagy ingyenes peldanyanak hasznaloja nem valik az adatbazis
+ birtokosava: az tovabbra is szerzoinek szellemi tulajdona marad. A felhasznalo
+ csak az adatbazis tudomanyos kutatasban valo alkalmazasara nyer jogot, es
+ semmilyen modositast nem eszko:zo:lhet azon. Az adatbazis korai valtozatai (ver.
+ 1.0 [(c) 1979], ver. 2.0 [(c) 1988], ver. 2.1 [(c) 1989], ver. 2.2 [(c) 1991])
+ meg nem keru:ltek kereskedelmi forgalomba, hasznalatuk tilos. A kereskedelmi
+ forgalomba keru:lt 3.0 valtozat ((c) 1992) tovabbra is hasznalhato, bar az
+ 1994-es 3.1 verzio kb. 200 javitast tartalmaz, ugyanakkor terjedelme is
+ lenyegesen kisebb lett. A ko:vetkezo, 3.2-es kiadas 1999 masodik feleben jelent
+ meg, aprobb szamitastechnikai jellegu javitasokat es a magyar felhasznaloi
+ felu:letet tartalmaz. Az adatbazis 5-o:s verzioja tuljadonkeppen a 3-as verzio
+ Internetes valtozata. Az 5-o:s verzioba fog bekeru:lni minden ujitas, javitas. A
+ 3-as verziok ko:zu:l az utolso, a 3.2-es azonban tovabbra is elerheto,
+ leto:ltheto marad. Ez a dokumentacio az adatbazis 3-as verziojahoz keszu:lt,
+ nehol jelentosek az elteresek az ujabb valtozatokban. Az 5-o:s verzio fobb
+ ujdonsagai:
+
+   * atteres a CDS/ISIS-rol SQL rendszerbe
+   * az adatok atkonvertalasa ISO-8859-2-es kodlapra
+   * az adatbazis atstrukturalasa
+   * ko:nnyen kezelheto webes kereso- es bo:ngeszofelu:let
+   * a magyar, angol, francia es nemet nyelvek tamogatasa
+   * az utobbi par evben ko:zzetett hibak, hianyok figyelembevetele
+   * egyeb apro korrekciok
+
+ Az ISIS hasznalata nem tul bonyolult, a programot eredetileg ugy terveztek, hogy
+ szo:veges informaciokat (elsosorban ko:nyvtari adatokat) lehessen vele kezelni,
+ to:bb nyelven. Ennek megfeleloen menu:rendszere is to:bbnyelvu, betukeszlete is
+ tartalmazhatja a nemzeti karaktereket, a ku:lo:nfele ekezetes es mellekjeles
+ betuket. Ezert repertoriumunk, noha magyar vonatkozasu adatokat tartalmaz,
+ minden nehezseg nelku:l hasznalhato to:bb nyelven is. Eppen a program
+ nemzetko:zi felhasznalhatosaga tette szu:ksegesse azt, hogy a repertorium
+ franciaul jelenjek meg, igy a magyarul nem tudo felhasznalok is hozzaferhetnek a
+ versek adataihoz. Mint mondottuk, az ISIS hasznalata nem tul bonyolult, de azert
+ nem is magatol ertetodo. Harom ponton mindenkeppen magyarazatra szorul. Az egyik
+ ilyen az adatbazis felepitese, mert ez nem az ISIS resze, hanem kizarolag az
+ adatbazis keszitoinek logikajat, illetve logikatlansagat tu:kro:zi. Hogy a
+ tarolt adatokat milyen rendben orzi a szamitogep, errol szol elsosorban ez a
+ hasznalati utasitas. A masodik magyarazatra szorulo pont az adatok ko:zo:tti
+ kereses. Ehhez a fentieken kivu:l az ISIS keresotechnikajat kell megerteni. Ezt
+ nem feladatunk itt reszletekbe menoen bemutatni, de nehany pelda segitsegevel
+ legalabb mintat szeretnenk nyujtani a probalkozasokhoz. Az adatbazisban jelenleg
+ kialakitott keresest segito szotart es az ehhez csatlakozo segedprogramot
+ ismerteti ez a resz. A harmadik magyarazatra szorulo pont az adatok
+ megjelenitese. A rendszer nemcsak arra kepes, hogy a ko:nyv formaban megjelent
+ repertorium mintajara teljes adatlapokat hozzon letre, hanem termeszetesen arra
+ is, hogy barmilyen kivant szempont szerint atrendezze ezeket, vagy szukitse a
+ megjelenitett eredmenyt. Magyaran, a ko:nyvben minden versrol minden ro:gzitett
+ adat megtalalhato; a szamitogepen megjelenithetem kepernyon, vagy kinyomtathatom
+ nyomtaton a versek engem erdeklo csoportjanak engem erdeklo adatait, peldaul
+ csakis Tinodi Sebestyen verseinek csupan a kezdosorait. Hogy a kepernyon,
+ illetve a nyomtaton mi jelenjek meg, ehhez ismerni kell az adatbazisnak nemcsak
+ a logikajat, hanem a tarolt adatok szamitogepes elnevezeseit is, errol ad szamot
+ a hasznalati utasitasnak ez a resze. Itt kapott helyet a megjeleniteshez
+ hasznalt segedprogramok ro:vid ismertetese.
+
+1. A repertorium felepitese
+
+  1.1. Alapfogalmak
+
+ A repertorium az 1601 elotti magyar versek es az ezeket tartalmazo 1701 elotti
+ keziratok es nyomtatvanyok adatlapjait tartalmazza. Ezeket az adatlapokat a
+ szamitastechnikai gyakorlatban rekordoknak hivjak, mi ebben az ismertetoben
+ megmaradunk az adatlap kifejezes mellett. Az adatlapok rovatokbol (a
+ szamitastechnikai megnevezes szerint: mezokbol) epu:lnek fel, ezek szu:kseg
+ szerint tovabb tagolodhatnak alrovatokra. Peldaul az 1129. adatlap tartalmazza
+ Bornemisza Peter hires bucsuversenek, a Siralmas ennekem tetoled megvaltom
+ kezdetu versenek leirasat. Ennek a adatlapnak a rovatai peldaul a kezdosor, a
+ cim, a szerzo neve; alrovat peldaul a szerzo nevenek rovatan belu:l a
+ vezeteknev, illetve a keresztnev. A repertorium tulajdonkeppen az o:sszes ilyen
+ adatlapnak a gyujtemenye. A szamitogepes adatbazis az adatok egy reszet
+ termeszetesen kodolva tartalmazza, vagyis meg kell adnunk e kodok feloldasat,
+ ismertetnu:nk kell az alkalmazott jelo:lesrendszert. Masreszt a versek
+ adatlapjain kivu:l masfele adatlapok is szerepelnek az adatbazisban: az 1600
+ utani, notajelzesu:l szolgalo versek adatlapjai, a to:bbreszes versek
+ mellekadatlapjai, illetve a versek forrasainak adatlapjai. Ezeknek a felsorolasa
+ es felepitesu:k szinten elengedhetetlenu:l hozzatartozik az adatbazis
+ leirasahoz.
+
+  1.2. Adatlapok
+
+ Vegyu:k tehat sorra egy adatlap rovatait, es nezzu:k meg hogyan lehet kito:ltve
+ az adatlap egy-egy rovata. (A szamitogepes rendszert hasznalva ezen informaciok
+ ro:viditve megtekinthetok a megfelelo rovaton allva az F1 billentyu
+ lenyomasaval.) Minden egyes rovatnal a rovat jelet es az adatlap megfelelo
+ rovatanak ro:viditett megnevezeset is megadjuk, erre a 2. pontban fogunk
+ hivatkozni.
+
+    1.2.1. Az 1601 elotti versek adatlapjainak rovatai
+
+ v1 - A vers azonositoszama (R). A vers hivatkozasi szama, amelyet a szamitogepes
+ rendszer hasznal a versek keresesere es azonositasara. Szandekunk szerint a
+ versek ro:vid azonositoja, ami felsorolasoknal lehet praktikus, illetve akkor,
+ ha ket vagy to:bb vers kezdosora to:bb szon keresztu:l megegyezik. A szamitogep
+ szamara az azonosito mindig negyjegyu szam, tehat az elso ilyen azonosito: 0001.
+ Termeszetesen az adatok megjelenitesenel a kezdo nullak eltu:ntethetok. A rovat
+ hossza 5, vagyis a negyjegyu azonosito utan meg marad egy betunyi hely; ezt a
+ kesobb bemutatando segedadatlapok betus azonositoszamainal hasznaljuk. Az
+ R-szamok kiosztasa eredetileg a to:rzsanyag abece-rendjehez igazodott, am kesobb
+ az adatbazis bovu:lesevel ez a rend megszunt. Ugyanigy van nemi o:sszefu:gges az
+ adatlapok sorszama es az azonositok ko:zo:tt, eredetileg parhuzamosan haladtak,
+ de adatlapok to:rlesevel, potlasaval, atrendezesevel ez az o:sszefu:gges
+ megszunt. Az adatlapok sorszama, az ugynevezett MFN (Master File Number)
+ szamunkra esetleges, az adatbazis to:rteneteben nem allando, megvaltozhat,
+ megszunhet. Az R-szam tehat az azonosito, veglegesen ro:gzitett, de egyeb
+ jelentestartalma nincsen.
+
+ A jo:voben altalaban is celszerunek tartjuk es javasoljuk a regi magyar versekre
+ szerzoju:ko:n es kezdosorukon felu:l R-szamukkal is hivatkozni, ugyanugy, ahogy
+ pl. a regi magyar nyomtatvanyok eseteben is az egyertelmu azonositas kedveert
+ fel szoktuk tu:ntetni RMK- vagy RMNY-szamukat.
+
+ Egy problema, mely a versek o:nazonossagat illeti: a versek 17. szazadi
+ atdolgozasai nalunk egyszeruen valtozatokkent szerepelnek: a csupan arnyalatnyi
+ modosulast hozo gondos masolas es a kimeletlen, cenzurazo jellegu atiras
+ ko:zo:tti ku:lo:nbseget a leltarozo csupan fokozatinak tekinti.
+
+ Felvetodik, hogy mely versek tartoznak az 1601 elottiek ko:rebe. Itt viszonylag
+ kritikusak voltunk: csak azokat a muveket vettu:k fel, amelyeknek keltezeset
+ megfeleloen indokoltnak tartottuk, es nem mindenben ko:vettu:k a szakirodalom
+ tanacsait. Nem mertu:k egyelore felvenni pl. Szucs Gyo:rgy muvet (Szu:kseg
+ mineku:nk, mi keresztyenek, vo:. RMDT I, 754, RMKT17, 8, 123. sz.). Az Ujfalvi
+ Imre szerkesztette enekesko:nyv ugyan 1602-ben jelent meg, azonban ugy
+ kepzelju:k, hogy bizonyara kizarolag 1601 elotti anyagot tartalmaz, ezert
+ felvettu:k az eloszo:r ott elofordulo enekeket is. Mar ko:zvetettebb
+ bizonyitekok szolnak amellett, hogy a hagyomanyorzo gradualok (mindenekelott a
+ Batthyany-gradual) anyagat egeszeben szinten 16. szazadinak szabad tekinteni.
+
+ v2 - A vers kezdosora (INC). A vers incipitjet a mai magyar kiejtesi es
+ helyesirasi gyakorlat szerint adjuk meg, lehetoleg a vers metrumahoz igazodoan a
+ teljes elso sort. Kivetelt kepez ez alol az az eset, amikor to:bb vers kezdodik
+ azonos sorral, ekkor tovabbi szavakkal folytatodik az incipit az elso elteresig.
+ Ha a vers elso sora nem ismert, akkor a vers explicitjet ko:zo:lju:k ezen a
+ helyen, es erre a figyelmet (explicit!) jelzessel hivjuk fel. Az explicit az
+ adatbazisban a vers utolso metrikai sorat jelenti. Ha a vers annyira to:redekes,
+ hogy sem az elso, sem az utolso sora nem ismert, illetve bizonyos ku:lo:nleges
+ esetekben (a megszokasra valo tekintettel) a meglevo szo:veg kezdete szerepel
+ itt. A ko:vetkezo to:redekeknek nem az explicitjet adtuk meg: E veg pusztasagrol
+ megemlekeznetek (R303), aame ez szivembe lo:ve egyik nyilat (R579), O
+ bolondsagot kezd inditani (R1098), O:lto:znek be az erdo (R1141), Sandor utan
+ anyjat is Cassander mego:le (R2013). Ha a vers szo:vege egyaltalan nem ismert,
+ akkor a rovat u:resen marad. Megjeleniteskor ebben az esetben a vers cime
+ szerepel az R-szam mellett. A rovat maximalis hossza 500 betunyi.
+
+ v3 - A vers cime (TITRE). A vers szakirodalomban szokasos cimet, vagy ennek
+ hijan a vers mufajanak megfelelo ertelemszeru cimet tartalmazza, mai
+ helyesirassal. Ha a vers ciklusba, sorozatba illeszkedik, akkor ebben a rovatban
+ szerepel a ciklus neve, vagy ennek ro:viditese, es a cikluson belu:li sorszam is
+ (pl. Celia 4, vagy MKIK 61, azaz a ro:viditest feloldva: a Maga kezevel irt
+ ko:nyvenek 61-es sorszamu verse). Ha a vers zsoltarforditas, akkor a cim
+ ko:to:tt alaku, Ps jel utan egy szoko:z, majd harom szamjegyu sorszam (szu:kseg
+ szerint az elejen szoko:zo:kkel kiegeszitve), majd egy egyenlosegjel, es egy
+ ujabb haromjegyu sorszam szerepel, a Vulgata ill. a Biblia Hebraica
+ zsoltarszamozasanak megfeleloen. Ha a vers zsoltarforditas forditasa (pl.
+ nemetbol), akkor az eredeti cimet ko:veti ez a jelzes. A rovat hossza 500
+ betunyi.
+
+ v5 - A vers szerzoje (AUT). Ha a szerzo ismeretlen, es a szakirodalomban sem
+ szerepel maskepp (pl. Pataki Nevtelen), akkor a rovat u:resen marad. Ha a szerzo
+ ismert, akkor a rovat a nevet tartalmazza harom alrovatban:
+
+   * "^1" jel utan a szerzo vezetekneve (vezeteknev alatt azt a nevet ertve, ami
+     szerint az abecebe rendezes to:rtenik)
+   * "^2" utan a szerzo keresztneve
+   * "^3" utan esetlegesen egy kerdojel all. Ez utobbi a szerzoseg bizonytalan
+     voltara utal. Ha a szerzo nevenek csak egy resze (keresztnev), vagy
+     monogramja ismert, akkor ertelemszeruen ezek az adatok szerepelnek itt
+
+ A rovat ismetelheto, vagyis szazalekjellel (%) elvalasztva to:bb nev is
+ megadhato, ha a vers to:bbszerzos, vagy szerzokent kerdojelesen to:bb szemely is
+ szobajo:het. A rovat hossza 500 betuhelynyi.
+
+ v11 - Meghatarozhato irodalmi minta (TRAD). Egy szamjegyu kod, lehetseges
+ ertekei es jelentesei:
+
+   * "1" - A vers esetleges idegen nyelvu, ko:zvetlen irodalmi mintait nem tudjuk
+     megallapitani, lehet, hogy nem is volt ko:zvetlen irodalmi mintaja
+   * "2" - A vers meghatarozhato ko:zvetlen irodalmi mintan alapszik
+   * "3" - A vers bizonyosan ko:zvetlen irodalmi mintan alapszik, de a mintat nem
+     tudjuk azonositani
+   * "4" - Nem tudjuk, hogy a versnek volt-e irodalmi mintaja
+
+ A ro:vidseg kedveert forditasnak nevezzu:k az 2. es 3. esetbe tartozo verseket.
+ Ha a vers forditas, akkor eredetije, pontosabban mintaja to:bb is lehet. De
+ olyan verssel is talalkoztunk, amelyrol a szakirodalom to:bb, egymast kizaro
+ mintat is megallapitott, neku:nk azonban nem sikeru:lt igazsagot tenni, ezert
+ egymas mellett felsoroltuk a szakirodalom javaslatait. Ilyen a Szu:kseg neku:nk
+ Krisztus joteterol (R1351). A vers ko:zvetlen irodalmi mintajanak adatait a
+ ko:vetkezo rovatok tartalmazzak.
+
+ v12 - A mintaul vett vers kezdosora (INCOR). Ha a vers forditas, vagy egyes
+ reszei forditason alapszanak, akkor az eredeti mu incipitje szerepel itt, az
+ eredeti nyelven. Kivetel a zsoltar: itt - fu:ggetlenu:l attol, hogy esetleg
+ ko:zvetlenu:l heberbol is keszu:lhetett a forditas - mindig a Vulgata
+ kezdoszavait adjuk meg (a rovat elsodleges celja az azonosito adatok
+ redundanciajanak no:velese). Ha prozai mu verses forditasarol van szo, akkor
+ incipitet itt nem adunk. A rovat ismetelheto, vagyis szazalekjellel (%)
+ elvalasztva to:bb kezdosor is ko:vetheti egymast. A rovat szoros kapcsolatban
+ all a v13 es v15 rovatokkal, mivel azok is ismetelheto rovatok, es a
+ felsorolasban az egymasnak megfelelo adatoknak azonos sorrendben kell
+ ko:vetniu:k egymast. Ez akkor igenyel nagyobb figyelmet, ha valamelyik adatelem
+ hianyzik, mert az ismetelheto rovatok ko:zo:tt u:res nem szerepelhet. Ha tehat
+ to:bb eredeti mu van, de ezek ko:zu:l egynek nincsen incipitje, mert prozai,
+ akkor celszeruen a felsorolas utolso helyen all. A rovat hossza 500 betuhelynyi.
+
+ v13 - A mintaul vett mu cime (TITOR). Ha a vers forditas, vagy egyes reszei
+ forditason alapszanak, akkor az eredeti mu cime szerepel itt, az eredeti
+ nyelven. Ha a forras a Biblia, akkor lehetoseg szerint megadjuk a pontos
+ elofordulasi helyet is, a Vulgata hagyomanya szerint ro:viditve. Ha a vers a
+ Biblia szamos helyet idezi, s a kolofonban megjegyzi, hogy a Szentirasbol
+ forditottak, a rovatban csak a Bibliat adjuk meg, a helyek felsorolasa nelku:l.
+ Ha hosszabb parafrazissal van dolgunk, de nehany bibliai vers ko:zben kimarad, a
+ kihagyasokrol nem emlekezu:nk meg, pl. a Siess, keresztyen, lelki jot hallani
+ (R1229) eseteben csak ennyit irunk: 1. Sam. 1-17. A rovat ismetelheto, vagyis
+ szazalekjellel (%) elvalasztva to:bb cim is ko:vetheti egymast. Ha a vers
+ zsoltarforditas, akkor a cim ko:to:tt alaku, Ps jel utan egy szoko:z, majd harom
+ szamjegyu sorszam (szu:kseg szerint az elejen szoko:zo:kkel kiegeszitve), majd
+ egy egyenlosegjel, es egy ujabb haromjegyu sorszam szerepel, a Vulgata ill a
+ Biblia Hebraica zsoltarszamozasanak megfeleloen. Ha a vers zsoltarforditas
+ forditasa (pl. nemetbol), akkor az eredeti cimet ko:veti ez a jelzes. A rovat
+ szoros kapcsolatban all a v12 es v15 rovatokkal, mivel azok is ismetelheto
+ rovatok, es a felsorolasban az egymasnak megfelelo adatoknak azonos sorrendben
+ kell ko:vetniu:k egymast. A rovat hossza 500 betuhelynyi.
+
+ Nem szabad szem elol tevesztenu:nk, hogy verseinknek eredetileg gyakran nem volt
+ cimu:k, illetve az ma mar nem allapithato meg. A rovat fo celja, hogy redundans
+ azonositoval szolgaljon. Idegen nyelvu forrasunk cime (ku:lo:no:sen himnuszok
+ eseteben) olykor egyszeruen hianyzik. Ilyenkor redundans azonositoval szolgalnak
+ ku:lo:nleges sorszamok, ld. mindjart a ko:vetkezo pontban.
+
+ v14 - Himnuszok utaloszama (HYMNUS). Ha a vers olyan himnusz forditasa, amely ki
+ van adva a Dreves-Blume-fele Analecta Hymnica ko:teteiben, illetve van szama a
+ Chevalier Repertoire hymnologique-jaban, akkor ezek az adatok ko:vetik egymast
+ szazalekjellel (%) elvalasztva. A rovat hossza 500 betuhelynyi.
+
+ v15 - A mintaul vett mu szerzoje (AUTET). Ha a vers forditas, vagy irodalmi
+ mintat ko:vet, akkor a mintaul vett mu szerzojenek neve szerepel itt, az eredeti
+ nyelven. A v3 rovatnal ismertetett ^1, ^2, ^3 alrovatok tartalmazzak a szerzo
+ nevenek elemeit. A rovat ismetelheto, vagyis szazalekjellel (%) elvalasztva
+ to:bb nev is ko:vetheti egymast. A rovat szoros kapcsolatban all a v12 es v13
+ rovatokkal, mivel azok is ismetelheto rovatok, es a felsorolasban az egymasnak
+ megfelelo adatoknak azonos sorrendben kell ko:vetkezniu:k. A rovat hossza 500
+ betuhelynyi.
+
+ v18 - A forditas alapjaul szolgalo nyelv (LANOR). Fejlesztes alatt allo rovat.
+ Pillanatnyilag (a 3.1 verzioban) akkor van kito:ltve, ha a vers forditas, tudjuk
+ is, hogy milyen nyelvbol, de ez a szokasos adatokbol (INCOR, TITOR, AUTET) nem
+ deru:l ki. Ez peldaul akkor fordul elo, ha az eredeti mu nem azonosithato
+ pontosan (Gergei Albert: Argirus historiaja). A rovat kodolt, elofordulo kodjai
+ es jelentesei a ko:vetkezok:
+
+   * "all" - nemet
+   * "gre" - go:ro:g
+   * "cro" - horvat
+   * "hon" - magyar
+   * "lat" - latin
+
+ A magyar nyelv elofordulasat az indokolja, hogy van olyan eset, amikor
+ nyilvanvalo, hogy a szerzo magyar forrasokra alapozva irja muvet. Ez tehat az
+ idegen nyelvu forras tagadasa. A rovatnak mindig harom betunyi kodot kell
+ tartalmaznia, ha nem u:res.
+
+ v21 - A vers szereztetesenek ideje (AN). Ebben a rovatban egy vagy to:bb evszam
+ allhat. A vers keletkezesi ideje termeszetesen ritkan irhato le egy hatarozott
+ datummal, altalaban csak a terminus ante quem, terminus post quem allapithato
+ meg. Ilyen esetekben ennek a fogodzonak az evszama szerepel itt. Hogy melyik
+ eset all fenn, arrol a ko:vetkezo rovat ad informaciot. Ez azt is jelenti, hogy
+ az adatok lekerdezesenel a v21 es v22 rovatok egyu:tt kezelendok, o:nmagaban ez
+ a rovat torz informaciot ad. A rovat hossza 200 betuhelynyi, ismetelheto.
+
+ v22 - A vers szereztetesi idejenek pontosabb ko:ru:lirasara szolgalo kiegeszites
+ (PREC). Egyszamjegyu kod, lehetseges ertekei es jelentesei:
+
+   * "1" - A v21 rovat egyetlen evszamadata pontos datum.
+   * "2" - A v21 rovat egyetlen evszamadatanal nem kesobbi a vers.
+   * "3" - A v21 rovat egyetlen evszamadatanal nem korabbi a vers.
+   * "4" - A v21 rovat egyetlen evszamadata ko:ru:li idoben keletkezett a vers.
+   * "5" - A v21 rovat egyetlen evszamadata ko:rnyeket megelozo idoben
+     keletkezett a vers.
+   * "6" - A v21 rovat ko:tojelekkel (-) elvalasztott ket evszamadata ko:zo:tt
+     keletkezett a vers.
+   * "7" - A v21 rovat to:bb, szazalekjelekkel (%) elvalasztott evszamadatanak
+     valamelyike pontos datum.
+
+ v23 - Enekelt vers, vagy szo:vegvers? (CHANS) Egyszamjegyu kod, lehetseges
+ ertekei es jelentesu:k a ko:vetkezo:
+
+   * "1" - A vers szo:vegvers
+   * "2" - A vers enekvers
+   * "3" - Bizonytalan, hogy a verset enekeltek-e
+
+ v24 - A vers szignaltsaganak modja (SIGNE). A rovat szorosan kapcsolodik a v3
+ rovathoz. Egyszamjegyu kod, lehetseges ertekei es jelentesu:k a ko:vetkezo:
+
+   * "1" - A verset a szerzo latta el nevmegjelo:lessel
+   * "2" - A vers szerzojet nem ismerju:k
+   * "3" - A verset a keletkezeset ko:vetoen a szerzonek tulajdonitottak
+   * "4" - A verset a modern kutatas tulajdonitja a szerzonek
+   * "5" - A vers maga nem szignalt, de a gyujtemeny, amelyben szerepel, a szerzo
+     neve alatt jelent meg
+   * "6" - A vers anagrammatikusan szignalt, vagyis a szerzo neve nem olvashato a
+     vers felett, de nevenek anagrammaja igen
+
+ v28 - A vers mufaja (GENRE). A vers mai mufaji besorolasara vonatkozo kodszamok
+ sorozata. Ezek a kodszamok mindig haromjegyuek (szu:kseg szerint az eleju:ko:n
+ 0-kal kiegeszitve), vesszokkel elvalasztva egymastol. A mufajok hierarchikusan,
+ fa-strukturaban helyezkednek el, ez indokolja az esetleges ismetlodo
+ terminusokat is. A mufajok rendjet bemutato agrajzot ku:lo:n fejezet
+ tartalmazza. Mivel egy-egy vers a legto:bbszo:r to:bb mufaji csoportba is
+ besorolhato, a rovat to:bb mufajlancot is tartalmazhat szazalekjellel (%)
+ elvalasztva egymastol. A rovat 300 betuhely hosszu.
+
+ v30 - Van-e a versnek kolofonja? (COLO) A rovat kapcsolatban all a v32 rovattal,
+ ertelemszeruen v32 csak akkor lehet kito:ltve, ha v30 erteke 1. Egyszamjegyu
+ kod, lehetseges ertekei es ertelmezesei:
+
+   * "1" - A versnek van kolofonja
+   * "2" - A versnek nincs kolofonja
+   * "3" - Nem tudjuk, hogy a versnek van-e kolofonja (Akkor fordulhat elo, ha a
+     vers to:redekes es nincsen meg a vege.)
+
+ v31 - Kinek ajanlotta a szerzo a verset? (DEDIE) Ebben a rovatban a v5 rovat
+ nevleirasi szabalyainak megfeleloen allhat egy vagy to:bb nev. Nem to:rekedtu:nk
+ a korabeli, eredeti nevalakok tiszteletben tartasara. Az ironikus ajanlasokat is
+ ajanlasoknak tekintju:k. Ha az egesz gyujtemeny van valakinek ajanlva, arrol nem
+ emlekezu:nk meg az egyes verseknel. A dedikalas legto:bbszo:r az akrosztichonban
+ to:rtenik, igy gyakran nem tudjuk eldo:nteni az akrosztichonban szereplo nevrol,
+ hogy a szerzoe-e vagy a cimzette; ha eros bennu:nk a ketseg, akkor v5 es v31 is
+ kerdojelesen (^3) tartalmazza a nevet. A rovat hossza 300 betuhelynyi.
+
+ v32 - A kolofonban szereplo adatok (DONCOLO). Ha a kolofon konkret adatokat
+ tartalmaz a szerzorol vagy a vers keletkezesenek ko:ru:lmenyeirol, akkor a
+ kolofon szo:vegenek erre vonatkozo resze szerepel ebben a rovatban, ugy, hogy
+ ezuttal csak a helyesirast korszerusitettu:k, es meg a hibas alakokat is
+ megoriztu:k. A rovat alrovatokra bomlik:
+
+   * "^1" utan allnak a szerzo szemelyere vonatkozo adatok (altalaban nev, ennek
+     hijan egyeb megjelo:les)
+   * "^d" utan a vers keletkezesi idejere vonatkozo adatok
+   * "^l" utan a vers keletkezesenek helyere vonatkozo megjegyzesek
+
+ A rovat ismetelheto, ugyanis van ra pelda, hogy egy vers ku:lo:nbo:zo
+ lejegyzesei, valtozatai ku:lo:nbo:zo adatokat tartalmaznak. Ilyenkor a variansok
+ ku:lo:nbo:zo adatait egyarant szerepeltetju:k. U:gyelni kell azonban arra, hogy
+ nem az alrovatok ismetelhetoek, hanem a teljes rovat a teljes
+ alrovat-szerkezettel egyu:tt. A rovat hossza 300 betuhely.
+
+ v33 - Van-e a versnek akrosztichonja? (ACR) A rovat kapcsolatban all a v34 es
+ v35 rovatokkal. Egyszamjegyu kod, lehetseges ertekei es ertelmezesei:
+
+   * "1" - A versnek van akrosztichonja
+   * "2" - A versnek nincs akrosztichonja
+   * "3" - Nem tudjuk, hogy a versnek van-e akrosztichonja (Akkor fordulhat elo,
+     ha a vers to:redekes, vagy ketseges, hogy az akrosztichonban szereplo
+     szo:veg ertelmezendo-e.)
+
+ v34 - A vers akrosztichonja (ACROST). Ha a versnek van akrosztichonja, vagy
+ feltetelezheto, hogy van, akkor a rovat az akrosztichon szo:veget tartalmazza a
+ szakirodalomban szokasos modon: a versfokben talalhato egyjegyu betuket
+ nagybetukkel, a kettos betuk masodik jegyet kisbetukkel, a szavakat ertelem
+ szerint szoko:zo:kkel elvalasztva, a kiko:vetkeztetett hianyzo betuket
+ szo:gletes zarojelben szerepeltetve. Ha az akrosztichon verses, akkor verssorok
+ veget to:rtvonal (/) zarja le. To:bb forras eseteben a legjobb szo:veget
+ igyekeztu:k kivalasztani, de ha az akrosztichonok ko:zo:tt jelentos, informativ
+ elteres volt talalhato, mindegyik valtozatot megadtuk. A lenyegtelen
+ eltereseket, vagy olyanokat sem mutato akrosztichon-valtozatok csak az adatbazis
+ egyik nagygepes valtozataban ferhetoek hozza. A rovat hossza 1650 betuhelynyi.
+
+ v35 - A akrosztichonban szereplo adatok (DONACR). Ha a akrosztichon konkret
+ adatokat tartalmaz a szerzorol vagy a vers keletkezesenek ko:ru:lmenyeirol,
+ akkor az akrosztichon szo:vegenek idetartozo resze szerepel ebben a rovatban. A
+ rovat alrovatokra bomlik:
+
+   * "^1" utan ko:vetkeznek a szerzo szemelyere vonatkozo adatok (altalaban nev,
+     ennek hijan egyeb megjelo:les)
+   * "^d" utan a vers keletkezesi idejere vonatkozo adatok
+   * "^l" utan a vers keletkezesenek helyere vonatkozo megjegyzesek
+
+ Figyelmeztetnu:nk kell az adatbazis felhasznalojat, hogy az akrosztichon
+ tapasztalatunk szerint nem nagyon eros erv a szerzoseg mellett, hanem gyakran a
+ dedikacio hordozoja. A rovat ismetelheto, ugyanis van ra pelda, hogy egy vers
+ ku:lo:nbo:zo lejegyzesei, valtozatai ku:lo:nbo:zo adatokat tartalmaznak.
+ Ilyenkor a variansok ku:lo:nbo:zo adatait egyarant szerepeltetju:k. U:gyelni
+ kell azonban arra, hogy nem az alrovatok ismetelhetoek, hanem a teljes rovat a
+ teljes alrovat-szerkezettel egyu:tt. A rovat hossza 1650 betuhely.
+
+ v39 - Megjegyzesek (COMMENT). A verssel kapcsolatos egyeb megjegyzesek helye. A
+ feldolgozas soran gyakran hasznalt, esetlegesen a felhasznalo szamara is
+ ertekelheto informaciot tartalmazo, de valojaban nem az o szemenek szant,
+ ko:tetlen szo:veges rovat. Lehetseges maximalis hossza 600 betu. Ide keru:ltek
+ az adatlap rovataiba fel nem jegyezheto adatok, kerdesek, u:zenetek is.
+
+ v41 - Teljes-e a vers szo:vege? (INT) Egyszamjegyu kod, lehetseges ertekei es
+ ertelmezesei:
+
+   * "1" - A vers szo:vege teljes, a terjedelemre vonatkozo adat pontos
+   * "2" - A vers to:redek, a terjedelemre vonatkozo adat a to:redek terjedelmet
+     mutatja
+   * "3" - A vers to:redek, de ismerju:k az egesz vers terjedelmet, igy a
+     terjedelemre vonatkozo adat pontos
+   * "4" - Nem tudjuk eldo:nteni, hogy a vers teljes-e, a terjedelemre vonatkozo
+     adat bizonytalan
+
+ v42 - A vers terjedelme (LON). Csak a ko:vetkezo, v43 rovattal egyu:tt ad
+ ertelmes informaciot, mivel ebben a rovatban csak a meroszam szerepel, a
+ mertekegyseg nem. A terjedelem szerinti kereseseknel, rendezeseknel ku:lo:no:sen
+ megteveszto lehet! A rovat ismetelheto, szazalekjellel (%) elvalasztva to:bb
+ szamadat szerepelhet. Ezt a megoldast azert valasztottuk, mert a versek a
+ ku:lo:nbo:zo forrasokban nagyon gyakran eltero hosszusaguak, es nem do:ntheto
+ el, hogy melyik adat tekintendo helyesnek. A to:redekes szo:vegek terjedelmet
+ nem tu:ntetju:k fel, ha vers teljes terjedelme ismert. 0 is szerepelhet a
+ rovatban, ha a verset csak emlitesbol ismerju:k.
+
+ v43 - A vers terjedelmenek mertekegysege (PRE). Az elozo, v42 rovat pontosito
+ adata. Egyszamjegyu kod, lehetseges ertekei es ertelmezesei:
+
+   * "1" - A vers terjedelme versszakokban ertendo
+   * "2" - A vers terjedelme sorokban ertendo
+   * "3" - A vers terjedelme bekezdesekben ertendo
+
+ Ertelemszeruen csak az izostrofikus metrumu versek terjedelmi mertekegysege
+ lehet a strofa. A sorolo verselesu darabok mellett a hexameterben, disztichonban
+ irt versek terjedelme merheto sorokkal, illetve a notajelzesek reven fennmaradt
+ enekek terjedelme tipikusan 1 sor. A bekezdesre is szu:kseg van egyes
+ daraboknal, fokent akkor, ha a metrum nem allapithato meg a vers to:redekes
+ volta, vagy bizonytalan verselese miatt.
+
+ v44 - A vers metrumanak tipusa (TYPME). Verstani vitak targya lehet
+ felosztasunk, mentsegu:l szolgaljon, hogy a teljessegre valo to:rekvesu:nk
+ ko:vetkezmenye az, hogy minden regi magyar verset bele kellet eroltetnu:nk
+ valamilyen csoportba. Fejlesztes alatt allo rovat, reszben mar kidolgozott,
+ reszben kidolgozando verstani gondolatmenetek eredmenye a ko:vetkezo kodolas. A
+ rovat egy vagy ket szamjegyu kodjainak lehetseges ertekei es ertelmezesei:
+
+   * "1" - Szotagszamlalo, izostrofikus vers
+   * "3" - Bizonytalan, hogy vers-e, vagy proza
+   * "4" - Bizonytalan verselesu idomertekes vers
+   * "5" - Bizonytalan verselesu szotagszamlalo, izostrofikus vers
+   * "6" - Hexameter
+   * "7" - Disztichon
+   * "8" - Idomertekes vers, de nem hexameter vagy disztichon
+   * "10" - Hangsulyos, nem strofikus, nem szotagszamlalo rimtelen vers
+   * "11" - Bizonytalan, hogy vers-e, vagy ritmikus proza
+   * "12" - Verssorok es proza valtakozasa
+   * "15" - Valtakozo metrumu (ld. a Mellekadatlapok leirasanal!)
+   * "16" - Szotagszamlalo tendenciat mutato, de nem szotagszamlalo vers. Pesti
+     Gabor altal hasznalt, specialis metrum (elkeszu:lt, egyelore nem publikalt
+     gondolatmenetre alapulo osztaly)
+   * "17" - Szotagszamlalo vers
+   * "18" - Szoszamlalo vers
+   * "19" - Sequentiat imitalo vers
+   * "30" - Notajelzes (metruma mas vers metruma alapjan van kiko:vetkeztetve)
+
+ v45 - A vers metruma (METR). Ha a vers metruma leirhato szotagszamokkal es/vagy
+ rimjelo:lessel, akkor ebben a rovatban szerepel a metrumkeplet. Ismetelheto
+ rovat, de nem a valtakozo metrumok miatt (arra a mellekadatlapok szolgalnak),
+ hanem azert, mert szazalekjelekkel (%) elvalasztva ko:vetik egymast a
+ metrumkeplet sorai, szigoruan ko:to:tt formaban. Eloszo:r a rimkeplet megfelelo
+ betujele, nagybetuvel (fu:ggetlenu:l attol, hogy refrenes-e a vers), majd egy
+ szoko:zt ko:vetoen a sor szotagszama ket betuhelyen (egyjegyu szamnal szoko:zzel
+ kito:ltve az elso helyet), majd az esetleges tovabbi tagolas, u:temezes szerinti
+ szotagszamok ket-ket betuhelyen (egyjegyu szamnal szoko:zzel kito:ltve az elso
+ helyet), minden elvalasztas nelku:l. Tehat peldaul a negysarku felezo 12-es
+ keplete a szabalyok szerint igy fest:
+
+A 12 6 6%A 12 6 6%A 12 6 6%A 12 6 6
+
+ Az u:temezes maximum negy reszre szabdalhatja szet a sort. A rimeket
+ elofordulasuk sorrendjeben az abece betuivel jelo:lju:k, a rimtelen sor jele X.
+ Kiveteles esetben megengedheto szotagszamok nelku:li rimjelo:les. A rovat szoros
+ kapcsolatban all egyreszt a metrumtipust meghatarozo v44 rovattal, masreszt a
+ ko:vetkezo v46, v47 rovatokkal. Tulajdonkeppen a ket utobbi szolgal a kerdezes
+ es rendezes celjaira, mivel a metrumkeplet tul bonyolult modon kezelheto. A
+ rovat maximalis hossza 600 betuhelynyi.
+
+ v46 - A vers rimkeplete (RIME). A v45 rovat jelo:lesebol kiemelt rimjelo:lo
+ betukbol allo lanc. Celja, hogy a rimelesre vonatkozo kerdeseket, rendezesi
+ eloirasokat a bonyolult metrumkeplet feldolgozasa (szegmentalasa) nelku:l
+ lehessen feltenni. A rimjelo:les szabalyait lasd a v45 rovatnal. A rovat hossza
+ 60 betuhelynyi.
+
+ v47 - A vers metrumkepletenek szotagszamai (SYLL). A v45 rovat jelo:lesebol
+ kiemelt sor-szotagszamokbol allo lanc. A lanc minden eleme ketjegyu szam
+ (egyjegyu szamnal szoko:zzel kito:ltve az elso helyet). Celja, hogy a sorok
+ szotagszamaira vonatkozo kerdeseket, rendezesi eloirasokat a bonyolult
+ metrumkeplet feldolgozasa (szegmentalasa) nelku:l lehessen feltenni, illetve
+ hogy a szegmentalas az u:temek szotagszamadatainak figyelmen kivu:l hagyasaval
+ ko:nnyebben elvegezheto legyen. A rovat hossza 120 betuhelynyi.
+
+ v48 - A vers forrasainak felekezeti megoszlasa (RELSE). Az adatbaziskezelo
+ program egyik segedprogramjaval kito:lto:tt rovat. A gyors megjelenites
+ erdekeben ebbe a rovatba gyujto:ttu:k o:ssze a verset tartalmazo forrasok
+ (keziratok es nyomtatvanyok) felekezeti hovatartozasara vonatkozo adatokat. A
+ rovat alrovatokra bomlik, ezek jelo:lese es jelentese a ko:vetkezo:
+
+   * "^k" - katolikus
+   * "^p" - protestans
+   * "^r" - reformatus
+   * "^e" - evangelikus
+   * "^s" - szombatos
+   * "^u" - unitarius
+   * "^m" - muzulman
+   * "^v" - vilagi
+   * "^x" - ko:zelebbrol meg nem hatarozott
+
+ Az alrovat jelo:leset ko:vetoen egy-egy szamadat all, a szoban forgo felekezetu
+ forrasok darabszama. Ha valamelyik csoportba nem keru:l szamadat, akkor az
+ alrovat jelo:leset sem kell kitenni. A rovat hossza 500 betuhelynyi. Nem
+ automatikusan kito:ltodo rovat, tehat ha a forrasadatok valtoznak (peldaul uj
+ nyomtatvany bukkan elo), akkor vagy versenkent kezzel modositando a rovat, vagy
+ a teljes adatbazis anyagara el kell vegezni a felekezeti adatok ujraszamlalasat
+ a megfelelo segedprogramokkal.
+
+ v51 - A vers nyomtatott forrasai (RMNY). A verset tartalmazo 1701 elotti
+ nyomtatott forrasok kodjainak felsorolasa. A peldanybol nem ismert, csupan
+ kiko:vetkeztetett kiadasokat is szerepeltetju:k, illetve csak csonka peldanybol
+ ismert, de elmeletileg kiegeszitheto kiadasok eseteben is feltu:ntetju:k a benne
+ feltetelezett verseket, ha maskent nem jarhatunk el, lap- vagy ivszam nelku:l.
+ Pl. igy jarunk el az RMNY 353 vegenek csonkulasa miatt. Tekintettel vagyunk
+ tovabba a kiadasvaltozatokra. (RMNY 49V pl. az RMNY 49 tetel nyomtatasi
+ variansat jelo:li.) Ismetelheto rovat, minden elofordulast szazalekjelek (%)
+ valasztanak el. A kodszamok szerkezete a ko:vetkezokeppen van szabalyozva:
+ Eloszo:r egy ketjegyu szam mutatja, hogy a szoban forgo nyomtatvany melyik
+ bibliografiai ko:tetben szerepel, illetve hogy egyik helyen sem (ezt a csoportot
+ HH-val jelo:ltu:k):
+
+   * "27" - RMK I. tetel
+   * "28" - RMNY-tetel
+   * "29" - HH-listan szereplo tetel
+
+ Ezt a kodot kettospont ko:veti, majd a jelo:lt bibliografiai ko:tetbeli sorszam,
+ negy betuhelyen. Ha a sorszamot ko:veti to:rtjellel (/), vagy ko:tojellel (-)
+ elvalasztott tovabbi szamozas, betuzes, akkor ez a negy betuhely utani helyekre
+ keru:l. Ha ilyen jelo:les nincs, akkor ehelyett negy szoko:znek kell
+ szerepelnie. Ezt egy P-betu es egy kettospont ko:veti; majd a szoban forgo
+ nyomtatvany oldalszama, vagy levelszama, vagy ezek hijan az ivjelzes betujele es
+ levelsorszama; minden esetben negy szamjegynyi helyet kell kito:lteni (szu:kseg
+ eseten bevezeto nullakkal). Vegu:l egy ko:tojel (-) utan a recto/verzo-jelo:les
+ a, illetve b jele ko:vetkezik, ha levelszam vagy ivjelzes szerepelt elotte,
+ tovabbi ket betunyi helyen; ha ilyet nem jelo:lu:nk, akkor nem kell
+ szoko:zo:kkel potolni a helyet. Tehat helyes alakok a ko:vetkezok:
+
+27:0001 P:0100 28:0353/1 P:0222-A 27:1789/2-AP:00A2
+
+ A megjelenito program a kodokat feldolgozva olyan adatlapokat keres elo, amelyek
+ tartalmazzak az itt hivatkozott kiadvanyok megjelenesi adatait. Errol a
+ Forras-adatlapok cim alatt kesobb ko:vetkezik leiras. A kodok a bibliografiai
+ ko:tetek kodjainak nagysagrendjeben, azon belu:l pedig a tetelszamok rendjeben
+ haladnak. Ez megko:zelitoleg a nyomtatvanyok megjelenesenek idorendjet is
+ tu:kro:zi. Ha egy vers egy kiadvanyban to:bbszo:r is megjelent, akkor minden
+ egyes elofordulasa ku:lo:n tetelkent szerepel a rovatban. A rovat hossza 1000
+ betuhelynyi.
+
+ A felhasznalonak e rovat eseteben ku:lo:no:sen a figyelmebe ajanljuk azt a
+ ko:ru:lmenyt, hogy olyan adatbazist bocsatottunk a rendelkezesere, melynek
+ tovabbfejlesztese nem szu:netel. A 3.0. es 3.1 kiadasnak, ill. a Repertoire...
+ nyomtatott keziko:nyvenek keszitese ko:zben peldaul meg nem tudtunk hozzaferni
+ az RMK I. 761A, 1155B, 1287, 1462 es 1544. szamu gyu:lekezeti enekesko:nyvek
+ peldanyahoz. Nem lathattuk az 568A tetelt sem, igy nem keru:lhetett be a Kertek
+ banyasznak (helyesen: banasnak), szolok metszesnek o:ru:lnek kezdetu
+ naptarvers-to:redek. Az anyag attekintesenek ku:lo:no:s nehezsegei folytan a
+ naptarversek es a csizio eseteben egyelore csak a 16. szazadi elofordulasokat
+ mertu:k felsorolni.
+
+ Egyelore ku:lo:n jegyzek tartalmazza a hangjegyes nyomtatvanyok felsorolasat,
+ igy ez a fontos ko:ru:lmeny a 3.1 valtozatban a versek adatlapjain sem jelenik
+ meg.
+
+ Nem tudtunk boldogulni az RMNY 351-es tetellel, melynek lapszamozasa nincs,
+ ivszamozasa pedig hibas. Az RMNY munkako:zo:ssegenek eljarasat vettu:k at: a
+ kepzeletben utolag megszamozott lapokat tu:ntettu:k fo:l.
+
+ Ma mar helytelennek latjuk azt a gyakorlatunkat, hogy csak egy elofordulaskent
+ tu:ntettu:k fo:l forrasaink ko:zo:tt azokat a ku:lo:nleges eseteket, amikor egy
+ vers ket valtozata egymas utan, azonos lapszammal szerepel ugyanabban a
+ gyujtemenyben. (Ilyen pl.: Az Atyanak orszagabol e vilagra Isten jo:ve (R119).
+ Meg egy hiba: az altalunk megadott lapszam azt jelenti, hogy a vers a megadott
+ lapon kezdodik, az viszont egyaltalan nem deru:l ki, hogy a vers szo:vege, vagy
+ csupan cime-e az, ami ott elkezdodik.
+
+ v52 - A vers keziratos forrasai (MKEVB). A verset tartalmazo 1701 elotti
+ keziratos forrasok kodjainak felsorolasa. Ismetelheto rovat, minden elofordulast
+ szazalekjelek (%) valasztanak el. A kodszamok szerkezete a ko:vetkezo modon
+ szabalyozott: Eloszo:r egy ketjegyu szam mutatja, hogy a szoban forgo kezirat
+ szerepel-e a Stoll Bela szerkesztette A magyar keziratos enekesko:nyvek es
+ versgyujtemenyek bibliografiajaban (MKEVB), vagy sem (ezt a csoportot H-val
+ jelo:ltu:k):
+
+   * "18" - MKEVB-tetel
+   * "19" - H-listan szereplo tetel
+
+ Ezt a kodot kettospont ko:veti, majd a jelo:lt bibliografiai sorszam, negy
+ betuhelyen. Ha a sorszamot ko:veti to:rtjellel (/), vagy ko:tojellel (-)
+ elvalasztott tovabbi szamozas, betuzes, akkor ez a negy betuhely utani helyekre
+ keru:l. Ha ilyen jelo:les nincs, akkor ehelyett negy szoko:znek kell
+ szerepelnie. Ezt egy P-betu es egy kettospont ko:veti; majd a szoban forgo
+ kezirat oldalszama, vagy levelszama; minden esetben negy szamjegynyi helyet kell
+ kito:lteni (szu:kseg eseten bevezeto nullakkal). Vegu:l egy ko:tojel (-) utan a
+ recto/verzo-jelo:les a, illetve b jele ko:vetkezik, ha levelszam szerepelt
+ elotte, tovabbi ket betunyi helyen; ha ilyet nem jelo:lu:nk, akkor nem kell
+ szoko:zo:kkel potolni a helyet. Tehat helyes alakok a ko:vetkezok:
+
+17:0001 P:0100 18:0047/1 P:0222-A
+
+ A megjelenito program a kodokat feldolgozva olyan adatlapokat keres elo, amelyek
+ tartalmazzak az itt hivatkozott kiadvanyok megjelenesi adatait. Errol a
+ Forras-adatlapok cim alatt kesobb ko:vetkezik leiras. A kodok a bibliografiak
+ kodjainak nagysagrendjeben, azon belu:l pedig a tetelszamok rendjeben haladnak.
+ Ez megko:zelitoleg a keziratok keletkezesi idorendjet is tu:kro:zi. Ha egy vers
+ egy keziraton belu:l to:bbszo:r is elofordul, akkor minden egyes elofordulasa
+ ku:lo:n tetelkent szerepel a rovatban. A rovat hossza 1000 betuhelynyi.
+ Hozzaferhetetlen volt az MKEVB 102. tetel, igy ez a 3.1 kiadasban sem szerepel.
+
+ v53 - A vers dallamanak kiadasai (ED-MEL). Elsosorban a Csomasz Toth Kalman
+ szerkesztette Regi Magyar Dallamok Tara I. dallamaira to:rtenik itt hivatkozas.
+ Ilyenkor eloszo:r az RMDT1 jelo:les all, majd egy szoko:zzel elvalasztva a
+ dallam ko:tetbeli sorszama harom betuhelyen (szu:kseg eseten az elejen
+ szoko:zo:kkel kiegeszitve), vegu:l ko:zvetlenu:l a szamadat utan az SZ
+ ro:vidites mutatja, hogy sorszamrol van szo. Ha a dallamra vonatkozo informacio
+ nem sorszamhoz ko:to:tt, akkor a szamadat oldalszamot jelent, es utana nem all
+ ro:vidites. Termeszetesen az RMDT1 ro:viditesen kivu:l szerepelhet a rovatban
+ mas kiadvany ro:viditese is. Az RMDT2 (Papp Geza: Regi Magyar Dallamok Tara II.
+ A XVII. szazad enekelt dallamai) jelo:lesmodja megegyezik a fent ismertetettel.
+ Ha egyeb kiadvanyra to:rtenik utalas, akkor a ro:viditest es a ko:tetszamot,
+ oldalszamot ko:tojelek (-) valasztjak el egymastol. A rovat ismetelheto,
+ szazalekjelekkel (%) elvalasztva to:bb kiadas, illetve elofordulas is
+ felsorolhato. A rovat hossza 1000 betuhelynyi.
+
+ v54 - A vers modern kiadasa (ED-CR). Ha a versnek van kritikai kiadasa, akkor
+ itt tu:ntetju:k fel ennek ro:viditeset es ko:tet- illetve oldalszamait egymastol
+ ko:tojelekkel (-) elvalasztva. Kritikai kiadas hijan a vers egyeb, lehetoleg
+ friss kiadasi helyet adjuk meg ro:viditve. A rovat ismetelheto, szazalekjelekkel
+ (%) elvalasztva to:bb kiadas is felsorolhato. A rovat hossza 1000 betuhelynyi.
+
+ v55 - A vers fakszimile kiadasa (FACS). Elsosorban a Forrasadatlapok eseteben
+ kito:lto:tt rovat (ld. ott!), de nehany esetben a versek adatlapjan is szerepel
+ itt kiadas. Akkor, ha versnek van fakszimile kiadasa, nem pedig valamelyik
+ forrasanak. Ilyen eset peldaul az egyleveles kezirat fotoja valamelyik
+ folyoiratban, vagy az Omagyar Maria-siralom o:nallo fakszimile kiadasa, amely
+ nem azonos a Leuweni-kodex fakszimile kiadasaval (ilyen nincs is). A rovat
+ ismetelheto, szazalekjelekkel (%) elvalasztva to:bb kiadas is felsorolhato. A
+ rovat hossza 1000 betuhelynyi.
+
+ v61 - A vers notajelzesei (DAL-CON). A rovatban azoknak a verseknek az azonosito
+ szamai (R) szerepelnek egymastol szazalekjelekkel (%) elvalasztva, amelyek a
+ vers valamelyik forrasaban a vers notajelzeseu:l szolgalnak. Ha a notajelzesu:l
+ szolgalo vers is 1601 elotti, akkor ez a repertorium ket alapadatlapja ko:zo:tti
+ kapcsolatot jelent. Ha a notajelzesu:l szolgalo vers kesobbi, vagy nem magyar
+ vers, akkor az R-szam nem az foadatlapok csoportjara utal. Az ilyen verseknek is
+ van adatlapjuk, es igy R-szamuk is (altalaban 3000 fo:lo:tti), de ezeken az
+ adatlapokon csak az azonosito szam es a vers kezdosora (INC) van feltu:ntetve.
+ Ezek az adatlapok nem is szolgalnak masra, csak hogy a notajelzesek
+ felsorolasanal azonos modon lehessen hivatkozni az R-szamokon keresztu:l az 1601
+ elotti es utani versek kezdosoraira is. A rovat ismetelheto, hossza 300
+ betuhelynyi.
+
+ v65 - A verset notajelzeskent hasznalo versek (DAL-MOD). Az elozo (v61) rovat
+ forditottja. Itt azoknak verseknek az azonosito szamai (R) vannak felsorolva
+ szazalekjelekkel (%) elvalasztva, amelyek a szoban forgo versre utalnak. Mivel
+ itt mind a hivatkozo vers, mindpedig a hivatkozott csak 1601 elotti lehet, ez a
+ rovat az R-szamokon keresztu:l kapcsolatot jelent a repertorium foadatlapjai
+ ko:zo:tt. Ha egy vers eppen ilyen notahivatkozas reven ismert csupan, az
+ adatbazisban akkor is teljes erteku, o:nallo urlappal rendelkezo verskent
+ szerepel, ertelemszeruen csak a kiko:vetkeztetheto rovatok vannak benne
+ kito:ltve (INC, TITRE, COMMENT, TYPME, METR, RIME, SYLL, ED-MEL). A rovat
+ ismetelheto, hossza 300 betuhelynyi.
+
+ v91 - Az adatlap tipusa (RECTYP). Az eddig ismertetett rovatok szinte mindig a
+ versek adatait tartalmazo un. foadatlapokra vonatkoztak. Az adatbazisban azonban
+ masfajta urlapok is talalhatok. Ezeket egyjegyu kodszammal ku:lo:nbo:ztethetju:k
+ meg egymastol. A rovat lehetseges kodszamai es jelentesu:k a ko:vetkezo:
+
+   * "0" - 1601 elotti magyar vers adatait tartalmazo urlap (foadatlap). R-szama
+     mindig negyjegyu
+   * "6" - 1601 elotti magyar vers adatait tartalmazo urlap, amely egy 0-as
+     tipusu masik adatlaphoz tartozo kiegeszites (mellekadatlap). R-szama
+     megegyezik a 0-as tipusu adatlap R-szamaval, amit egy betujelo:les (a, b,
+     c...) ko:vet. Metrumvalto vagy notajelzest valto versek eseten fordul elo.
+     Az urlap (kepernyo-maszk) felepitese teljesen megegyezik az foadatlapokeval,
+     de csak azok a rovatok vannak kito:ltve, amelyek specialisan a vers szoban
+     forgo reszere vonatkoznak, a to:bbi mellekadatlap azonos rovatatol elternek
+   * "8" - Notajelzeskent elofordulo idegen nyelvu vers vagy 1600 utani magyar
+     vers urlapja. Az urlap (kepernyomaszk) felepitese teljesen megegyezik az
+     alapadatlapokeval, de itt csak az R es INC rovatok kito:lto:ttek
+   * "9" - A versek forrasaikent szolgalo dokumentumok (keziratok, nyomtatvanyok)
+     adatait tartalmazo urlap (Forras-adatlap). Reszletes leirasat a ko:vetkezo
+     pontban adjuk
+
+ v161 - A vers hivatkozasa mas 1601 elotti versre resz/egesz viszony eseten (CF.
+ ENCORE). Van ra eset, hogy a repertoriumban szereplo versek egymassal resz/egesz
+ viszonyban vannak. Peldaul Huszti Peter Aeneise tartalmazza az Oly buval,
+ banattal az Aeneas kiraly kezdetu verset, amely o:nallo verskent is felbukkan a
+ 16. szazadban. Ilyenkor ezt a rovatot hasznaljuk a kapcsolodo adatlapok
+ azonosito szamainak (R) felsorolasara. A rovat ismetelheto, az R-szamokat
+ szazalekjellel (%) elvalasztva kell megadni. A rovat hossza 200 betuhelynyi.
+
+ v162 - A vers hivatkozasa mas 1601 elotti versre (VIDE). Azoknak a verseknek az
+ azonosito szamai (R) vannak itt felsorolva, amelyeknek forrasa azonos a szoban
+ forgo versevel, peldaul ha ugyanannak az eredetinek a ku:lo:nbo:zo forditasai. A
+ rovat ismetelheto, az R-szamokat szazalekjellel (%) elvalasztva kell megadni. A
+ rovat hossza 200 betuhelynyi.
+
+ v163 - A vers refrenszerkezete (REFREN). Fejlesztes alatt allo rovat. A metrikai
+ osztalyozas rendszerenek finomitasat szolgalja, de ennel reszletesebb jelo:lesre
+ to:rekszu:nk az adatbazis kesobbi verzioiban. Ha a vers nem refrenes, akkor
+ kito:ltetlen. Ha versnek van refrenje, akkor a rovat szorosan igazodik a
+ metrikai szerkezetet leiro rovatokhoz (METR, RIME, SYLL). Minden metrikai sornak
+ ket betuhelynyi pozicio felel meg a rovaton belu:l. A rovat hossza 200
+ betuhelynyi. Ezen a jelo:lt sornak megfeleloen a ko:vetkezo jelo:lesek
+ allhatnak:
+
+   * "+" - A sorban nincs refren
+   * "R0" - Refrenes sor
+   * "R1" - Szabalyosan valtakozo rimes refren
+   * "R2" - Idonkent refrennel ellatott sor
+   * "R3" - Szabalytalanul valtakozo refren
+   * "R4" - Metrumot nem tudunk megallapitani, de a vers refrenes szerkezetu
+     lehetett
+   * "I0" - Megismetelt sor
+
+ v164 - Echos szerkezetu-e a vers? (ECHO) Egyjegyu kodszam. Fejlesztes alatt allo
+ rovat, az 1601 elotti echos versek kicsiny szama miatt a kesobbi, 17. szazadi
+ echos versek szerkezeti csoportositasat tervezzu:k figyelembe venni. Ha nincs
+ kito:ltve a rovat, akkor a vers nem echos szerkezetu. Egyebkent a kodszamok
+ lehetseges ertekei es jelentesu:k a ko:vetkezo:
+
+   * "1" - Echos szerkezetu vers, az echos rimek a strofak vegen jelennek meg
+   * "2" - Echos szerkezetu vers, az echos rim a vers legvegen jelenik meg
+
+ v165 - A vers adatlapjanak belso hivatkozasa (BELSO CF.). Mig a CF. ENCORE rovat
+ azt a celt szolgalta, hogy a vers adatai mellett jelenjenek meg mas adatlapokra
+ to:rteno hivatkozasok is, ez a rovat arra valo, hogy a vers adatlapja
+ kapcsolodjon mas adatlapokhoz, de a megjelenitesnel ez a hivatkozas ne jelenjen
+ meg. Peldaul egy metrumvalto vers ku:lo:nbo:zo metrumait csak ku:lo:n
+ adatlapokon tudjuk tarolni. Ilyenkor a folapon (RECTYP=0) a metrumtipusnal az
+ all, hogy a vers metrumvalto (Typme=15), es a BELSO CF. rovat mutatja meg, hogy
+ hany es milyen azonositoju mellekadatlap (RECTYP=6) kapcsolodik a vershez,
+ amelyeken az egyes metrumok vannak feltu:ntetve. Hasonlo modon to:rtenik a
+ valtakozo notajelzesek adatainak tarolasa is. Ezekrol az esetekrol a
+ mellekadatlapok leirasanal (v91, RECTYP=6, RECTYP=8) volt szo reszletesebben. A
+ rovat ismetelheto, hossza 200 betuhelynyi.
+
+    1.2.2. Az adaturlap mintaval kito:ltve
+
+ Amennyiben a versek adatlapjainak rovataiban szereplo adatokat akarjuk
+ megtekinteni vagy modositani, azt egy harom kepernyos urlapon tehetju:k meg.
+ Valasszuk Bornemisza Peter mar emlitett, hires bucsuverset, es szolgaljanak
+ ennek a munek az adatai peldaul az urlap kito:ltesi modjara. Az urlap neve ALAP,
+ a rovatok az alabbi sorrendben ko:vetik egymast:
+
+ 1. kepernyooldal
+
+R 1233_ RECTYP 0 BELSO CF. _____________________________________________________
+INC Siralmas ennekem tetoled megvaltom__________________________________________
+________________________________________________________________________________
+TITRE Cantio optima_____________________________________________________________
+________________________________________________________________________________
+AUT   ^1Bornemisza^2Peter______________________________________ TRAD 1 LANOR ___
+INCOR __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+TITOR __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+AUTET __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+HYMN. __________________________________________________________________________
+AN    1556_______________________________________________ PREC 4 CHANS 2 SIGNE 1
+GENRE 048,050,053,059,115%048,050,053,059,089___________________________________
+CF.   __________________________________________________________________________
+VIDE  __________________________________________________________________________
+________________________________________________________________________________
+
+ 2. kepernyooldal
+
+R 1233_
+DEDIE __________________________________________________________________________
+COLO  1 DONCOLO ^Ljo Husztnak varaban^1Bornemisza Peto:r az o vig kedveben_______
+________________________________________________________________________________
+________________________________________________________________________________
+ACR   2 ACROST  ________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+DONACR _________________________________________________________________________
+INT    1 LON 6____________________________________________ PRE 1 ECHO _ TYPME 1_
+METR   A 12 6 6%A 12 6 6%X 13 6 7_______________________________________________
+RIME   AAX______________________________________________________________________
+SYLL   121213___________________________________________________________________
+REFREN ----R0___________________________________________________________________
+RMNY  __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+MKEVB 18:0027 P:0120-A__________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+ED-CR RMKT-7-207________________________________________________________________
+
+ 3. kepernyooldal
+
+R 1233_
+DAL-CON 0968____________________________________________________________________
+DAL-MOD 0968____________________________________________________________________
+ED-MEL  RMDT1 103SZ_____________________________________________________________
+RELSE   ^v1_____________________________________________________________________
+FACS    ________________________________________________________________________
+COMMENT ________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+
+    1.2.3. Az 1701 elotti forrasok (keziratok es nyomtatvanyok) adatlapjainak
+    felepitese
+
+ v101 - A dokumentum tipusa (TIPUS). A rovat hossza 20 betuhelynyi. A dokumentum
+ leirasat tartalmazo bibliografia ro:viditese. A lehetseges jelo:lesek es
+ jelentesu:k a ko:vetkezo:
+
+   * "MKEVB0" - 1565 elotti keziratos forras, vagy olyan kezirat, ill. keziratos
+     bejegyzes, amely nem talalhato meg az MKEVB1-gyel jelo:lt bibliografiaban.
+     Ezeknek a forrasoknak a felsorolasa megtalalhato a repertorium alapjan
+     nyomtatott ko:tetben.
+   * "MKEVB1" - Stoll Bela: A magyar keziratos enekesko:nyvek es versgyujtemenyek
+     bibliografiaja (1565-1840) cimu bibliografiajaban szereplo kezirat.
+   * "RMNY" - A Regi Magyarorszagi Nyomtatvanyok 1473-1600 cimu bibliografiaban
+     szereplo nyomtatvany.
+   * "RMK1" - Szabo Karoly: Regi magyar ko:nyvtar I. cimu bibliografiajaban
+     szereplo nyomtatvany, amely nem szerepel az RMNY ro:viditessel jelo:lt
+     ko:tetben.
+   * "RMG" - Olyan nyomtatvany, amely nem szerepel sem az RMNY-nyel, sem az
+     RMK1-gyel jelo:lt bibliografiakban. Ezek felsorolasa szinten megtalalhato a
+     repertorium nyomtatott valtozataban.
+
+ v111 - A dokumentum bibliografian belu:li sorszama (SORSZAM). A TIPUS rovatban
+ megjelo:lt bibliografiaban szereplo tetelszam szerepel itt 5 betuhelyen, amibol
+ az elso negy helyen ko:telezoen negyjegyu szamnak kell allnia (szu:kseg szerint
+ az elejen nullakkal kiegeszitve), az o:to:dik helyen pedig betu vagy szamjegy is
+ allhat, ha a bibliografia tetelszama betuvel vagy szammal van kiegeszitve. Tehat
+ (az egyenlosegjelek jobb oldalan a TIPUS es SORSZAM rovatok adatait szerepelnek
+ ko:tojellel elvalasztva):
+
+RMNY 353/2 = RMNY-03532 RMK I 256A = RMK1-0256A
+
+ v112 - A dokumentum szerzoje (SZERZO). Ha a szoban forgo nyomtatvany szerzojet
+ ismerju:k, akkor ebben a rovatban szerepel a neve, nem a folapon megszokott
+ alrovatos szerkezetben, hanem hagyomanyos alakban. Ha a kiadvany to:bb muvet
+ tartalmaz (peldaul ket historiat), es a bibliografia to:bb szerzot es cimet is
+ ko:zo:l, akkor minden esetben az elso szerzot es cimet vesszu:k figyelembe, meg
+ akkor is, ha a repertorium ezt a verset nem is tartalmazza, mert a ko:tet
+ azonosithatosaga a fontos, es a SORSZAM rovat 5. betuhelyen szereplo jelo:les
+ eligazit a kiadvany reszei ko:zo:tt. A rovat hossza 80 betuhelynyi.
+
+ v113 - A dokumentum forditoja (FORDITO). Amennyiben a kezirat vagy nyomtatvany
+ nem eredeti, hanem forditas, ugy a mu forditojanak neve szerepel itt, a SZERZO
+ rovat nevjelo:lesi gyakorlatanak megfeleloen. A rovat hossza 80 betuhelynyi.
+
+ v121 - A dokumentum uj cime (CIM_UJ). A kezirat vagy nyomtatvany szakirodalomban
+ hasznalatos elnevezese. Ha a ko:vetkezo, CIM_ER rovat nincs kito:ltve, akkor ez
+ az adat jelenik meg a dokumentum megnevezesekent, cimekent. Fejlesztes alatt
+ allo rovat. A keziratok megnevezese altalaban ebben a rovatban to:rtenik, mivel
+ a keziratoknak a legto:bbszo:r valoban nincsen kiadvanyszeru cimu:k, csupan a
+ bennu:k szereplo egyes muveknek. Az adatbazis jelenlegi allapotaban a francia
+ nyelvu ko:tethez igazodoan ezek a megnevezesek franciaul szerepelnek, de ezt a
+ jelo:lesmodot a kesobbiekben szeretnenk megvaltoztatni, magyar nyelvu jelo:lest
+ es to:bbnyelvu, segedprogram altal generalt, valaszthato megjelenitesi modot
+ tervezu:nk. A rovat hossza 200 betuhelynyi.
+
+ v122 - A dokumentum eredeti cime (CIM_ER). A kezirat vagy nyomtatvany eredeti
+ cimenek betuhiv leirasabol az elso harom szo. A to:mo:r bibliografiai
+ hivatkozasok erdekeben a cim csonkolt formaban jelenik meg, ez a rovat a cim
+ azonositasara szolgal. Fejlesztes alatt allo rovat, a kesobbiekben a cim teljes
+ alakjat tartalmazza majd, es segedprogrammal oldjuk meg a to:mo:r, haromszavas
+ megjelenitest. Mivel a megjelenites ugy to:rtenik, hogy a CIM_ER rovat tartalma
+ jelenik meg, ha a rovat ki van to:ltve, ilyenkor gyakran elofordul, hogy a
+ CIM_UJ rovat a cim teljesebb alakjat tartalmazza. Ha a kiadvany to:bb muvet
+ tartalmaz (peldaul ket historiat), es a bibliografia to:bb szerzot es cimet is
+ ko:zo:l, akkor minden esetben az elso szerzot es cimet vesszu:k figyelembe, meg
+ akkor is, ha a repertorium ezt a verset nem is tartalmazza, mert a ko:tet
+ azonosithatosaga a fontos, es a SORSZAM rovat 5. betuhelyen szereplo jelo:les
+ eligazit a kiadvany reszei ko:zo:tt. A rovat hossza 200 betuhelynyi.
+
+ v131 - A nyomtatvany nyomtatasi helye (NYOMDAHELY). Ertelemszeruen a kiadvany
+ nyomtatasi helyet jelo:li, a varos nevet magyaros alakban adjuk meg. To:bb varos
+ eseten vesszokkel valasztjuk el a helyneveket. A rovat hossza 80 betuhelynyi.
+
+ v132 - A dokumentum keletkezesi ideje (IDOPONT). A kezirat vagy nyomtatvany
+ keletkezesi idejet mutatja. Ha pontos evszamot tudunk, akkor ez all itt,
+ egyebkent az idoadat magyar nyelvu kiegeszitessel szerepel. A szo:veges resz
+ szigoruan ko:to:tt, mivel a rovat adatait segedprogram forditja idegen nyelvre
+ (a megjelent ko:tet eseteben franciara). A rovat hossza 80 betuhelynyi.
+
+ v133 - A nyomtatvanyt eloallito nyomdasz (NYOMDASZ). Fejlesztes alatt allo
+ rovat. Esetenkent mar most is kito:lto:tt. Ertelemszeruen a nyomdasz neve
+ szerepelhet itt 200 betuhelynyi hosszan.
+
+ v141 - A dokumentum mufaja (MUFAJ). Fejlesztes alatt allo rovat. Esetenkent mar
+ most is kito:lto:tt. Ertelemszeruen a kezirat vagy nyomtatvany egeszenek mufajat
+ lehet itt feltu:ntetni, szo:vegesen, 80 betuhelynyi hosszan.
+
+ v142 - A dokumentum felekezeti hovatartozasa (FELEKEZET). Ha a kezirat vagy
+ nyomtatvany felekezetileg besorolhato, akkor a felekezet magyar megnevezese
+ (katolikus, protestans, reformatus, evangelikus, szombatos, unitarius,
+ mohamedan, vilagi) szerepel itt, egyebkent kito:ltetlen. A versek adatlapjain
+ szereplo RELSE rovat a forrasoknak ezt az adatat tartalmazza o:sszesitve. A
+ rovat hossza 80 betuhelynyi.
+
+ v151 - A dokumentum orzesi helye (VAROS). Ha a forras kezirat vagy egypeldanyos
+ nyomtatvany, akkor itt adjuk meg annak a varosnak a nevet eredeti helyesirassal,
+ ahol a peldanyt orzik. A rovat hossza 80 betuhelynyi.
+
+ v152 - A dokumentumot orzo ko:nyvtar neve (KO:NYVTAR). A keziratot vagy
+ egypeldanyos nyomtatvanyt orzo ko:nyvtar neve eredeti helyesirassal. A varos
+ neve utan szerepelhet az (olim.) jelzes, mutatva, hogy a szoban forgo dokumentum
+ ma nem lelheto fel a megadott helyen. A rovat hossza 80 betuhelynyi.
+
+ v153 - A dokumentumot tartalmazo gyujtemeny (GYUJTEMENY). Ha az elozo rovatban
+ megnevezett ko:nyvtaron belu:l a dokumentum ku:lo:n gyujtemenyben szerepel,
+ akkor ennek a neve szerepel itt eredeti helyesirassal. A rovat hossza 80
+ betuhelynyi.
+
+ v154 - A dokumentumot tartalmazo ko:tet jelzete (KO:TET JELZET). Nyomtatvanyba
+ bejegyzett kezirasos forrasoknal a nyomtatvany bibliografiai leirasara utalo
+ hivatkozas (Peldaul a Szekely Istvan vilagkronikajanak lapjaira bejegyzett vers
+ eseten: RMNY 156). A rovat hossza 80 betuhelynyi.
+
+ v155 - A dokumentumot tartalmazo ko:tet megnevezese (SZO:VEGES FELOLDASA). Az
+ elozo rovatban megjelo:lt nyomtatvany szo:veges megnevezese, az adatok
+ sorrendje: szerzo, cim, megjelenesi hely, megjelenesi ido, a keziratos resz
+ helye a ko:teten belu:l. A rovat hossza 200 betuhelynyi.
+
+ v156 - A dokumentum raktari jelzete (RAKTARI JELZET). A ko:nyvtaron, illetve a
+ gyujtemenyen belu:li raktari jelzet szerepelhet itt (ha tudjuk), 12 betuhelynyi
+ hosszon. Ha a jelzet ennel hosszabb, akkor az adat esetleg a ko:vetkezo,
+ MEGJEGYZES rovatban szerepelhet.
+
+ v160 - Megjegyzesek (MEGJEGYZES). Tovabbi esetleges informaciok helye. Itt
+ szerepelhet a hosszabb raktari jelzeten kivu:l, hogy mely azonositoju, esetleg
+ kezdosoru vers szerepel a forrasban, hogy hianyos-e a leirasunk, illetve, hogy
+ miert hianyos. A megjegyzes hossza 200 betunyi lehet.
+
+    1.2.4. A forrasurlap mintaval kito:ltve
+
+ A fent ismertetett a rovatokbol allnak tehat a forrasok adatlapjai. Amikor a
+ rovatok adatait akarjuk megtekinteni vagy modositani, akkor ezt a FORR
+ elnevezesu kepernyos urlapon tehetju:k meg. A rovatok az alabbi sorrendben
+ ko:vetik egymast:
+
+tipus MKEVB1______________ sorszam 0027_
+szerzo  ________________________________________________________________
+fordito ________________________________________________________________
+cim_uj _________________________________________________________________
+cim_er Vasady-kodex_____________________________________________________
+nyomdahely _____________________________________________________________
+idopont    1613-1615 ko:ru:l______________________________________________
+nyomdasz   _____________________________________________________________
+mufaj      _____________________________________________________________
+felekezet  vilagi_______________________________________________________
+varos      _____________________________________________________________
+ko:nyvtar   _____________________________________________________________
+gyujtemeny _____________________________________________________________
+ko:t.jelzet _____________________________________________________________
+feloldasa  _____________________________________________________________
+rak.jelzet ____________ facs ___________________________________________
+megjegyzes _____________________________________________________________
+
+  1.3. A mufajfa
+
+ Repertoriumunk az egyes versek mufajait nem mint o:nallo mufajneveket tarolja,
+ hanem egy fastrukturaban helyezi el. Mivel egy vers to:bb mufajba is sorolhato,
+ a mufaji besorolast leiro mezo ismetelheto (lasd meg: 1.2.1-es fejezet, a v28
+ leirasa). A fa alapvetoen ket agu, az egyik ag a vallasos, a masik a vilagi
+ mufajokat tartalmazza. Kialakitasanal a fo tampont "A magyar irodalom
+ to:rtenete" akademiai keziko:nyv altal vazolt mufajrendszer volt, ezt modositva,
+ kiegeszitve jo:tt letre az alabbi struktura.
+
+    1.3.1. A vallasos ag
+
+[001] vallasos
+  |
+  +---[002] historia
+  |     |
+  |     +---[004] elbeszelo
+  |     |     |
+  |     |     +---[009] bibliai
+  |     |     +---[134] vilagkronika
+  |     |     +---[300] egyhazto:rteneti kivonat
+  |     |           |
+  |     |           +---[301] ko:zel kortarsi
+  |     |           +---[302] regi
+  |     |
+  |     +---[005] leiro v. ertekezo
+  |           |
+  |           +---[010] predikacios enek
+  |
+  +---[003] nem historia
+        |
+        +---[006] bibliai
+        |     |
+        |     +---[013] zsoltar
+        |     +---[014] jeremiad
+        |     +---[015] ro:vid foglalat
+        |     +---[201] drama
+        |     +---[258] Enekek eneke
+        |
+        +---[008] liturgikus vagy paraliturgikus eredetu
+        |     |
+        |     +---[016] himnusz
+        |     |     |
+        |     |     +---[124] Szent kiralyrol
+        |     |
+        |     +---[017] antifona
+        |     +---[018] szekvencia
+        |     +---[100] benedicamus
+        |     +---[102] imadsag
+        |     +---[104] szerzetesi regula
+        |     +---[125] legenda
+        |     +---[126] Maria-siralom
+        |     +---[130] Maria-enek
+        |     +---[200] cantio
+        |     +---[255] urfelmutatasi enek
+        |     +---[256] benedicamus parafrazis
+        |
+        +---[023] dogmatika
+        |     |
+        |     +---[027] kate-enek
+        |           |
+        |           +---[028] Szentharomsag-enek
+        |           +---[026] urvacsora-enek
+        |           +---[029] credo magyarazat
+        |           +---[030] Miatyank-enek
+        |           +---[031] Tizparancsolat-enek
+        |           +---[039] vallastetel
+        |           +---[107] hitvita
+        |           +---[202] doxologia
+        |
+        +---[024] alkalmi enek
+        |     |
+        |     +---[032] hazasenek
+        |     +---[033] keresztelesi enek
+        |     +---[034] bo:lcsodal
+        |     +---[035] temetesi enek
+        |     +---[257] asztali aldas
+        |     +---[259] utonjarok eneke
+        |
+        +---[025] mindennapi v. u:nnepi lelki enek
+        |     |
+        |     +---[036] dicseret
+        |     +---[037] halaado enek
+        |     +---[038] ko:nyo:rges
+        |     +---[043] hivok biztatasa
+        |     +---[040] Szentlelek invokacio
+        |     +---[041] tanulsag
+        |     +---[044] siralom
+        |     +---[101] halalrakeszito
+        |     +---[042] jo keresztenyi cselekedetre into enek
+        |     +---[045] hivok vigasztalasa
+        |     +---[047] a vilag hiabavalosagarol
+        |     +---[260] rabenek
+        |
+        +---[103] muzulman
+        +---[123] bajolo, varazsige
+        +---[203] emblema
+
+    1.3.2. A vilagi ag
+
+[048] vilagi
+  |
+  +---[049] historia
+  |     |
+  |     +---[051] elbeszelo
+  |     |     |
+  |     |     +---[056] nem fiktiv
+  |     |     |     |
+  |     |     |     +---[068] to:rtenelmi
+  |     |     |     +---[069] kortarsi, tudosito
+  |     |     |
+  |     |     +---[057] fiktiv
+  |     |
+  |     +---[052] leiro v. ertekezo
+  |
+  +---[050] nem historia
+        |
+        +---[053] moralis v. politikai
+        |      |
+        |      +---[058] arisztokratikus regiszter
+        |      |     |
+        |      |     +---[086] katonaenek
+        |      |
+        |      +---[059] popularis v. vagans regiszter
+        |      |     |
+        |      |     +---[074] naptarvers
+        |      |     +---[087] hegedos enek
+        |      |     +---[088] vagans szatira
+        |      |     +---[089] politikai propaganda
+        |      |     +---[115] utazasi vers
+        |      |     +---[127] jogszabaly
+        |      |     +---[128] jatek
+        |      |     +---[129] csizio
+        |      |     +---[212] mezogazdasagi ko:ltemeny
+        |      |
+        |      +---[061] humanista iskolai regiszter
+        |            |
+        |            +---[090] episztola dedicatoria
+        |            +---[091] tanulsag, fabula
+        |            +---[092] idezet
+        |            +---[093] epigramma[R], sententia[I]
+        |            +---[095] epicedium
+        |            +---[109] emblema
+        |            +---[120] Horatius-parodia
+        |
+        +---[054] szerelmes, erotikus
+              |
+              +---[063] arisztokratikus regiszter - udvari
+              |     |
+              |     +---[076] partimen
+              |     +---[077] emblema
+              |     +---[078] szerelmi ko:szo:ntes
+              |     +---[080] to:ro:k bejt forditasa
+              |     +---[081] aenigma
+              |     +---[118] misszilis level
+              |     +---[210] epigramma
+              |     +---[211] udvari drama
+              |
+              +---[064] popularis regiszter
+              |     |
+              |     +---[082] noi dal
+              |     +---[083] latrikanus vers
+              |     +---[084] gab
+              |     +---[119] alba
+              |     +---[121] tancdal
+              |
+              +---[066] humanista iskolai
+
+2. Kereses
+
+ Az urlapok adatait egyesevel a kepernyon is megtekinthetju:k, de akarcsak a
+ repertorium ko:nyvbeli valtozataban, csakis egyfajta rend szerint felsorolva. A
+ ko:nyvben az incipitek abecerendje a vezeto szempont, a szamitogepes valtozatban
+ az urlapok belso azonositoszama (MFN). Ahhoz, hogy egy vers urlapjat
+ elokeressu:k, vagy hogy adott modon kito:lto:tt rovatu versek egy csoportjat
+ kivalogassuk, az ISIS keresesi eljarasait kell hasznalnunk. Ennek reszletes
+ ismertetese az ISIS felhasznaloi keziko:nyveben talalhato. Lenyegeben ket,
+ egymastol fokent a vegrehajtas sebessegeben ku:lo:nbo:zo modszert hasznalhatunk.
+ A szabad szo:veges kereses ugyan lassu, de az adatbazisban talalhato minden
+ informacio keresheto vele; az inverz fajl hasznalataval to:rteno kereses csak a
+ keresesre elokeszitett rovatokra alkalmazhato, majdnem minden rovat ilyen, es ez
+ az eljaras kellokeppen gyors is. Peldakon keresztu:l mutatjuk be mindket
+ modszert, kiegeszitve meg a keresoelemek szotaranak hasznalataval is.
+
+  2.1. Szabad szo:veges kereses
+
+ Az elozo fejezetben felsoroltuk a versek, illetve a dokumentumok adatlapjainak
+ rovatait. A felsorolas tartalmazta a rovatok azonosito szamat is. Ha az ISIS
+ keresomenu:jeben a Search (S) pontot valasztjuk, akkor az azonosito szamok
+ segitsegevel rakerdezhetu:nk barmelyik rovat tartalmara. A szabad szo:veges
+ keresest mindig egy kerdojellel (?) kezdju:k, majd a kerdeses rovat azonositojat
+ irjuk le. Egy kettospontot (:) ko:vetoen aposztrofok (') ko:zo:tt megadhatjuk a
+ kerdeses jelsorozatot, akar betukrol, akar szamokrol van szo. Korabbi peldankban
+ Bornemisza Peter bucsuverse szerepelt. Tegyu:k fel tehat, hogy ennek adatai
+ alapjan arra vagyunk kivancsiak, hogy mely verseket szereztek meg Huszton. Arra
+ gondolva, hogy ezt az informaciot a kolofon adatai tartalmazzak,
+ megkerdezhetju:k, hogy mely adatlapok DONCOLO rovataban fordul elo a 'Huszt'
+ betusorozat. A keresesi urlapra ekkor a ko:vetkezo kerdes keru:l:
+
+? v32:'Huszt'
+
+ A szamitogep ekkor elokeresi a belso azonositok rendjeben az o:sszes adatlapot,
+ es o:sszeveti a szoban forgo rovat tartalmat a keresett jelsorozattal. Ha talal
+ megfelelo adatlapot, akkor ezt kijelzi. Miutan a gep a keresest befejezte (ez az
+ adatbazis merete miatt lassu gepen percekbe telhet), a kereses folyaman
+ megtalalt adatlapokat megjelenithetju:k kepernyon (D), kinyomtathatjuk, vagy
+ tarolhatjuk kesobbi nyomtatas celjara (P). Valasztott peldankban a szamitogep
+ harom verset fog kivalasztani. A teljes adatlap megjelenitese helyett a
+ to:mo:rebb es attekinthetobb nyomtatasi kepet eredmenyezo
+
+ v1,x1,v2,c6,v5^1," "v5^2,': ',v3,c6,v32^l
+
+ megjelenito formatumot hasznaljuk. Ennek felepiteserol a ko:vetkezo fejezet
+ szol. A harom vers adatai a ko:vetkezokeppen jelennek meg a kepernyon:
+
+   0332 En mostan beszelem a romaiakat Huszti Peter: Aeneis 1171 Panaszolkodunk
+   most orszagunknak ily nagy pusztasagan Bornemisza Peter: Cantio Szent Janos
+   latasarol Husztnak varaban 1233 Siralmas ennekem tetoled megvaltom Bornemisza
+   Peter: Cantio optima jo Husztnak varaban
+
+ Amint lathatjuk, bekeru:lt egy olyan vers is a harom ko:ze, amelyet nem Huszton
+ szereztek, de a kolofonban megis szerepel a 'Huszt' betusorozat, a szerzo
+ nevenek reszekent. Vagyis nem kerdeztu:nk kelloen pontosan. A nem kivant vers
+ szerepelteteset a valaszban kiku:szo:bo:lhettu:k volna, ha a keresokerdesben v32
+ helyett v32^l alakot irunk. A pelda azt is mutatja, hogy a szabad szo:veges
+ keresesnel az ISIS formatumnyelven megfogalmazva barmilyen kerdest feltehetu:nk.
+ Kerdeseinket kombinalhatjuk, hasznalhatjuk a logikai 'es' (*), 'vagy' (+), 'nem'
+ (^) muveleteket. A rovat szukitesere (alrovat hasznalatara) lattunk peldat,
+ megforditva is eljarhatunk, az S-fu:ggveny segitsegevel tetszoleges rovatokat
+ o:ssze is vonhatunk. Egy-egy kerdes megvalaszolasara jol hasznalhato a
+ bemutatott eljaras, sokszoros ismetlese azonban nagyon hosszadalmas, mivel a
+ szamitogep minden ujabb kerdesnel eloro:l kezdi az adatlapok vizsgalatat. A
+ gyorsabb kereseshez az inverz file hasznalata szu:kseges.
+
+  2.2. Kereses az inverz file hasznalataval
+
+ Az adatbazisra vonatkozo kerdeseink altalaban egy-egy rovat tartalmara
+ vonatkoznak, vagy ilyen kerdesek logikai muveletekkel valo o:sszekapcsolasaval
+ allithatoak elo. Ha tehat a rovatok tartalmabol ku:lo:nbo:zo mutatokat
+ keszitu:nk, akkor a kerdezeskor elegendo ezek alapjan elokeresni a megfelelo
+ adatlapokat, es nem szu:kseges ujbol es ujbol az o:sszeset atvizsgalni. Az ISIS
+ altal hasznalt inverz file nem mas, mint egy ilyen, sokszempontu mutato.
+ Tulajdonkeppen minden rovat szerint el lehetne kesziteni a keresest segito
+ tablazatot, de erre valojaban nincs szu:kseg. A COMMENT rovat abecebe rendezese
+ peldaul nyilvan teljesen felesleges. A felhasznalora van bizva, hogy mit itel
+ fontos es ezert keresotablazatba foglalando rovatnak. A repertorium
+ felepitesekor szinte minden rovatot ilyennek tekintettu:nk. Az ISIS a
+ ku:lo:nbo:zo tablazatokat egyetlen nagy listaban, az inverz file-ban tarolja.
+ Hogy a ku:lo:nbo:zo szempontokat elku:lo:nithessu:k, a ku:lo:nbo:zo rovatok
+ adatait mas es mas bevezeto betusorral jelo:ltu:k. Peldaul a vers szerzojenek a
+ neve elott az AUT= jel all, a vers forrasaul szolgalo mu szerzojenek neve elott
+ AUTET=, a dedikacioban szereplo szemelyek neve elott pedig a DEDIE=. Ezeket a
+ bevezeto jeleket az ISIS-ben prefix-nek nevezik. Ezek a legto:bbszo:r
+ megegyeznek a rovatok urlapokon szereplo elnevezeseivel, de nem mindig, es nem
+ pontosan ugyanaz az informacio all mo:go:ttu:k. Az elteres oka egyreszt az, hogy
+ a kerdezes termeszetes szempontjai nem egyeznek meg mindig a tarolasnal
+ ko:vetett elvekkel, masreszt kerdeseink to:bb rovat adatara vagy egy rovatnal
+ kisebb reszre is vonatkozhatnak. Az alabbiakban felsoroljuk az altalunk hasznalt
+ prefixeket:
+
+   * INC -- A versek kezdosorai elott all. Nem azonos teljesen a v2 rovat
+     tartalmaval, mert a ko:nnyebb kereshetoseg vegett a ko:zpontozast
+     megszu:ntettu:k. Csak a foadatlapok incipit-rovatai tartoznak ide, a
+     notajelzesek, mellekadatlapok kezdosorai nem. Ha egy versnek nincsen
+     incipitje, akkor a keresotablazatban a cimevel szerepel.
+   * TITRE -- A versek cimeit vezeti be. Csak a folapok cimrovatai tartoznak ide,
+     a mellekadatlapoke nem. A ko:zpontozast itt is megszu:ntettu:k.
+   * AUT -- A versek szerzoinek neve elott szerepel. A nevet itt hagyomanyos
+     alakban tu:ntetju:k fel, vezeteknev, keresztnev sorrendben. A
+     bizonytalansagra utalo kerdojelet a nevvel egyu:tt nem szerepeltetju:k (az
+     egyertelmu kerdezhetoseg vegett), viszont ku:lo:n kerdezheto a
+     bizonytalansagra utalo jel nev nelku:l (AUT=?). A to:bbszerzos muvek szerzoi
+     ku:lu:n-ku:lo:n kerdezhetoek.
+   * NJ -- A csak notajelzesben szereplo kezdosorok elott all. Amennyiben a
+     szoban forgo versnek nem ismert a kezdosora, ugy a cim ko:veti a jelet. A
+     ko:zpontozast megszu:ntettu:k.
+   * TRAD -- A forditasra utalo kodszam prefixe.
+   * INCOR -- A mintaul szolgalo muvek kezdosorai elott szerepel.
+   * TITOR -- A mintaul szolgalo muvek cimei elott all.
+   * HYMNUS -- A himnuszkatalogusok adatait vezeti be.
+   * AUTET -- A mintaul szolgalo muvek szerzoinek neve elott all. A nevet
+     hagyomanyos alakban, vezeteknev, keresztnev sorrendben kereshetju:k. A
+     bizonytalansagra utalo kerdojelet a nevvel egyu:tt nem szerepeltetju:k (az
+     egyertelmu kerdezhetoseg miatt), viszont ku:lo:n kerdezheto a
+     bizonytalansagra utalo jel nev nelku:l (AUTET=?). To:bbszerzos muvek eseten
+     a szerzok nevei ku:lu:n-ku:lo:n kerdezhetoek.
+   * LANOR -- A forditas alapjaul szolgalo nyelv ro:viditesei elott all.
+   * AN -- A versek szereztetesi datumaban szereplo evszamok elott all. Ezt az
+     informaciot a ko:vetkezo, pontosito adattal egyu:tt celszeru kezelni, es a
+     lekerdezesnel is o:sszetett kerdest kell megfogalmazni.
+   * PREC -- A szereztetesi datumhoz kapcsolodo, pontosito meghatarozas kodjai
+     elott all.
+   * CHANS -- Az enekeltsegre vonatkozo kodszam prefixe.
+   * SIGNE -- A szignaltsag modjara vonatkozo kodszamok elott szerepel.
+   * LEVEL -- A versek mufajt leiro kodlancainak zaro kodszamai elott all. Vagyis
+     ku:lo:n kerdezhetoek a legalacsonyabb szintu mufaji o:sszetevok kodjai, a
+     mufajfa levelei.
+   * GENRE -- A versek mufajt leiro kodlancaiban tetszoleges helyen szereplo
+     kodszamok elott szerepel. Vagyis a mufajleirasban hasznalt barmely
+     o:sszetevo kodja ku:lo:n kerdezheto, a mufajfa gyo:kere, elagazasi pontjai
+     es levelei egyarant.
+   * COLO -- A kolofon letezesre utalo kodszam elott all. A kolofon adatira csak
+     szabad szo:veges kerdeseket tehetu:nk fel, mert a nagyon eltero szerkezetu
+     informaciokat nincs ertelme tablazatosan o:sszegyujteni.
+   * DEDIE -- A dedikacioban szereplo nevek prefixe.
+   * ACR -- Az akrosztichon megletere utalo kodszam elott szerepel. Az
+     akrosztichon szo:vege es a benne talalhato adatok (hely, ido, szerzo) csak
+     szabad szo:veges keresessel erhetoek el, mert eltero szerkezetu:k miatt a
+     tablazatos tarolasnak nincsen ertelme.
+   * INT -- A szo:veg teljessegere utalo kodszam elott all.
+   * LON -- A vers terjedelmet jelzo meroszamok elott szerepel. Csak a
+     ko:vetkezo, mertekegyseget jelo:lo adattal egyu:tt alkot korrekt
+     informaciot, o:sszetett kerdessel kerdezheto.
+   * PRE -- A terjedelem mertekegyseget jelzo kodszamok elott szerepel.
+   * TYPME -- A metrumtipusok kodszamai elott all. A metrumok, ku:lo:nbo:zo
+     szerkezetu jelo:lesmodjuk miatt egeszu:kben nem kerdezhetoek. Ha a
+     metrumtipusbol ko:vetkezoen van rim- es szotagszam-jelo:les (metrumkeplet),
+     akkor a ko:vetkezo ket adatra kerdezhetu:nk, es logikai 'es' muvelettel
+     kapjuk meg a versek kivant csoportjat.
+   * RIME -- A versek metrumkepleteben elofordulo rimjelo:lo betusorok elott all.
+   * SYLL -- A versek metrumkepleteben elofordulo szotagszamjelo:lo szamsorok
+     elott szerepel.
+   * MEL -- A versek dallamkiadasara vonatkozo adatok elott szerepel.
+   * CR -- A versek modern kiadasat jelzo adatok elott all.
+   * FACS -- A versek vagy a dokumentumok fakszimile kiadasara utalo
+     bibliografiai adatok elott szerepel.
+   * DAL-CON -- A notajelzeskent elofordulo 1601 elotti versek R-szamai elott
+     all.
+   * RECTYP -- Az adatlap tipusat jelo:lo kodszam prefixe. Nagyon fontos
+     kerdezesi szempont! A 0 ertek lekerdezesevel tudjuk elku:lo:niteni a
+     foadatlapokat a to:bbitol. Ez egyreszt a korrekt valaszok miatt fontos,
+     masreszt idotakarekossag is, hiszen felere cso:kkenti a vizsgalatba vont
+     urlapok szamat. Ugyanigy vonatkoztathatjuk kerdeseinket peldaul a
+     dokumentumok urlapjaira, stb.
+   * TIP -- A dokumentum tipusanak ro:viditesei elott all.
+   * HELY -- A dokumentumok keletkezesi helye elott all.
+   * IDO -- A dokumentumok keletkezesi ideje elott all.
+   * FEL -- A dokumentumok felekezeti hovatartozasanak jelo:leset vezeti be.
+   * CF. -- A versek CF. ENCORE rovataiban szereplo, resz-egesz viszonyra utalo
+     R-szamok elott szerepel.
+   * VIDE -- A versek VIDE rovataban szereplo, azonos forrasra utalo R-szamok
+     elott szerepel.
+   * REFR -- A versek refrenes voltat jelo:lo kodszam elott all.
+   * ECHO -- A versek ekhos voltat jelo:lo kodszam elott szerepel.
+   * BCF. -- A to:bb urlapon nyilvantartott versek azonosito R-szamai elott
+     szerepel.
+
+ Egyaltalan nem kapnak prefix jelo:lest a versek R-szamai. Az inverz file
+ szotaraban szerepelnek, de mindenfele bevezeto jelo:les nelku:l, csupan a v1
+ rovat erteket feltu:ntetve. Azert celszeru igy kezelni az azonositokat, mert ez
+ a leggyakrabban kerdezett rovat; az urlapok mas rovataiban is az R-szamokat
+ hasznaljuk ro:vid utalokent, ku:lo:nbo:zo listakon, felsorolasokban is az
+ R-szamokat adjuk meg. A megjelenitest vegzo segedprogramok ku:lo:nbo:zo
+ utalasoknal (CF.ENCORE, BCF., VIDE), notajelzeseknel (DAL-MOD, DAL-CON)
+ fordulnak az inverz file-hoz, es R-szam szerinti keresest vegeznek.
+ Hasonlokeppen bevezeto betusor nelku:l keru:ltek invertalasra a versek
+ elofordulasanak bibliografiai adatai, es a dokumentumok azonositasara szolgalo
+ tipus- es sorszam-adatok. Ezeket fokent a megjelenito segedprogramok hasznaljak,
+ az inverz file-on keresztu:l teremtenek kapcsolatot a versek es a dokumentumok
+ ko:zo:tt. Itt emlitju:k meg, hogy a gyors keresest (pl. az R-szam szerinti
+ kivalasztast) elosegitendo, ket specialis billentyu is hasznalhato az adatbazist
+ kezelo programban. Barmelyik menu:ben allva, az F9 billentyu lenyomasaval a
+ Keresokerdes megfogalmazasa urlapjara keru:lu:nk, s ezt kito:ltve az F10
+ billentyuvel a keresett urlapok valnak szerkeszthetove.
+
+ Az inverz file tartalma harom modon is megtekintheto. Az Inverzfile kezelese
+ menu:ben kerhetu:nk listat rola, de ez nem celszeru, mert a teljes lista nagyon
+ hosszu, es joreszt erdektelen adatokat tartalmaz a felhasznalo szamara.
+ Praktikusabb a Kereses, megjelenites menu: szotart megjelenito pontjat (T)
+ hasznalni. Itt a prefix megadasa utan lapozhatunk a szotarban, megtekinthetju:k
+ az elofordulo kodokat, illetve szo:veges reszeket, termeszetesen csupan 30
+ betuhelynyi hosszan (ez indokolta a viszonylag ro:vid prefixek alkalmazasat). Az
+ ISIS felhasznaloi keziko:nyveben leirt modon keresokerdesek megfogalmazasara is
+ hasznalhatjuk a szotart. A harmadik lehetoseg egy specialis segedprogram
+ hasznalata.
+
+  2.3. A SYLL program hasznalata
+
+ A SYLL nevu program inditasahoz az ISIS fomenu:jeben a Felhasznaloi
+ segedprogramok pontot kell valasztanunk (A), majd a Futtatas funkciot (R), es a
+ SYLL nevet kell megadnunk. Ekkor az elobbi pontban felsorolt prefixek ko:zu:l
+ valaszthatunk, es ennek megfeleloen a gep a kepernyore listazza a inverz file
+ szotar-reszet, es minden szotari elem utan grafikusan is abrazolja az adott
+ tetelhez kapcsolodo urlapok mennyiseget. O:t-o:t verset vagy dokumentumot
+ szimbolizal egy-egy vonal az abran, igy a ku:lo:nbo:zo szotari egysegek aranya
+ szemleletesen, oszlopgrafikon formajaban tekintheto meg. Erdemes kiprobalni,
+ mert noha mindig csupan egyetlen szempont szerinti bo:ngeszest tesz lehetove a
+ program, sokkal gyorsabb, mint a keresokerdesek megfogalmazas utjan valo
+ tajekozodas. Ko:nnyen valaszolhatunk olyan tipusu kerdesekre igy, amik azt
+ tudakoljak, hogy egy adott szempont szerint milyen fajta versbol van a legto:bb.
+ Peldaul: Melyik a legnepszerubb rimkeplet, szotagszamforma? Ki irta a legto:bb
+ verset? Kitol forditottak, es kitol a legto:bbet? Melyik a leghosszabb vers? Es
+ igy tovabb... A program hasznalata soran u:gyelnu:nk kell arra, hogy az egy-egy
+ szempont szerinti kereses nem mindig korrekt modszer, peldaul a versek
+ keletkezesi idopontjanak attekintesekor (prefix: AN=) vegyesen kapjuk meg a
+ ku:lo:nbo:zo pontosito kodokkal egyu:tt ervenyes evszamokat. Egy-egy attekintes
+ utan, vagy ko:zben az X billentyuvel szakithatjuk meg a grafikonrajzolast, es
+ igy fejezhetju:k be a program hasznalatat is.
+
+  2.4. To:bbszempontu keresesek
+
+ Az adatbazis igazi felhasznalasi formaja a celiranyos, to:bbszempontu kereses.
+ Ilyenkor a kerdezo megprobal olyan kerdessorozatot megfogalmazni, amely egyre
+ szukiti a megfelelo versek csoportjat, mig vegu:l kelloen kis szamu vershez nem
+ jut. Ezer vers adatait nehez attekinteni, de meg husz vers is sok lehet, ha nem
+ csupan egyetlen szempontot vizsgalunk. Az a valasz azonban, amely egy jol
+ megfogalmazott keresesi sorozat vegen csupan nehany verset eredmenyez, nagyon
+ beszedes lehet. Numerikus adatok eseten egy statisztikai korrelacio-vizsgalat
+ jellemezhet egy adatbazist. Vegyes es szo:veges adatok eseten, mint amilyen ez
+ is, az o:sszefu:ggesek feltarasa sokkal o:sszetettebb feladat. Az iment
+ megfogalmazott szukito kereses a nem nyilvanvalo (nem trivialis) gyenge
+ o:sszefu:ggesek feltarasa. Ket peldat mutatunk be kedvcsinalonak, es ezzel
+ egeszitju:k ki az ISIS felhasznaloi keziko:nyvenek keresesi strategiakat
+ bemutato reszet. Tudjuk, hogy az 1601 elotti magyar versek ko:reben a hymnus
+ mufaj nagyon gyakori. A mufaj kodjara rakerdezve (LEVEL=016) kideritheto, hogy
+ repertoriumunkban 137 db verset minositettu:nk igy. Azt is tudjuk, hogy e
+ mufajnak legnepszerubb versformaja a negysarku 8-as. Ilyen formaju vers (NUMSE=
+ 8 8 8 8) 119 db van az adatbazisban. Olyan vers, ami mindket ismervnek eleget
+ tesz (#1 * #2) 74 db. Ez a szam igen magas, a korrelacio nagyfoku, az informacio
+ elore sejtheto, nem tul izgalmas, mondhatni: erdektelen. Am ha a forditott
+ kerdest tesszu:k fel, hogy hany olyan hymnus van, ami nem ilyen versformaju,
+ hanem mondjuk negysarku 12-es (NUMSE=12121212), akkor ro:gto:n izgalmas
+ eredmenyhez jutunk. A negysarku 12-esek szama (115 db) ugyancsak magas, hiszen
+ peldaul a historias enekek egyik kedvelt formaja. A hymnusok es a negysarku
+ 12-esek halmaza azonban alig erintkezik! Tegyu:k fel a
+
+ LEVEL=016 * NUMSE=12121212
+
+ kerdest, es a szamitogep azonnal jelzi, hogy csupan egyetlen(!) ilyen 1601
+ elotti magyar verset ismeru:nk. Hogy melyik ez a vers, az a D billentyu
+ lenyomasa utan megtekintheto. Masodik peldankban szinten a szotagszamok jatsszak
+ a foszerepet. Vegyu:k szemu:gyre Balassi Balint egyik kedvelt versformajat, a
+ Palko notajat. Ennek szotagszamai 12, 12, 6, 12. Mivel tudjuk, hogy Balassi
+ to:bb verset is irt ebben a formaban, kerdezzu:nk ugy, hogy ezek a versek eleve
+ hianyozzanak a listarol:
+
+ NUMSE=1212 612 ^AUT=Balassi Balint
+
+ A valaszkent kapott verseket szemu:gyre veve megallapithato, hogy a Palko
+ notajan kivu:l, melyet epp Balassi verseinek notajelzeseibol ismeru:nk, csupan
+ ket helyrol bukkan elo ez a forma, Rimay Janos ko:lteszetebol, es Ujvary
+ Mihalyebol. Az elso nev varhato volt, a masodik, ezek szerint talan szinten
+ Balassi-ko:veto poeta neve azonban egyaltalan nem. A ket pelda csupan izelito,
+ tovabbi, ma meg rejtett o:sszefu:ggesek versek, szerzok, mufajok es formak
+ ko:zo:tt feltarasra varnak, a felhasznalon mulik csupan, hogy milyen modon
+ kerdez.
+
+3. Az adatok megjelenitese, rendezese, nyomtatasa
+
+  3.1. Megjelenites
+
+ A repertoriumban talalhato adatok legegyszerubben a kepernyon tekinthetoek meg,
+ az ISIS adatbeviteli urlapjain. Ezek leirasat az elozo pontban reszleteztu:k. Ez
+ a mod ugyan gyors, de az adatok nyersen, nem olvashato modon keru:lnek elenk.
+ Megnezhetju:k a versek adatait abban a formaban is, ahogyan a repertorium
+ nyomtatott valtozataban szerepelnek. Ehhez a Kereses, megjelenites menu:ben kell
+ a D, ill. B funkciot valasztanunk. Ha nem modositottuk elozoleg a megjelenitesi
+ formatumot, akkor az ALAP nevu formatum van ervenyben, es ez a versek ko:zel
+ teljes leirasat adja, francia nyelven, tagolva, szerkesztett alakban. A
+ korabbiaknak megfeleloen legyen most is Bornemisza Peter bucsuverse a peldank,
+ ez a ko:vetkezo alakban jelenik meg a kepernyon:
+
+1233 Siralmas ennekem tetoled megvaltom -- Cantio optima
+
+                   H i s t o i r e   l i t t e r a i r e
+
+Signe par Bornemisza Peter, sans dedicace. Sans acrostiche. Colophon
+registrant les circonstances de la composition; le lieu: jo Husztnak varaban;
+l'auteur: Bornemisza Peto:r az o vig kedveben. Compose environ 1556.
+
+                        M e t r e   e t   g e n r e
+
+Metre strophique syllabo-tonique, chante. Son modele melodique: Mindenek
+meghalljak es jol megtanuljak (968). Modele melodique du poeme suivant:
+Mindenek meghalljak es jol megtanuljak (968). Texte integral comprenant 6
+strophes. Refrain. Structure strophique:
+
+                   a12(6,6), a12(6,6), X13(6,7)
+
+Qualifications posteriures: poeme profane -- non presente comme histoire --
+moral ou politique -- du registre popularisant ou vagant -- d'un refugie ou
+d'un pelerin; poeme profane -- non presente comme histoire -- moral ou
+politique -- du registre popularisant ou vagant -- de propagande politique.
+
+                         B i b l i o g r a p h i e
+
+Source manuscrite: Vasady-kodex, environ 1613-1615 {profane} (S 27) p. 120.
+Edition moderne: RMKT-7-207.
+Edition de la melodie: RMDT1 #103.
+
+ Ez a forma kepernyon jelenik meg, de az ISIS ugyanezt nyomtatora is ku:ldheti,
+ vagy a nyomtatasi kepnek megfeleloen lemezre teheti, vagyis mas
+ szo:vegszerkeszto programmal is folytathato a munka, ill. a nyomtatas. Ehhez a
+ Nyomtatas/Rendezes menu:ben a nyomtatasi urlap rovatban a @ALAP nevet kell
+ megadni, es az ISIS nyomtatasi eljarasat ko:vetni. Eltekintve attol, hogy az igy
+ megjeleno informacio esetleg tulsagosan is boseges (bar ez is lehet zavaro), az
+ ilyen megjelenites nehezkes is lehet. Az o:sszes adat elokeresese, kivaltkeppen
+ az adatlapok ko:zo:tti kapcsolatra epu:lo informacioknal (notajelzesek, forras
+ dokumentumok, mellekadatlapok rovatai) lassu muvelet, sok vers eseteben jelentos
+ idomegtakaritas erheto el a megjelenitesi mod egyszerusitesevel. Masreszt sok
+ vers eseteben a felsorolas jellegu nyomtatasi kep a megfelelo, olyan lista
+ praktikus, amin csupan nehany rovat tartalma van feltu:ntetve. Ezert most azt
+ mutatjuk be, hogyan allithato elo olyan megjelenitesi formatum, amely az
+ adatlapok reszleges megjelenitesere valo. Tegyu:k fel, hogy a vers adatainak
+ megjelenitesekor csupan a ko:vetkezo informaciokra van szu:ksegu:nk: azonosito
+ szam, kezdosor, akrosztichon. Ezeket az adatokat a v1, v2, v34 rovatok
+ tartalmazzak, vagyis az R, INC, es ACR nevu rovatok. Elsokent lepju:nk a
+ Kereses, megjelenites menu:be, majd valasszuk a Megjelenito formatum valtas
+ menu:pontot. To:ro:lju:k le a kepernyon lathato ALAP nevu formatumot (F6), es
+ irjunk helyette masikat:
+
+v1,x1,v2/,v34//
+
+ Ebben a jelo:lesben felsoroltuk a megjeleniteni kivant mezoket, az x1 egy
+ szoko:z kihagyasat, a to:rtjel (/) uj sor kezdeset jelenti. Az uj megjelenitesi
+ formatum hatasara az ISIS ezek utan csak a kivant rovatok tartalmat ku:ldi
+ kepernyore vagy nyomtatora. Peldaul Balassi Balint Csak bubanat, immar kezdetu
+ verse eseteben ez szerepel majd a kepernyon:
+
+0220 Csak bubanat immar hagyatott ennekem, kiben elfogy eletem CHAK BORBALAERT
+
+ Termeszetesen a pelda a leheto legegyszerubb volt. Azoknak az adatoknak a
+ megjeleniteset ugyanis, ahol kodszamok, ro:viditesek szerepelnek, specialis
+ megjelenito programok vegzik. Ezek muko:deset itt nem targyalhatjuk,
+ felhasznalasuk modja megvizsgalhato az ALAP nevu formatum vizsgalataval. Ezek a
+ programok a PROG alko:nyvtarban talalhatok, Pascal nyelven keszu:ltek. Itt most
+ csupan felsorolasukra, es a parameterek ismertetesere vallalkozhatunk.
+ Hasznalatukkor u:gyelni kell arra, hogy csak kito:lto:tt rovat eseten adnak
+ ertelmes eredmenyt, tehat a programok hivasa elott a formatumban ellenorizni
+ kell a rovat letezeset.
+
+ BOOKD -- A v51 (RMNY) es v52 (MKEVB) rovatok kodszamai alapjan elokeresi a
+ megfelelo forrasadatlapot, es annak alapjan a dokumentum ro:vid cimet,
+ keletkezesi helyet es idejet, felekezeti besorolasat, oldalszamjelo:leset es a
+ fakszimile kiadasra valo esetleges utalast tartalmazo bibliografiai tetelleirast
+ allit elo. Mivel a dokumentumok adatait ket rovat tartalmazhatja (RMNY, MKEVB),
+ es ezek ismetelheto rovatok, a programot mindket mezore es minden elofordulasra
+ meg kell hivni. A program hivasakor at kell adni az aktualis adatlap ISIS-ben
+ hasznalt azonositojat (MFN), a szoban forgo rovat jelo:leset es a rovat szoban
+ forgo tetelenek elso 19 betuhelynyi tartalmat. Javasolt alkalmazasi mod (az elso
+ sor a keziratok, a masodik a nyomtatvanyok bibliografiai hivatkozasat allitja
+ elo):
+
+(|, |+d52,&bookd(mfn(4),|v52=|v52.19))
+(|, |+d51,&bookd(mfn(4),|v51=|v51.19))
+
+ CODED -- Altalanos kodfeloldo segedprogram. A v22 (PREC), v23 (CHANS), v24
+ (SIGNE), v30 (COLO), v33 (ACR), v41 (TEXT), v44 (TYPME) rovatok kodszamait
+ alakitja francia nyelvu szo:vegge. A programok az ALAP nevu formatum igenyeiihez
+ igazodnak, tehat az ott megkivant alakot produkaljak (kis/nagybetus kezdes,
+ szo:vegresz utani irasjel, esetleg grammatikailag hianyos szerkezet, stb.).
+ Hsznalatukkor vagy az ALAP formatumhoz igazodjunk, vagy a programot alakitsuk
+ at. A program hivasakor at kell adni a szobanforgo rovat jelo:leset es a rovat
+ tartalmat. Javasolt alkalmazasi mod:
+
+&coded('v24='v24)
+
+ HYMND -- A v14 (HYMN) rovat jelo:lesenek alapjan a himnuszrepertoriumok
+ nyomtatasban szokasos ro:viditett jelo:lesmodjara ter at. Mivel a rovat
+ ismetelheto, minden elofordulasra meg kell hivni. Javasolt hasznalati mod:
+
+(|, |+d14,&hymnd(v14))
+
+ MEGOD -- A v48 rovat (RELSE) adatai alapjan a forrasok felekezeti megoszlasat
+ ismerteto francia nyelvu mondatot keszit, ha a forrasok szama nagyobb egynel. A
+ forrasprogram szo:veges reszet atirva, majd a programot az ISIS szabalyainak
+ megfeleloen ujraforditva ez a mondat mas nyelvre u:ltetheto. Javasolt hasznalati
+ mod:
+
+&megod(v48)
+
+ METRD -- A v45 (METR) rovat metrumkeplet jelo:lese alapjan a szokasos (kisbetus,
+ vesszokkel elvalasztott, u:temezest zarojelben elku:lo:nito) jelo:lest alakitja
+ ki. A program figyelembe veszi a v163 (REFR) rovat adatait is, ha a vers
+ refrenes, akkor a jelo:lesben a megfelelo helyeken a szokasos nagybetus
+ jelo:lesmodra ter at. A program hasznalatakor u:gyelni kell arra, hogy a METR
+ rovat nem csak olyankor nincs kito:ltve, ha nem adtunk metrumkepletet, az is
+ elofordulhat, hogy a vers metrumvalto es igy a metrumjelo:lesek a foadatlap
+ helyett a mellekadatlapokon vannak. A teljes diszkusszio az ALAP nevu
+ formatumban tekintheto meg. Letezo metrumjelo:les egyszeru megjelenitesere
+ javasolt forma:
+
+&metrd(v45)
+
+ MUF1D -- A v28 (GENRE) rovat egy mufajlancanak dekodolasat vegzi a vallasos
+ mufajlancok eseteben (ezek elso kodszama mindig 001). Mivel a v28 ismetelheto
+ rovat, annak minden elofordulasara meg kell hivni az elso kodszam megvizsgalasa
+ utan. Javasol hasznalatat lasd a MUF2D programnal!
+
+ MUF2D -- A v28 (GENRE) rovat egy mufajlancanak dekodolasat vegzi a vilagi
+ mufajlancok eseteben (ezek elso kodszama mindig 048). Mivel a v28 ismetelheto
+ rovat, annak minden elofordulasara meg kell hivni az elso kodszam megvizsgalasa
+ utan. Javasolt hasznalati mod:
+
+(|; |+d28, if v28.2='00' then &muf1d(v28) else &muf2d(v28) fi)
+
+ RMDT -- A v53 rovat (ED-MEL) sorszam, ill. lapszam jelo:lesenek feloldasat
+ vegzi. Mivel a rovat ismetelheto, minden elofordulasra meg kell hivni. Javasolt
+ hasznalati mod:
+
+(|, |+d53,&rmdt(v53))
+
+ A to:bbi PROG alko:nyvtarban talalhato program reszben az ISIS standard
+ formatum-programja (CENTER, CHKPWD, DBSSEL, DISPL, FDSPL, KEYB, NUMBER, PFTSEL,
+ SRCHLP, TEXT, THES, WSNSEL, WSTSEL), reszben az adatlapok felto:ltesehez,
+ modositasahoz es az inverz-file elkeszitesehez hasznalt program (ATIR, COMMA,
+ CSERE, DALMO, DEKOD, HAJT, LIST, PICI, UTALO). A megjelenitest segito programok
+ egy reszenek neve vegen D-betu utal a kepernyon (Display) valo megjelenitesre.
+ Erre azert volt szu:kseg, mert a Repertorium nyomtatott valtozatahoz ugyanezen
+ programok modositott valtozatat hasznaltuk, ezek neveinek vegen P-betu utal a
+ nyomtatasra (Printer). Megjegyzendo azonban, hogy a nyomtatashoz hasznalt
+ programok csak a Repertorium elkeszitesenek voltak celszeru segedeszko:zei,
+ teljesen ahhoz igazodnak (opcionalis francia szoelvalasztasi jeleket,
+ tipografiai utasitasokat, szo:vegszerkeszto program hasznalatahoz szu:kseges
+ utasitasokat szurnak a szo:vegbe), ezert hasznalatuk ellenjavallt. Ezeket a
+ programokat az ALAP formatum nem is hasznalja, a nyomtatashoz a PRINT nevu
+ formatum szolgalt (valamint a PRINT1 es PRINT2). Az ISIS formatumnyelvenek
+ minimalis ismeretevel es az ALAP formatum reszeinek felhasznalasaval (akar csak
+ kis reszletek onnan valo kiemelesevel) a versek adatainak reszleges megjelenites
+ megoldhato. Amennyiben ez megsem bizonyulna jarhato utnak, meg mindig
+ elfogadhato eredmenyt ad az a modszer, hogy az adatokat, kodokat, ro:viditeseket
+ eredeti formajukban, abban az alakban szerepeltetju:k, ahogyan a rovatokban
+ szerepelnek, es az atalakitast, ertelmezest a felhasznalora, ill. annak
+ szo:vegszerkesztojere bizzuk. A rovatok reszletes leirasa az elso pontban ezt a
+ celt is szolgalta.
+
+  3.2. Rendezes
+
+ Az adatok rendezese, es ku:lo:nbo:zo szempontok szerinti listas nyomtatasa az
+ ISIS-en belu:l eleg nehezkes feladat. A program felhasznaloi keziko:nyve
+ ismerteti az erre vonatkozo legszu:ksegesebb tudnivalokat. Az eddig leirt
+ ismertetes alapjan a rendezesi szempontok tetszolegesen megtervezhetok, bar az
+ o:sszetett adatstruktura miatt ez nem egyszeru feladat. A munkank soran hasznalt
+ rendezesi urlapok az MENU alko:nyvtarban megtalalhatok, tanulmanyozasuk segithet
+ sajat urlapok kialakitasaban.
+ A PRINT menu:ben felhasznaloi urlapot kerve megadhato:
+ EYNYO folap nyomtatasahoz, automatikusan hivja az EYREN nevu incipit szerint
+ rendezo maszkot. EYMUT mutato keszitesehez, automatikusan hivja az EYMUF nevu
+ mufaj szerint rendezo maszkot, ez atirhato.
+ Az EYMUT maszk rendezesi urlap mezojeben allhat:
+ EYMUF mufaj szerint rendez (sajnos nullakkal) EYAUO idegen szerzo szerint rendez
+ (vesszok nelku:l) EYAU2 idegen szerzo szerint rendez (vesszokkel) EYTIO idegen
+ cim szerint rendez EYMET rimkeplet/szotagszam szerint rendez EYME1 rimkeplet
+ szerint rendez EYME2 szotagszam/rimkeplet szerint rendez EYME3 szotagszam
+ szerint rendez EYME4 szotagszam/u:temezes szerint rendez EYME5 u:temezes szerint
+ rendez
+ A magyar ekezetes abece hasznalata szinten megoldhato az ISIS-en belu:l, a
+ szu:kseges segedtablazatot ugyancsak mellekeltu:k (ISISUC.HUN, ISISAC.HUN).
+
+4. Repertorium-bibliografia
+
+   * GAL Gyo:rgy, A "Repertoire de la poesie hongroise ancienne" adatmodellje,
+     ItK, 1989, 272.
+   * GOLDEN Daniel, TexTexT, ELTE szakdolgozat, 1998
+   * HORVATH Ivan, Balassi Balint ko:lteszete to:rteneti poetikai
+     megko:zelitesben, Bp., Akademiai Kiado, 1982
+   * HORVATH Ivan, A vers, Bp., Gondolat Kiado, 1991
+   * HORVATH Ivan, A regi magyar vers keszu:lo keziko:nyve, A magyar vers (BELADI
+     Miklos - JANKOVICS Jozsef - NYERGES Judit szerk.) Bp. 1985.
+   * HORVATH Ivan, Szo:veg, 2000, 1994. november, 45.
+   * HORVATH Ivan - FONT Zsuzsa - HERNER Janos - HUBERT Gabriella - SZONYI
+     Etelka, Szegedi kiserlet a XVI. szazadi magyar vers gepi feldolgozasara ItK,
+     1980, 633.
+   * HORVATH Ivan - FONT Zsuzsa - GAL Gyo:rgy - HERNER Janos - H. HUBERT
+     Gabriella - RUTTNER Tamas - SZONYI Etelka - VADAI Istvan: Repertoire de la
+     poesie hongroise ancienne, Paris, 1992.
+   * TOTH Tu:nde, Irodalomto:rteneszek a babeli ko:nyvtarbol (A regi magyar vers
+     repertoriuma), ItK, 1997, 133.
+   * TURI Laszlo, Szamitogep az irodalomtudomanyban, ELTE szakdolgozat, 1993
+   * VADAI Istvan, +1 (Metrikai hatarjelo:lesek a regi magyar versben), ItK,
+     1991, 351.

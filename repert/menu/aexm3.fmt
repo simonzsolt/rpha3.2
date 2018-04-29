@@ -1,0 +1,14 @@
+ 11 1  712
+  2  2  2  6  7  8  9 10 11 12 14
+  1 27 72 23 23 23 23 23 23 23 38
+  2  2  2  6  7  8  9 10 11 12 14
+  9 27 77 27 27 27 27 27 27 27 41
+ 1 1 1 1 1 1 1 1 1 1 1
+ 5 5 5 4 4 4 4 4 4 4 0
+   7   0   4   3   3   3   3   3   3   3   2
+     7    30     4    30    30    30    30    30    30    30     1
+   0   0   0   1   1   1   1   1   1   1   1
+    7   30    4   24   20   26   28    9   11   19    0
+     0     0     0     0     0     0     0     0     0     0     0
+ServiceMenuC -R -S -E -D -F -X - ?XXXXXXXCISISUTL System Menus Editing options EXM3Create a new system menuDisplay current menuSelect
+ another system menuEdit currently selected menuCopy menuDelete menuExit (to main menu)

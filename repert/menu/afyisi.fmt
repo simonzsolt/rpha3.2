@@ -1,0 +1,17 @@
+ 11 1 1145
+  2  4  6  8  9 11 11 13 13 16 18
+  1  1  1 10 10  1 49  1 49  1  1
+  2  4  6  8  9 11 11 13 13 16 18
+  1 30 30 30 30 30 77 30 73 30 30
+ 1 1 1 1 1 1 1 1 1 1 1
+ 5 0 0 0 0 0 1 0 2 0 0
+   0  24  22  16  17  22  27  17  22  27  25
+    80    10    10     1     1     6     1    11     5    10    10
+   0   0  71   0   0  36   0  76  66   0  88
+   80    0    7    1    1    0    1    7    0    0    0
+   0   0   0   0   0   0   0   0   0   0   0
+Nom fichier sortie batchNom fichier ISO sortieS‚parateur champS‚parateur enreg.Nom de base de donn‚esS‚lection par fichier HIT ?Limit
+es NFM dd/ffRenum‚rote … partir deFichier param. de reformat.Fich. conversion diacrit.Nom du fichier de sortie en format ISO … export
+er vers un autre systŠmeNom de la base de donn‚es … exporterTranche de la base de donn‚es … exploiter : dd, NFM de d‚but, ff, NFM de 
+finNFM … partir duquel seron renum‚rotŠs les enregistrements export‚sEntrer le nom du fichier permettant la reconversion des accents 
+en groupes dits "GIZMOS"        Programme d'‚change de donn‚es - Param‚tres d'options d'export    FYISI ISO.MST##N1/32000

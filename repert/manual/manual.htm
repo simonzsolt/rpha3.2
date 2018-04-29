@@ -1,0 +1,1790 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Használati útmutató a régi magyar vers számítógépes repertóriumához</title>
+</head>
+<body>
+<h1>Használati útmutató</h1>
+
+<div>A régi magyar vers számítógépes repertóriumának<br>
+ (Répertoire de la poésie hongroise ancienne)<br>
+ 3.2-es [(c) 1979-1999] verziójához</div>
+
+<hr>
+<div>
+<ul>
+<li><a href="#0">Bevezetõ</a></li>
+
+<li><a href="#1">A repertórium felépítése</a>
+
+<ul>
+<li><a href="#11">Alapfogalmak</a></li>
+
+<li><a href="#12">Adatlapok</a>
+
+<ul>
+<li><a href="#121">Az 1601 elõtti versek adatlapjainak rovatai</a></li>
+
+<li><a href="#122">A adatûrlap mintával kitöltve</a></li>
+
+<li><a href="#123">Az 1701 elõtti források (kéziratok és nyomtatványok) adatlapjainak
+felépítése</a></li>
+
+<li><a href="#124">A forrásûrlap mintával kitöltve</a></li>
+</ul>
+</li>
+
+<li><a href="#13">A mûfajfa</a>
+
+<ul>
+<li><a href="#131">A vallásos ág</a></li>
+
+<li><a href="#132">A világi ág</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li><a href="#2">Keresés</a>
+
+<ul>
+<li><a href="#21">Szabad szöveges keresés</a></li>
+
+<li><a href="#22">Keresés az inverz file használatával</a></li>
+
+<li><a href="#23">A SYLL program használata</a></li>
+
+<li><a href="#24">Többszempontú keresések</a></li>
+</ul>
+</li>
+
+<li><a href="#3">Az adatok megjelenítése, rendezése, nyomtatása</a>
+
+<ul>
+<li><a href="#31">Megjelenítés</a></li>
+
+<li><a href="#32">Rendezés</a></li>
+</ul>
+</li>
+
+<li><a href="#4">Repertórium-bibliográfia</a></li>
+</ul>
+
+<hr>
+</div>
+
+<h2><a name="0">0. Bevezetõ</a></h2>
+
+<p>A régi magyar vers számítógépes repertóriumát kézikönyvként is kiadták, de a repertórium valódi,
+igazán használható, a kutató igényeihez rugalmasan alkalmazkodó formája a számítógépes adatbázis,
+melynek továbbfejlesztése sem szünetel. Az adatbázis elkészítésének folyamán többféle készüléket
+használtunk, a peremlyukkártyás kezdetleges megoldástól a nagyszámítógépen, majd a személyi
+számítógépen keresztül a modern hálózati megoldásokig. A munka során bekövetkezett eszközváltások
+jól mutatják, milyen viharos fejlõdésen ment keresztül a számítástechnika irodalomtudományi
+alkalmazása. Jelenleg kétféleképpen, részben (5.0, (c) ContentWare, 2000) az Interneten keresztül,
+a Linuxos MySQL adatbáziskezelõ rendszeren, részben (3.2, (c) 1999) az UNESCO által a személyi
+számítógépekre kifejlesztett microCDS/ISIS 3.8-as adatbáziskezelõ rendszeren keresztül érhetõek el
+a repertórium adatai. Ez az útmutató az ISIS-es verzió felhasználói számára készült.</p>
+
+<p>Elõre kell bocsátanunk néhány figyelmeztetést. A Répertoire de la poésie hongroise ancienne
+személyi számítógépes változatának hordozója, az ISIS csak az UNESCO tagországaiban ingyenes
+hozzáférésû. Az adatbázis hajlékony-, ill. optikai lemezes változatát mi is ingyenesen bocsátjuk a
+felhasználó rendelkezésére. (Ez nem vonatkozik a hordozó, a másolás és a postai szállítás
+költségeire.) A könyvtárak számára javasoljuk azonban a teljes változat beszerzését, mely az
+adatbázison kívül kétkötetes, francia nyelvû (elsõsorban hibajavítást, az adatbázis
+tökéletesbítését szolgáló) kézikönyvet is tartalmaz: Iván HORVÁTH (direction), Gabriella H. HUBERT
+(assisté par), Zsuzsa FONT, János HERNER, Etelka SZÕNYI, István VADAI (avec la coopération de),
+Tamás RUTTNER (responsable de l'enregistrement textuel), György GÁL (responsable en matière de
+mathématiques et de logiciel), Répertoire de la poésie hongroise ancienne. Manuel de corrections
+d'erreurs, I-II, megjelent a Centre de Poétique Comparée AD CORPUS POETICARUM c. sorozatában,
+sorozatszerkesztõ Léon ROBEL, kiadta az Éditions du Nouvel Objet (96, bd. des Batignolles, 75017
+Paris), 1992, Magyarországon terjeszti a Librairie Le Pont (1011 Budapest, Fõ u. 17., tel.:
+202-1133/155).</p>
+
+<p>Az adatbázis fizetõ vagy ingyenes példányának használója nem válik az adatbázis birtokosává: az
+továbbra is szerzõinek szellemi tulajdona marad. A felhasználó csak az adatbázis tudományos
+kutatásban való alkalmazására nyer jogot, és semmilyen módosítást nem eszközölhet azon. Az
+adatbázis korai változatai (ver. 1.0 [(c) 1979], ver. 2.0 [(c) 1988], ver. 2.1 [(c) 1989], ver. 2.2
+[(c) 1991]) még nem kerültek kereskedelmi forgalomba, használatuk tilos. A kereskedelmi forgalomba
+került 3.0 változat ((c) 1992) továbbra is használható, bár az 1994-es 3.1 verzió kb. 200 javítást
+tartalmaz, ugyanakkor terjedelme is lényegesen kisebb lett. A következõ, 3.2-es kiadás 1999 második
+felében jelent meg, apróbb számítástechnikai jellegû javításokat és a magyar felhasználói felületet
+tartalmaz. Az adatbázis 5-ös verziója tuljadonképpen a 3-as verzió Internetes változata. Az 5-ös
+verzióba fog bekerülni minden újítás, javítás. A 3-as verziók közül az utolsó, a 3.2-es azonban
+továbbra is elérhetõ, letölthetõ marad. Ez a dokumentáció az adatbázis 3-as verziójához készült,
+néhol jelentõsek az eltérések az újabb változatokban. Az 5-ös verzió fõbb újdonságai:</p>
+
+<ul>
+<li>áttérés a CDS/ISIS-rõl SQL rendszerbe</li>
+
+<li>az adatok átkonvertálása ISO-8859-2-es kódlapra</li>
+
+<li>az adatbázis átstrukturálása</li>
+
+<li>könnyen kezelhetõ webes keresõ- és böngészõfelület</li>
+
+<li>a magyar, angol, francia és német nyelvek támogatása</li>
+
+<li>az utóbbi pár évben közzétett hibák, hiányok figyelembevétele</li>
+
+<li>egyéb apró korrekciók</li>
+</ul>
+
+<p>Az ISIS használata nem túl bonyolult, a programot eredetileg úgy tervezték, hogy szöveges
+információkat (elsõsorban könyvtári adatokat) lehessen vele kezelni, több nyelven. Ennek
+megfelelõen menürendszere is többnyelvû, betûkészlete is tartalmazhatja a nemzeti karaktereket, a
+különféle ékezetes és mellékjeles betûket. Ezért repertóriumunk, noha magyar vonatkozású adatokat
+tartalmaz, minden nehézség nélkül használható több nyelven is. Éppen a program nemzetközi
+felhasználhatósága tette szükségessé azt, hogy a repertórium franciául jelenjék meg, így a magyarul
+nem tudó felhasználók is hozzáférhetnek a versek adataihoz. Mint mondottuk, az ISIS használata nem
+túl bonyolult, de azért nem is magától értetõdõ. Három ponton mindenképpen magyarázatra szorul. Az
+egyik ilyen az adatbázis felépítése, mert ez nem az ISIS része, hanem kizárólag az adatbázis
+készítõinek logikáját, illetve logikátlanságát tükrözi. Hogy a tárolt adatokat milyen rendben õrzi
+a számítógép, errõl szól elsõsorban ez a használati utasítás. A második magyarázatra szoruló pont
+az adatok közötti keresés. Ehhez a fentieken kívül az ISIS keresõtechnikáját kell megérteni. Ezt
+nem feladatunk itt részletekbe menõen bemutatni, de néhány példa segítségével legalább mintát
+szeretnénk nyújtani a próbálkozásokhoz. Az adatbázisban jelenleg kialakított keresést segítõ
+szótárt és az ehhez csatlakozó segédprogramot ismerteti ez a rész. A harmadik magyarázatra szoruló
+pont az adatok megjelenítése. A rendszer nemcsak arra képes, hogy a könyv formában megjelent
+repertórium mintájára teljes adatlapokat hozzon létre, hanem természetesen arra is, hogy bármilyen
+kívánt szempont szerint átrendezze ezeket, vagy szûkítse a megjelenített eredményt. Magyarán, a
+könyvben minden versrõl minden rögzített adat megtalálható; a számítógépen megjeleníthetem
+képernyõn, vagy kinyomtathatom nyomtatón a versek engem érdeklõ csoportjának engem érdeklõ adatait,
+például csakis Tinódi Sebestyén verseinek csupán a kezdõsorait. Hogy a képernyõn, illetve a
+nyomtatón mi jelenjék meg, ehhez ismerni kell az adatbázisnak nemcsak a logikáját, hanem a tárolt
+adatok számítógépes elnevezéseit is, errõl ad számot a használati utasításnak ez a része. Itt
+kapott helyet a megjelenítéshez használt segédprogramok rövid ismertetése.</p>
+
+<h2><a name="1">1. A repertórium felépítése</a></h2>
+
+<h3><a name="11">1.1. Alapfogalmak</a></h3>
+
+<p>A repertórium az 1601 elõtti magyar versek és az ezeket tartalmazó 1701 elõtti kéziratok és
+nyomtatványok adatlapjait tartalmazza. Ezeket az <i><b>adatlapokat</b></i> a számítástechnikai
+gyakorlatban <i><b>rekordoknak</b></i> hívják, mi ebben az ismertetõben megmaradunk az adatlap
+kifejezés mellett. Az adatlapok <i><b>rovatokból</b></i> (a számítástechnikai megnevezés szerint:
+<i><b>mezõkbõl</b></i>) épülnek fel, ezek szükség szerint tovább tagolódhatnak <i><b>
+alrovatokra</b></i>. Például az 1129. adatlap tartalmazza Bornemisza Péter híres búcsúversének, a
+Siralmas énnékem tetõled megváltom kezdetû versének leírását. Ennek a adatlapnak a rovatai például
+a kezdõsor, a cím, a szerzõ neve; alrovat például a szerzõ nevének rovatán belül a vezetéknév,
+illetve a keresztnév. A repertórium tulajdonképpen az összes ilyen adatlapnak a gyûjteménye. A
+számítógépes adatbázis az adatok egy részét természetesen kódolva tartalmazza, vagyis meg kell
+adnunk e kódok feloldását, ismertetnünk kell az alkalmazott jelölésrendszert. Másrészt a <i><b>
+versek adatlapjain</b></i> kívül másféle adatlapok is szerepelnek az adatbázisban: az <i><b>1600
+utáni, nótajelzésül szolgáló versek adatlapjai</b></i>, a többrészes <i><b>versek
+mellékadatlapjai</b></i>, illetve a <i><b>versek forrásainak adatlapjai</b></i>. Ezeknek a
+felsorolása és felépítésük szintén elengedhetetlenül hozzátartozik az adatbázis leírásához.</p>
+
+<h3><a name="12">1.2. Adatlapok</a></h3>
+
+<p>Vegyük tehát sorra egy adatlap rovatait, és nézzük meg hogyan lehet kitöltve az adatlap egy-egy
+rovata. (A számítógépes rendszert használva ezen információk rövidítve megtekinthetõk a megfelelõ
+rovaton állva az F1 billentyû lenyomásával.) Minden egyes rovatnál a rovat jelét és az adatlap
+megfelelõ rovatának rövidített megnevezését is megadjuk, erre a 2. pontban fogunk hivatkozni. <a
+name="_Toc457264991"></a></p>
+
+<h4><a name="121">1.2.1. Az 1601 elõtti versek adatlapjainak rovatai</a></h4>
+
+<p><b>v1</b> - A vers azonosítószáma (<b>R</b>). A vers hivatkozási száma, amelyet a számítógépes
+rendszer használ a versek keresésére és azonosítására. Szándékunk szerint a versek rövid
+azonosítója, ami felsorolásoknál lehet praktikus, illetve akkor, ha két vagy több vers kezdõsora
+több szón keresztül megegyezik. A számítógép számára az azonosító mindig négyjegyû szám, tehát az
+elsõ ilyen azonosító: 0001. Természetesen az adatok megjelenítésénél a kezdõ nullák eltüntethetõk.
+A rovat hossza 5, vagyis a négyjegyû azonosító után még marad egy betûnyi hely; ezt a késõbb
+bemutatandó segédadatlapok betûs azonosítószámainál használjuk. Az R-számok kiosztása eredetileg a
+törzsanyag ábécé-rendjéhez igazodott, ám késõbb az adatbázis bõvülésével ez a rend megszûnt.
+Ugyanígy van némi összefüggés az adatlapok sorszáma és az azonosítók között, eredetileg
+párhuzamosan haladtak, de adatlapok törlésével, pótlásával, átrendezésével ez az összefüggés
+megszûnt. Az adatlapok sorszáma, az úgynevezett MFN (Master File Number) számunkra esetleges, az
+adatbázis történetében nem állandó, megváltozhat, megszûnhet. Az R-szám tehát az azonosító,
+véglegesen rögzített, de egyéb jelentéstartalma nincsen.</p>
+
+<p>A jövõben általában is célszerûnek tartjuk és javasoljuk a régi magyar versekre szerzõjükön és
+kezdõsorukon felül R-számukkal is hivatkozni, ugyanúgy, ahogy pl. a régi magyar nyomtatványok
+esetében is az egyértelmû azonosítás kedvéért fel szoktuk tüntetni RMK- vagy RMNY-számukat.</p>
+
+<p>Egy probléma, mely a versek önazonosságát illeti: a versek 17. századi átdolgozásai nálunk
+egyszerûen változatokként szerepelnek: a csupán árnyalatnyi módosulást hozó gondos másolás és a
+kíméletlen, cenzúrázó jellegû átírás közötti különbséget a leltározó csupán fokozatinak
+tekinti.</p>
+
+<p>Felvetõdik, hogy mely versek tartoznak az 1601 elõttiek körébe. Itt viszonylag kritikusak
+voltunk: csak azokat a mûveket vettük fel, amelyeknek keltezését megfelelõen indokoltnak tartottuk,
+és nem mindenben követtük a szakirodalom tanácsait. Nem mertük egyelõre felvenni pl. Szûcs György
+mûvét (Szükség minékünk, mi keresztyének, vö. RMDT I, 754, RMKT17, 8, 123. sz.). Az Újfalvi Imre
+szerkesztette énekeskönyv ugyan 1602-ben jelent meg, azonban úgy képzeljük, hogy bizonyára
+kizárólag 1601 elõtti anyagot tartalmaz, ezért felvettük az elõször ott elõforduló énekeket is. Már
+közvetettebb bizonyítékok szólnak amellett, hogy a hagyományõrzõ graduálok (mindenekelõtt a
+Batthyány-graduál) anyagát egészében szintén 16. századinak szabad tekinteni.</p>
+
+<p><b>v2</b> - A vers kezdõsora (<b>INC</b>). A vers incipitjét a mai magyar kiejtési és
+helyesírási gyakorlat szerint adjuk meg, lehetõleg a vers metrumához igazodóan a teljes elsõ sort.
+Kivételt képez ez alól az az eset, amikor több vers kezdõdik azonos sorral, ekkor további szavakkal
+folytatódik az incipit az elsõ eltérésig. Ha a vers elsõ sora nem ismert, akkor a vers explicitjét
+közöljük ezen a helyen, és erre a figyelmet (explicit!) jelzéssel hívjuk fel. Az explicit az
+adatbázisban a vers utolsó metrikai sorát jelenti. Ha a vers annyira töredékes, hogy sem az elsõ,
+sem az utolsó sora nem ismert, illetve bizonyos különleges esetekben (a megszokásra való
+tekintettel) a meglévõ szöveg kezdete szerepel itt. A következõ töredékeknek nem az explicitjét
+adtuk meg: E vég pusztaságról megemlékeznétek (R303), åme ez szívembe lövé egyik nyilát (R579), Õ
+bolondságot kezd indítani (R1098), Öltöznek be az erdõ (R1141), Sándor után anyját is Cassander
+megölé (R2013). Ha a vers szövege egyáltalán nem ismert, akkor a rovat üresen marad.
+Megjelenítéskor ebben az esetben a vers címe szerepel az R-szám mellett. A rovat maximális hossza
+500 betûnyi.</p>
+
+<p><b>v3</b> - A vers címe (<b>TITRE</b>). A vers szakirodalomban szokásos címét, vagy ennek híján
+a vers mûfajának megfelelõ értelemszerû címet tartalmazza, mai helyesírással. Ha a vers ciklusba,
+sorozatba illeszkedik, akkor ebben a rovatban szerepel a ciklus neve, vagy ennek rövidítése, és a
+cikluson belüli sorszám is (pl. Celia 4, vagy MKIK 61, azaz a rövidítést feloldva: a Maga kezével
+írt könyvének 61-es sorszámú verse). Ha a vers zsoltárfordítás, akkor a cím kötött alakú, Ps jel
+után egy szóköz, majd három számjegyû sorszám (szükség szerint az elején szóközökkel kiegészítve),
+majd egy egyenlõségjel, és egy újabb háromjegyû sorszám szerepel, a Vulgata ill. a Biblia Hebraica
+zsoltárszámozásának megfelelõen. Ha a vers zsoltárfordítás fordítása (pl. németbõl), akkor az
+eredeti címet követi ez a jelzés. A rovat hossza 500 betûnyi.</p>
+
+<p><b>v5</b> - A vers szerzõje (<b>AUT</b>). Ha a szerzõ ismeretlen, és a szakirodalomban sem
+szerepel másképp (pl. Pataki Névtelen), akkor a rovat üresen marad. Ha a szerzõ ismert, akkor a
+rovat a nevet tartalmazza három alrovatban:</p>
+
+<ul>
+<li>"^1" jel után a szerzõ vezetékneve (vezetéknév alatt azt a nevet értve, ami szerint az ábécébe
+rendezés történik)</li>
+
+<li>"^2" után a szerzõ keresztneve</li>
+
+<li>"^3" után esetlegesen egy kérdõjel áll. Ez utóbbi a szerzõség bizonytalan voltára utal. Ha a
+szerzõ nevének csak egy része (keresztnév), vagy monogramja ismert, akkor értelemszerûen ezek az
+adatok szerepelnek itt</li>
+</ul>
+
+<p>A rovat ismételhetõ, vagyis százalékjellel (%) elválasztva több név is megadható, ha a vers
+többszerzõs, vagy szerzõként kérdõjelesen több személy is szóbajöhet. A rovat hossza 500
+betûhelynyi.</p>
+
+<p><b>v11</b> - Meghatározható irodalmi minta (<b>TRAD</b>). Egy számjegyû kód, lehetséges értékei
+és jelentései:</p>
+
+<ul>
+<li>"1" - A vers esetleges idegen nyelvû, közvetlen irodalmi mintáit nem tudjuk megállapítani,
+lehet, hogy nem is volt közvetlen irodalmi mintája</li>
+
+<li>"2" - A vers meghatározható közvetlen irodalmi mintán alapszik</li>
+
+<li>"3" - A vers bizonyosan közvetlen irodalmi mintán alapszik, de a mintát nem tudjuk
+azonosítani</li>
+
+<li>"4" - Nem tudjuk, hogy a versnek volt-e irodalmi mintája</li>
+</ul>
+
+<p>A rövidség kedvéért fordításnak nevezzük az 2. és 3. esetbe tartozó verseket. Ha a vers
+fordítás, akkor eredetije, pontosabban mintája több is lehet. De olyan verssel is találkoztunk,
+amelyrõl a szakirodalom több, egymást kizáró mintát is megállapított, nekünk azonban nem sikerült
+igazságot tenni, ezért egymás mellett felsoroltuk a szakirodalom javaslatait. Ilyen a Szükség
+nekünk Krisztus jótétérõl (R1351). A vers közvetlen irodalmi mintájának adatait a következõ rovatok
+tartalmazzák.</p>
+
+<p><b>v12</b> - A mintául vett vers kezdõsora (<b>INCOR</b>). Ha a vers fordítás, vagy egyes részei
+fordításon alapszanak, akkor az eredeti mû incipitje szerepel itt, az eredeti nyelven. Kivétel a
+zsoltár: itt - függetlenül attól, hogy esetleg közvetlenül héberbõl is készülhetett a fordítás -
+mindig a Vulgata kezdõszavait adjuk meg (a rovat elsõdleges célja az azonosító adatok
+redundanciájának növelése). Ha prózai mû verses fordításáról van szó, akkor incipitet itt nem
+adunk. A rovat ismételhetõ, vagyis százalékjellel (%) elválasztva több kezdõsor is követheti
+egymást. A rovat szoros kapcsolatban áll a v13 és v15 rovatokkal, mivel azok is ismételhetõ
+rovatok, és a felsorolásban az egymásnak megfelelõ adatoknak azonos sorrendben kell követniük
+egymást. Ez akkor igényel nagyobb figyelmet, ha valamelyik adatelem hiányzik, mert az ismételhetõ
+rovatok között üres nem szerepelhet. Ha tehát több eredeti mû van, de ezek közül egynek nincsen
+incipitje, mert prózai, akkor célszerûen a felsorolás utolsó helyén áll. A rovat hossza 500
+betûhelynyi.</p>
+
+<p><b>v13</b> - A mintául vett mû címe (<b>TITOR</b>). Ha a vers fordítás, vagy egyes részei
+fordításon alapszanak, akkor az eredeti mû címe szerepel itt, az eredeti nyelven. Ha a forrás a
+Biblia, akkor lehetõség szerint megadjuk a pontos elõfordulási helyet is, a Vulgata hagyománya
+szerint rövidítve. Ha a vers a Biblia számos helyét idézi, s a kolofonban megjegyzi, hogy a
+Szentírásból fordították, a rovatban csak a Bibliát adjuk meg, a helyek felsorolása nélkül. Ha
+hosszabb parafrázissal van dolgunk, de néhány bibliai vers közben kimarad, a kihagyásokról nem
+emlékezünk meg, pl. a Siess, keresztyén, lelki jót hallani (R1229) esetében csak ennyit írunk: 1.
+Sam. 1-17. A rovat ismételhetõ, vagyis százalékjellel (%) elválasztva több cím is követheti
+egymást. Ha a vers zsoltárfordítás, akkor a cím kötött alakú, Ps jel után egy szóköz, majd három
+számjegyû sorszám (szükség szerint az elején szóközökkel kiegészítve), majd egy egyenlõségjel, és
+egy újabb háromjegyû sorszám szerepel, a Vulgata ill a Biblia Hebraica zsoltárszámozásának
+megfelelõen. Ha a vers zsoltárfordítás fordítása (pl. németbõl), akkor az eredeti címet követi ez a
+jelzés. A rovat szoros kapcsolatban áll a v12 és v15 rovatokkal, mivel azok is ismételhetõ rovatok,
+és a felsorolásban az egymásnak megfelelõ adatoknak azonos sorrendben kell követniük egymást. A
+rovat hossza 500 betûhelynyi.</p>
+
+<p>Nem szabad szem elõl tévesztenünk, hogy verseinknek eredetileg gyakran nem volt címük, illetve
+az ma már nem állapítható meg. A rovat fõ célja, hogy redundáns azonosítóval szolgáljon. Idegen
+nyelvû forrásunk címe (különösen himnuszok esetében) olykor egyszerûen hiányzik. Ilyenkor redundáns
+azonosítóval szolgálnak különleges sorszámok, ld. mindjárt a következõ pontban.</p>
+
+<p><b>v14</b> - Himnuszok utalószáma (<b>HYMNUS</b>). Ha a vers olyan himnusz fordítása, amely ki
+van adva a Dreves-Blume-féle Analecta Hymnica köteteiben, illetve van száma a Chevalier Répertoire
+hymnologique-jában, akkor ezek az adatok követik egymást százalékjellel (%) elválasztva. A rovat
+hossza 500 betûhelynyi.</p>
+
+<p><b>v15</b> - A mintául vett mû szerzõje (<b>AUTET</b>). Ha a vers fordítás, vagy irodalmi mintát
+követ, akkor a mintául vett mû szerzõjének neve szerepel itt, az eredeti nyelven. A v3 rovatnál
+ismertetett ^1, ^2, ^3 alrovatok tartalmazzák a szerzõ nevének elemeit. A rovat ismételhetõ, vagyis
+százalékjellel (%) elválasztva több név is követheti egymást. A rovat szoros kapcsolatban áll a v12
+és v13 rovatokkal, mivel azok is ismételhetõ rovatok, és a felsorolásban az egymásnak megfelelõ
+adatoknak azonos sorrendben kell következniük. A rovat hossza 500 betûhelynyi.</p>
+
+<p><b>v18</b> - A fordítás alapjául szolgáló nyelv (<b>LANOR</b>). Fejlesztés alatt álló rovat.
+Pillanatnyilag (a 3.1 verzióban) akkor van kitöltve, ha a vers fordítás, tudjuk is, hogy milyen
+nyelvbõl, de ez a szokásos adatokból (INCOR, TITOR, AUTET) nem derül ki. Ez például akkor fordul
+elõ, ha az eredeti mû nem azonosítható pontosan (Gergei Albert: Árgirus históriája). A rovat
+kódolt, elõforduló kódjai és jelentései a következõk:</p>
+
+<ul>
+<li>"all" - német</li>
+
+<li>"gre" - görög</li>
+
+<li>"cro" - horvát</li>
+
+<li>"hon" - magyar</li>
+
+<li>"lat" - latin</li>
+</ul>
+
+<p>A magyar nyelv elõfordulását az indokolja, hogy van olyan eset, amikor nyilvánvaló, hogy a
+szerzõ magyar forrásokra alapozva írja mûvét. Ez tehát az idegen nyelvû forrás tagadása. A rovatnak
+mindig három betûnyi kódot kell tartalmaznia, ha nem üres.</p>
+
+<p><b>v21</b> - A vers szereztetésének ideje (<b>AN</b>). Ebben a rovatban egy vagy több évszám
+állhat. A vers keletkezési ideje természetesen ritkán írható le egy határozott dátummal, általában
+csak a terminus ante quem, terminus post quem állapítható meg. Ilyen esetekben ennek a fogódzónak
+az évszáma szerepel itt. Hogy melyik eset áll fenn, arról a következõ rovat ad információt. Ez azt
+is jelenti, hogy az adatok lekérdezésénél a v21 és v22 rovatok együtt kezelendõk, önmagában ez a
+rovat torz információt ad. A rovat hossza 200 betûhelynyi, ismételhetõ.</p>
+
+<p><b>v22</b> - A vers szereztetési idejének pontosabb körülírására szolgáló kiegészítés
+(<b>PREC</b>). Egyszámjegyû kód, lehetséges értékei és jelentései:</p>
+
+<ul>
+<li>"1" - A v21 rovat egyetlen évszámadata pontos dátum.</li>
+
+<li>"2" - A v21 rovat egyetlen évszámadatánál nem késõbbi a vers.</li>
+
+<li>"3" - A v21 rovat egyetlen évszámadatánál nem korábbi a vers.</li>
+
+<li>"4" - A v21 rovat egyetlen évszámadata körüli idõben keletkezett a vers.</li>
+
+<li>"5" - A v21 rovat egyetlen évszámadata környékét megelõzõ idõben keletkezett a vers.</li>
+
+<li>"6" - A v21 rovat kötõjelekkel (-) elválasztott két évszámadata között keletkezett a vers.</li>
+
+<li>"7" - A v21 rovat több, százalékjelekkel (%) elválasztott évszámadatának valamelyike pontos
+dátum.</li>
+</ul>
+
+<p><b>v23</b> - Énekelt vers, vagy szövegvers? (<b>CHANS</b>) Egyszámjegyû kód, lehetséges értékei
+és jelentésük a következõ:</p>
+
+<ul>
+<li>"1" - A vers szövegvers</li>
+
+<li>"2" - A vers énekvers</li>
+
+<li>"3" - Bizonytalan, hogy a verset énekelték-e</li>
+</ul>
+
+<p><b>v24</b> - A vers szignáltságának módja (<b>SIGNE</b>). A rovat szorosan kapcsolódik a v3
+rovathoz. Egyszámjegyû kód, lehetséges értékei és jelentésük a következõ:</p>
+
+<ul>
+<li>"1" - A verset a szerzõ látta el névmegjelöléssel</li>
+
+<li>"2" - A vers szerzõjét nem ismerjük</li>
+
+<li>"3" - A verset a keletkezését követõen a szerzõnek tulajdonították</li>
+
+<li>"4" - A verset a modern kutatás tulajdonítja a szerzõnek</li>
+
+<li>"5" - A vers maga nem szignált, de a gyûjtemény, amelyben szerepel, a szerzõ neve alatt jelent
+meg</li>
+
+<li>"6" - A vers anagrammatikusan szignált, vagyis a szerzõ neve nem olvasható a vers felett, de
+nevének anagrammája igen</li>
+</ul>
+
+<p><b>v28</b> - A vers mûfaja (<b>GENRE</b>). A vers mai mûfaji besorolására vonatkozó kódszámok
+sorozata. Ezek a kódszámok mindig háromjegyûek (szükség szerint az elejükön 0-kal kiegészítve),
+vesszõkkel elválasztva egymástól. A mûfajok hierarchikusan, fa-struktúrában helyezkednek el, ez
+indokolja az esetleges ismétlõdõ terminusokat is. A mûfajok rendjét bemutató ágrajzot külön fejezet
+tartalmazza. Mivel egy-egy vers a legtöbbször több mûfaji csoportba is besorolható, a rovat több
+mûfajláncot is tartalmazhat százalékjellel (%) elválasztva egymástól. A rovat 300 betûhely
+hosszú.</p>
+
+<p><b>v30</b> - Van-e a versnek kolofonja? (<b>COLO</b>) A rovat kapcsolatban áll a v32 rovattal,
+értelemszerûen v32 csak akkor lehet kitöltve, ha v30 értéke 1. Egyszámjegyû kód, lehetséges értékei
+és értelmezései:</p>
+
+<ul>
+<li>"1" - A versnek van kolofonja</li>
+
+<li>"2" - A versnek nincs kolofonja</li>
+
+<li>"3" - Nem tudjuk, hogy a versnek van-e kolofonja (Akkor fordulhat elõ, ha a vers töredékes és
+nincsen meg a vége.)</li>
+</ul>
+
+<p><b>v31</b> - Kinek ajánlotta a szerzõ a verset? (<b>DEDIE</b>) Ebben a rovatban a v5 rovat
+névleírási szabályainak megfelelõen állhat egy vagy több név. Nem törekedtünk a korabeli, eredeti
+névalakok tiszteletben tartására. Az ironikus ajánlásokat is ajánlásoknak tekintjük. Ha az egész
+gyûjtemény van valakinek ajánlva, arról nem emlékezünk meg az egyes verseknél. A dedikálás
+legtöbbször az akrosztichonban történik, így gyakran nem tudjuk eldönteni az akrosztichonban
+szereplõ névrõl, hogy a szerzõé-e vagy a címzetté; ha erõs bennünk a kétség, akkor v5 és v31 is
+kérdõjelesen (^3) tartalmazza a nevet. A rovat hossza 300 betûhelynyi.</p>
+
+<p><b>v32</b> - A kolofonban szereplõ adatok (<b>DONCOLO</b>). Ha a kolofon konkrét adatokat
+tartalmaz a szerzõrõl vagy a vers keletkezésének körülményeirõl, akkor a kolofon szövegének erre
+vonatkozó része szerepel ebben a rovatban, úgy, hogy ezúttal csak a helyesírást korszerûsítettük,
+és még a hibás alakokat is megõriztük. A rovat alrovatokra bomlik:</p>
+
+<ul>
+<li>"^1" után állnak a szerzõ személyére vonatkozó adatok (általában név, ennek híján egyéb
+megjelölés)</li>
+
+<li>"^d" után a vers keletkezési idejére vonatkozó adatok</li>
+
+<li>"^l" után a vers keletkezésének helyére vonatkozó megjegyzések</li>
+</ul>
+
+<p>A rovat ismételhetõ, ugyanis van rá példa, hogy egy vers különbözõ lejegyzései, változatai
+különbözõ adatokat tartalmaznak. Ilyenkor a variánsok különbözõ adatait egyaránt szerepeltetjük.
+Ügyelni kell azonban arra, hogy nem az alrovatok ismételhetõek, hanem a teljes rovat a teljes
+alrovat-szerkezettel együtt. A rovat hossza 300 betûhely.</p>
+
+<p><b>v33</b> - Van-e a versnek akrosztichonja? (<b>ACR</b>) A rovat kapcsolatban áll a v34 és v35
+rovatokkal. Egyszámjegyû kód, lehetséges értékei és értelmezései:</p>
+
+<ul>
+<li>"1" - A versnek van akrosztichonja</li>
+
+<li>"2" - A versnek nincs akrosztichonja</li>
+
+<li>"3" - Nem tudjuk, hogy a versnek van-e akrosztichonja (Akkor fordulhat elõ, ha a vers
+töredékes, vagy kétséges, hogy az akrosztichonban szereplõ szöveg értelmezendõ-e.)</li>
+</ul>
+
+<p><b>v34</b> - A vers akrosztichonja (<b>ACROST</b>). Ha a versnek van akrosztichonja, vagy
+feltételezhetõ, hogy van, akkor a rovat az akrosztichon szövegét tartalmazza a szakirodalomban
+szokásos módon: a versfõkben található egyjegyû betûket nagybetûkkel, a kettõs betûk második jegyét
+kisbetûkkel, a szavakat értelem szerint szóközökkel elválasztva, a kikövetkeztetett hiányzó betûket
+szögletes zárójelben szerepeltetve. Ha az akrosztichon verses, akkor verssorok végét törtvonal (/)
+zárja le. Több forrás esetében a legjobb szöveget igyekeztük kiválasztani, de ha az akrosztichonok
+között jelentõs, informatív eltérés volt található, mindegyik változatot megadtuk. A lényegtelen
+eltéréseket, vagy olyanokat sem mutató akrosztichon-változatok csak az adatbázis egyik nagygépes
+változatában férhetõek hozzá. A rovat hossza 1650 betûhelynyi.</p>
+
+<p><b>v35</b> - A akrosztichonban szereplõ adatok (<b>DONACR</b>). Ha a akrosztichon konkrét
+adatokat tartalmaz a szerzõrõl vagy a vers keletkezésének körülményeirõl, akkor az akrosztichon
+szövegének idetartozó része szerepel ebben a rovatban. A rovat alrovatokra bomlik:</p>
+
+<ul>
+<li>"^1" után következnek a szerzõ személyére vonatkozó adatok (általában név, ennek híján egyéb
+megjelölés)</li>
+
+<li>"^d" után a vers keletkezési idejére vonatkozó adatok</li>
+
+<li>"^l" után a vers keletkezésének helyére vonatkozó megjegyzések</li>
+</ul>
+
+<p>Figyelmeztetnünk kell az adatbázis felhasználóját, hogy az akrosztichon tapasztalatunk szerint
+nem nagyon erõs érv a szerzõség mellett, hanem gyakran a dedikáció hordozója. A rovat ismételhetõ,
+ugyanis van rá példa, hogy egy vers különbözõ lejegyzései, változatai különbözõ adatokat
+tartalmaznak. Ilyenkor a variánsok különbözõ adatait egyaránt szerepeltetjük. Ügyelni kell azonban
+arra, hogy nem az alrovatok ismételhetõek, hanem a teljes rovat a teljes alrovat-szerkezettel
+együtt. A rovat hossza 1650 betûhely.</p>
+
+<p><b>v39</b> - Megjegyzések (<b>COMMENT</b>). A verssel kapcsolatos egyéb megjegyzések helye. A
+feldolgozás során gyakran használt, esetlegesen a felhasználó számára is értékelhetõ információt
+tartalmazó, de valójában nem az õ szemének szánt, kötetlen szöveges rovat. Lehetséges maximális
+hossza 600 betû. Ide kerültek az adatlap rovataiba fel nem jegyezhetõ adatok, kérdések, üzenetek
+is.</p>
+
+<p><b>v41</b> - Teljes-e a vers szövege? (<b>INT</b>) Egyszámjegyû kód, lehetséges értékei és
+értelmezései:</p>
+
+<ul>
+<li>"1" - A vers szövege teljes, a terjedelemre vonatkozó adat pontos</li>
+
+<li>"2" - A vers töredék, a terjedelemre vonatkozó adat a töredék terjedelmét mutatja</li>
+
+<li>"3" - A vers töredék, de ismerjük az egész vers terjedelmét, így a terjedelemre vonatkozó adat
+pontos</li>
+
+<li>"4" - Nem tudjuk eldönteni, hogy a vers teljes-e, a terjedelemre vonatkozó adat
+bizonytalan</li>
+</ul>
+
+<p><b>v42</b> - A vers terjedelme (<b>LON</b>). Csak a következõ, v43 rovattal együtt ad értelmes
+információt, mivel ebben a rovatban csak a mérõszám szerepel, a mértékegység nem. A terjedelem
+szerinti kereséseknél, rendezéseknél különösen megtévesztõ lehet! A rovat ismételhetõ,
+százalékjellel (%) elválasztva több számadat szerepelhet. Ezt a megoldást azért választottuk, mert
+a versek a különbözõ forrásokban nagyon gyakran eltérõ hosszúságúak, és nem dönthetõ el, hogy
+melyik adat tekintendõ helyesnek. A töredékes szövegek terjedelmét nem tüntetjük fel, ha vers
+teljes terjedelme ismert. 0 is szerepelhet a rovatban, ha a verset csak említésbõl ismerjük.</p>
+
+<p><b>v43</b> - A vers terjedelmének mértékegysége (<b>PRE</b>). Az elõzõ, v42 rovat pontosító
+adata. Egyszámjegyû kód, lehetséges értékei és értelmezései:</p>
+
+<ul>
+<li>"1" - A vers terjedelme versszakokban értendõ</li>
+
+<li>"2" - A vers terjedelme sorokban értendõ</li>
+
+<li>"3" - A vers terjedelme bekezdésekben értendõ</li>
+</ul>
+
+<p>Értelemszerûen csak az izostrofikus metrumú versek terjedelmi mértékegysége lehet a strófa. A
+soroló verselésû darabok mellett a hexameterben, disztichonban írt versek terjedelme mérhetõ
+sorokkal, illetve a nótajelzések révén fennmaradt énekek terjedelme tipikusan 1 sor. A bekezdésre
+is szükség van egyes daraboknál, fõként akkor, ha a metrum nem állapítható meg a vers töredékes
+volta, vagy bizonytalan verselése miatt.</p>
+
+<p><b>v44</b> - A vers metrumának típusa (<b>TYPME</b>). Verstani viták tárgya lehet felosztásunk,
+mentségül szolgáljon, hogy a teljességre való törekvésünk következménye az, hogy minden régi magyar
+verset bele kellet erõltetnünk valamilyen csoportba. Fejlesztés alatt álló rovat, részben már
+kidolgozott, részben kidolgozandó verstani gondolatmenetek eredménye a következõ kódolás. A rovat
+egy vagy két számjegyû kódjainak lehetséges értékei és értelmezései:</p>
+
+<ul>
+<li>"1" - Szótagszámláló, izostrofikus vers</li>
+
+<li>"3" - Bizonytalan, hogy vers-e, vagy próza</li>
+
+<li>"4" - Bizonytalan verselésû idõmértékes vers</li>
+
+<li>"5" - Bizonytalan verselésû szótagszámláló, izostrofikus vers</li>
+
+<li>"6" - Hexameter</li>
+
+<li>"7" - Disztichon</li>
+
+<li>"8" - Idõmértékes vers, de nem hexameter vagy disztichon</li>
+
+<li>"10" - Hangsúlyos, nem strofikus, nem szótagszámláló rímtelen vers</li>
+
+<li>"11" - Bizonytalan, hogy vers-e, vagy ritmikus próza</li>
+
+<li>"12" - Verssorok és próza váltakozása</li>
+
+<li>"15" - Váltakozó metrumú (ld. a Mellékadatlapok leírásánál!)</li>
+
+<li>"16" - Szótagszámláló tendenciát mutató, de nem szótagszámláló vers. Pesti Gábor által
+használt, speciális metrum (elkészült, egyelõre nem publikált gondolatmenetre alapuló osztály)</li>
+
+<li>"17" - Szótagszámláló vers</li>
+
+<li>"18" - Szószámláló vers</li>
+
+<li>"19" - Sequentiát imitáló vers</li>
+
+<li>"30" - Nótajelzés (metruma más vers metruma alapján van kikövetkeztetve)</li>
+</ul>
+
+<p><b>v45</b> - A vers metruma (<b>METR</b>). Ha a vers metruma leírható szótagszámokkal és/vagy
+rímjelöléssel, akkor ebben a rovatban szerepel a metrumképlet. Ismételhetõ rovat, de nem a
+váltakozó metrumok miatt (arra a mellékadatlapok szolgálnak), hanem azért, mert százalékjelekkel
+(%) elválasztva követik egymást a metrumképlet sorai, szigorúan kötött formában. Elõször a
+rímképlet megfelelõ betûjele, nagybetûvel (függetlenül attól, hogy refrénes-e a vers), majd egy
+szóközt követõen a sor szótagszáma két betûhelyen (egyjegyû számnál szóközzel kitöltve az elsõ
+helyet), majd az esetleges további tagolás, ütemezés szerinti szótagszámok két-két betûhelyen
+(egyjegyû számnál szóközzel kitöltve az elsõ helyet), minden elválasztás nélkül. Tehát például a
+négysarkú felezõ 12-es képlete a szabályok szerint így fest:</p>
+
+<pre>
+A 12 6 6%A 12 6 6%A 12 6 6%A 12 6 6
+</pre>
+
+<p>Az ütemezés maximum négy részre szabdalhatja szét a sort. A rímeket elõfordulásuk sorrendjében
+az ábécé betûivel jelöljük, a rímtelen sor jele X. Kivételes esetben megengedhetõ szótagszámok
+nélküli rímjelölés. A rovat szoros kapcsolatban áll egyrészt a metrumtípust meghatározó v44
+rovattal, másrészt a következõ v46, v47 rovatokkal. Tulajdonképpen a két utóbbi szolgál a kérdezés
+és rendezés céljaira, mivel a metrumképlet túl bonyolult módon kezelhetõ. A rovat maximális hossza
+600 betûhelynyi.</p>
+
+<p><b>v46</b> - A vers rímképlete (<b>RIME</b>). A v45 rovat jelölésébõl kiemelt rímjelölõ betûkbõl
+álló lánc. Célja, hogy a rímelésre vonatkozó kérdéseket, rendezési elõírásokat a bonyolult
+metrumképlet feldolgozása (szegmentálása) nélkül lehessen feltenni. A rímjelölés szabályait lásd a
+v45 rovatnál. A rovat hossza 60 betûhelynyi.</p>
+
+<p><b>v47</b> - A vers metrumképletének szótagszámai (<b>SYLL</b>). A v45 rovat jelölésébõl kiemelt
+sor-szótagszámokból álló lánc. A lánc minden eleme kétjegyû szám (egyjegyû számnál szóközzel
+kitöltve az elsõ helyet). Célja, hogy a sorok szótagszámaira vonatkozó kérdéseket, rendezési
+elõírásokat a bonyolult metrumképlet feldolgozása (szegmentálása) nélkül lehessen feltenni, illetve
+hogy a szegmentálás az ütemek szótagszámadatainak figyelmen kívül hagyásával könnyebben elvégezhetõ
+legyen. A rovat hossza 120 betûhelynyi.</p>
+
+<p><b>v48</b> - A vers forrásainak felekezeti megoszlása (<b>RELSE</b>). Az adatbáziskezelõ program
+egyik segédprogramjával kitöltött rovat. A gyors megjelenítés érdekében ebbe a rovatba gyûjtöttük
+össze a verset tartalmazó források (kéziratok és nyomtatványok) felekezeti hovatartozására
+vonatkozó adatokat. A rovat alrovatokra bomlik, ezek jelölése és jelentése a következõ:</p>
+
+<ul>
+<li>"^k" - katolikus</li>
+
+<li>"^p" - protestáns</li>
+
+<li>"^r" - református</li>
+
+<li>"^e" - evangélikus</li>
+
+<li>"^s" - szombatos</li>
+
+<li>"^u" - unitárius</li>
+
+<li>"^m" - muzulmán</li>
+
+<li>"^v" - világi</li>
+
+<li>"^x" - közelebbrõl meg nem határozott</li>
+</ul>
+
+<p>Az alrovat jelölését követõen egy-egy számadat áll, a szóban forgó felekezetû források
+darabszáma. Ha valamelyik csoportba nem kerül számadat, akkor az alrovat jelölését sem kell
+kitenni. A rovat hossza 500 betûhelynyi. Nem automatikusan kitöltõdõ rovat, tehát ha a forrásadatok
+változnak (például új nyomtatvány bukkan elõ), akkor vagy versenként kézzel módosítandó a rovat,
+vagy a teljes adatbázis anyagára el kell végezni a felekezeti adatok újraszámlálását a megfelelõ
+segédprogramokkal.</p>
+
+<p><b>v51</b> - A vers nyomtatott forrásai (<b>RMNY</b>). A verset tartalmazó 1701 elõtti
+nyomtatott források kódjainak felsorolása. A példányból nem ismert, csupán kikövetkeztetett
+kiadásokat is szerepeltetjük, illetve csak csonka példányból ismert, de elméletileg kiegészíthetõ
+kiadások esetében is feltüntetjük a benne feltételezett verseket, ha másként nem járhatunk el, lap-
+vagy ívszám nélkül. Pl. így járunk el az RMNY 353 végének csonkulása miatt. Tekintettel vagyunk
+továbbá a kiadásváltozatokra. (RMNY 49V pl. az RMNY 49 tétel nyomtatási variánsát jelöli.)
+Ismételhetõ rovat, minden elõfordulást százalékjelek (%) választanak el. A kódszámok szerkezete a
+következõképpen van szabályozva: Elõször egy kétjegyû szám mutatja, hogy a szóban forgó nyomtatvány
+melyik bibliográfiai kötetben szerepel, illetve hogy egyik helyen sem (ezt a csoportot HH-val
+jelöltük):</p>
+
+<ul>
+<li>"27" - RMK I. tétel</li>
+
+<li>"28" - RMNY-tétel</li>
+
+<li>"29" - HH-listán szereplõ tétel</li>
+</ul>
+
+<p>Ezt a kódot kettõspont követi, majd a jelölt bibliográfiai kötetbeli sorszám, négy betûhelyen.
+Ha a sorszámot követi törtjellel (/), vagy kötõjellel (-) elválasztott további számozás, betûzés,
+akkor ez a négy betûhely utáni helyekre kerül. Ha ilyen jelölés nincs, akkor ehelyett négy
+szóköznek kell szerepelnie. Ezt egy P-betû és egy kettõspont követi; majd a szóban forgó
+nyomtatvány oldalszáma, vagy levélszáma, vagy ezek híján az ívjelzés betûjele és levélsorszáma;
+minden esetben négy számjegynyi helyet kell kitölteni (szükség esetén bevezetõ nullákkal). Végül
+egy kötõjel (-) után a rectó/verzó-jelölés a, illetve b jele következik, ha levélszám vagy ívjelzés
+szerepelt elõtte, további két betûnyi helyen; ha ilyet nem jelölünk, akkor nem kell szóközökkel
+pótolni a helyét. Tehát helyes alakok a következõk:</p>
+
+<pre>
+27:0001 P:0100 28:0353/1 P:0222-A 27:1789/2-AP:00A2
+</pre>
+
+<p>A megjelenítõ program a kódokat feldolgozva olyan adatlapokat keres elõ, amelyek tartalmazzák az
+itt hivatkozott kiadványok megjelenési adatait. Errõl a Forrás-adatlapok cím alatt késõbb
+következik leírás. A kódok a bibliográfiai kötetek kódjainak nagyságrendjében, azon belül pedig a
+tételszámok rendjében haladnak. Ez megközelítõleg a nyomtatványok megjelenésének idõrendjét is
+tükrözi. Ha egy vers egy kiadványban többször is megjelent, akkor minden egyes elõfordulása külön
+tételként szerepel a rovatban. A rovat hossza 1000 betûhelynyi.</p>
+
+<p>A felhasználónak e rovat esetében különösen a figyelmébe ajánljuk azt a körülményt, hogy olyan
+adatbázist bocsátottunk a rendelkezésére, melynek továbbfejlesztése nem szünetel. A 3.0. és 3.1
+kiadásnak, ill. a Répertoire... nyomtatott kézikönyvének készítése közben például még nem tudtunk
+hozzáférni az RMK I. 761A, 1155B, 1287, 1462 és 1544. számú gyülekezeti énekeskönyvek példányához.
+Nem láthattuk az 568A tételt sem, így nem kerülhetett be a Kertek bányásznak (helyesen: bánásnak),
+szõlõk metszésnek örülnek kezdetû naptárvers-töredék. Az anyag áttekintésének különös nehézségei
+folytán a naptárversek és a csízió esetében egyelõre csak a 16. századi elõfordulásokat mertük
+felsorolni.</p>
+
+<p>Egyelõre külön jegyzék tartalmazza a hangjegyes nyomtatványok felsorolását, így ez a fontos
+körülmény a 3.1 változatban a versek adatlapjain sem jelenik meg.</p>
+
+<p>Nem tudtunk boldogulni az RMNY 351-es tétellel, melynek lapszámozása nincs, ívszámozása pedig
+hibás. Az RMNY munkaközösségének eljárását vettük át: a képzeletben utólag megszámozott lapokat
+tüntettük föl.</p>
+
+<p>Ma már helytelennek látjuk azt a gyakorlatunkat, hogy csak egy elõfordulásként tüntettük föl
+forrásaink között azokat a különleges eseteket, amikor egy vers két változata egymás után, azonos
+lapszámmal szerepel ugyanabban a gyûjteményben. (Ilyen pl.: Az Atyának országából e világra Isten
+jöve (R119). Még egy hiba: az általunk megadott lapszám azt jelenti, hogy a vers a megadott lapon
+kezdõdik, az viszont egyáltalán nem derül ki, hogy a vers szövege, vagy csupán címe-e az, ami ott
+elkezdõdik.</p>
+
+<p><b>v52</b> - A vers kéziratos forrásai (<b>MKÉVB</b>). A verset tartalmazó 1701 elõtti kéziratos
+források kódjainak felsorolása. Ismételhetõ rovat, minden elõfordulást százalékjelek (%)
+választanak el. A kódszámok szerkezete a következõ módon szabályozott: Elõször egy kétjegyû szám
+mutatja, hogy a szóban forgó kézirat szerepel-e a Stoll Béla szerkesztette A magyar kéziratos
+énekeskönyvek és versgyûjtemények bibliográfiájában (MKÉVB), vagy sem (ezt a csoportot H-val
+jelöltük):</p>
+
+<ul>
+<li>"18" - MKÉVB-tétel</li>
+
+<li>"19" - H-listán szereplõ tétel</li>
+</ul>
+
+<p>Ezt a kódot kettõspont követi, majd a jelölt bibliográfiai sorszám, négy betûhelyen. Ha a
+sorszámot követi törtjellel (/), vagy kötõjellel (-) elválasztott további számozás, betûzés, akkor
+ez a négy betûhely utáni helyekre kerül. Ha ilyen jelölés nincs, akkor ehelyett négy szóköznek kell
+szerepelnie. Ezt egy P-betû és egy kettõspont követi; majd a szóban forgó kézirat oldalszáma, vagy
+levélszáma; minden esetben négy számjegynyi helyet kell kitölteni (szükség esetén bevezetõ
+nullákkal). Végül egy kötõjel (-) után a rectó/verzó-jelölés a, illetve b jele következik, ha
+levélszám szerepelt elõtte, további két betûnyi helyen; ha ilyet nem jelölünk, akkor nem kell
+szóközökkel pótolni a helyét. Tehát helyes alakok a következõk:</p>
+
+<pre>
+17:0001 P:0100 18:0047/1 P:0222-A
+</pre>
+
+<p>A megjelenítõ program a kódokat feldolgozva olyan adatlapokat keres elõ, amelyek tartalmazzák az
+itt hivatkozott kiadványok megjelenési adatait. Errõl a Forrás-adatlapok cím alatt késõbb
+következik leírás. A kódok a bibliográfiák kódjainak nagyságrendjében, azon belül pedig a
+tételszámok rendjében haladnak. Ez megközelítõleg a kéziratok keletkezési idõrendjét is tükrözi. Ha
+egy vers egy kéziraton belül többször is elõfordul, akkor minden egyes elõfordulása külön tételként
+szerepel a rovatban. A rovat hossza 1000 betûhelynyi. Hozzáférhetetlen volt az MKÉVB 102. tétel,
+így ez a 3.1 kiadásban sem szerepel.</p>
+
+<p><b>v53</b> - A vers dallamának kiadásai (<b>ED-MEL</b>). Elsõsorban a Csomasz Tóth Kálmán
+szerkesztette Régi Magyar Dallamok Tára I. dallamaira történik itt hivatkozás. Ilyenkor elõször az
+RMDT1 jelölés áll, majd egy szóközzel elválasztva a dallam kötetbeli sorszáma három betûhelyen
+(szükség esetén az elején szóközökkel kiegészítve), végül közvetlenül a számadat után az SZ
+rövidítés mutatja, hogy sorszámról van szó. Ha a dallamra vonatkozó információ nem sorszámhoz
+kötött, akkor a számadat oldalszámot jelent, és utána nem áll rövidítés. Természetesen az RMDT1
+rövidítésen kívül szerepelhet a rovatban más kiadvány rövidítése is. Az RMDT2 (Papp Géza: Régi
+Magyar Dallamok Tára II. A XVII. század énekelt dallamai) jelölésmódja megegyezik a fent
+ismertetettel. Ha egyéb kiadványra történik utalás, akkor a rövidítést és a kötetszámot,
+oldalszámot kötõjelek (-) választják el egymástól. A rovat ismételhetõ, százalékjelekkel (%)
+elválasztva több kiadás, illetve elõfordulás is felsorolható. A rovat hossza 1000 betûhelynyi.</p>
+
+<p><b>v54</b> - A vers modern kiadása (<b>ED-CR</b>). Ha a versnek van kritikai kiadása, akkor itt
+tüntetjük fel ennek rövidítését és kötet- illetve oldalszámait egymástól kötõjelekkel (-)
+elválasztva. Kritikai kiadás híján a vers egyéb, lehetõleg friss kiadási helyét adjuk meg
+rövidítve. A rovat ismételhetõ, százalékjelekkel (%) elválasztva több kiadás is felsorolható. A
+rovat hossza 1000 betûhelynyi.</p>
+
+<p><b>v55</b> - A vers fakszimile kiadása (<b>FACS</b>). Elsõsorban a Forrásadatlapok esetében
+kitöltött rovat (ld. ott!), de néhány esetben a versek adatlapján is szerepel itt kiadás. Akkor, ha
+versnek van fakszimile kiadása, nem pedig valamelyik forrásának. Ilyen eset például az egyleveles
+kézirat fotója valamelyik folyóiratban, vagy az Ómagyar Mária-siralom önálló fakszimile kiadása,
+amely nem azonos a Leuweni-kódex fakszimile kiadásával (ilyen nincs is). A rovat ismételhetõ,
+százalékjelekkel (%) elválasztva több kiadás is felsorolható. A rovat hossza 1000 betûhelynyi.</p>
+
+<p><b>v61</b> - A vers nótajelzései (<b>DAL-CON</b>). A rovatban azoknak a verseknek az azonosító
+számai (R) szerepelnek egymástól százalékjelekkel (%) elválasztva, amelyek a vers valamelyik
+forrásában a vers nótajelzéséül szolgálnak. Ha a nótajelzésül szolgáló vers is 1601 elõtti, akkor
+ez a repertórium két alapadatlapja közötti kapcsolatot jelent. Ha a nótajelzésül szolgáló vers
+késõbbi, vagy nem magyar vers, akkor az R-szám nem az fõadatlapok csoportjára utal. Az ilyen
+verseknek is van adatlapjuk, és így R-számuk is (általában 3000 fölötti), de ezeken az adatlapokon
+csak az azonosító szám és a vers kezdõsora (INC) van feltüntetve. Ezek az adatlapok nem is
+szolgálnak másra, csak hogy a nótajelzések felsorolásánál azonos módon lehessen hivatkozni az
+R-számokon keresztül az 1601 elõtti és utáni versek kezdõsoraira is. A rovat ismételhetõ, hossza
+300 betûhelynyi.</p>
+
+<p><b>v65</b> - A verset nótajelzésként használó versek (<b>DAL-MOD</b>). Az elõzõ (v61) rovat
+fordítottja. Itt azoknak verseknek az azonosító számai (R) vannak felsorolva százalékjelekkel (%)
+elválasztva, amelyek a szóban forgó versre utalnak. Mivel itt mind a hivatkozó vers, mindpedig a
+hivatkozott csak 1601 elõtti lehet, ez a rovat az R-számokon keresztül kapcsolatot jelent a
+repertórium fõadatlapjai között. Ha egy vers éppen ilyen nótahivatkozás révén ismert csupán, az
+adatbázisban akkor is teljes értékû, önálló ûrlappal rendelkezõ versként szerepel, értelemszerûen
+csak a kikövetkeztethetõ rovatok vannak benne kitöltve (INC, TITRE, COMMENT, TYPME, METR, RIME,
+SYLL, ED-MEL). A rovat ismételhetõ, hossza 300 betûhelynyi.</p>
+
+<p><b>v91</b> - Az adatlap típusa (<b>RECTYP</b>). Az eddig ismertetett rovatok szinte mindig a
+versek adatait tartalmazó ún. fõadatlapokra vonatkoztak. Az adatbázisban azonban másfajta ûrlapok
+is találhatók. Ezeket egyjegyû kódszámmal különböztethetjük meg egymástól. A rovat lehetséges
+kódszámai és jelentésük a következõ:</p>
+
+<ul>
+<li>"0" - 1601 elõtti magyar vers adatait tartalmazó ûrlap (fõadatlap). R-száma mindig
+négyjegyû</li>
+
+<li>"6" - 1601 elõtti magyar vers adatait tartalmazó ûrlap, amely egy 0-ás típusú másik adatlaphoz
+tartozó kiegészítés (mellékadatlap). R-száma megegyezik a 0-ás típusú adatlap R-számával, amit egy
+betûjelölés (a, b, c...) követ. Metrumváltó vagy nótajelzést váltó versek esetén fordul elõ. Az
+ûrlap (képernyõ-maszk) felépítése teljesen megegyezik az fõadatlapokéval, de csak azok a rovatok
+vannak kitöltve, amelyek speciálisan a vers szóban forgó részére vonatkoznak, a többi mellékadatlap
+azonos rovatától eltérnek</li>
+
+<li>"8" - Nótajelzésként elõforduló idegen nyelvû vers vagy 1600 utáni magyar vers ûrlapja. Az
+ûrlap (képernyõmaszk) felépítése teljesen megegyezik az alapadatlapokéval, de itt csak az R és INC
+rovatok kitöltöttek</li>
+
+<li>"9" - A versek forrásaiként szolgáló dokumentumok (kéziratok, nyomtatványok) adatait tartalmazó
+ûrlap (Forrás-adatlap). Részletes leírását a következõ pontban adjuk</li>
+</ul>
+
+<p><b>v161</b> - A vers hivatkozása más 1601 elõtti versre rész/egész viszony esetén (<b>CF.
+ENCORE</b>). Van rá eset, hogy a repertóriumban szereplõ versek egymással rész/egész viszonyban
+vannak. Például Huszti Péter Aeneise tartalmazza az Oly búval, bánattal az Aeneás király kezdetû
+verset, amely önálló versként is felbukkan a 16. században. Ilyenkor ezt a rovatot használjuk a
+kapcsolódó adatlapok azonosító számainak (R) felsorolására. A rovat ismételhetõ, az R-számokat
+százalékjellel (%) elválasztva kell megadni. A rovat hossza 200 betûhelynyi.</p>
+
+<p><b>v162</b> - A vers hivatkozása más 1601 elõtti versre (<b>VIDE</b>). Azoknak a verseknek az
+azonosító számai (R) vannak itt felsorolva, amelyeknek forrása azonos a szóban forgó versével,
+például ha ugyanannak az eredetinek a különbözõ fordításai. A rovat ismételhetõ, az R-számokat
+százalékjellel (%) elválasztva kell megadni. A rovat hossza 200 betûhelynyi.</p>
+
+<p><b>v163</b> - A vers refrénszerkezete (<b>REFRÉN</b>). Fejlesztés alatt álló rovat. A metrikai
+osztályozás rendszerének finomítását szolgálja, de ennél részletesebb jelölésre törekszünk az
+adatbázis késõbbi verzióiban. Ha a vers nem refrénes, akkor kitöltetlen. Ha versnek van refrénje,
+akkor a rovat szorosan igazodik a metrikai szerkezetet leíró rovatokhoz (METR, RIME, SYLL). Minden
+metrikai sornak két betûhelynyi pozíció felel meg a rovaton belül. A rovat hossza 200 betûhelynyi.
+Ezen a jelölt sornak megfelelõen a következõ jelölések állhatnak:</p>
+
+<ul>
+<li>"+" - A sorban nincs refrén</li>
+
+<li>"R0" - Refrénes sor</li>
+
+<li>"R1" - Szabályosan váltakozó rímes refrén</li>
+
+<li>"R2" - Idõnként refrénnel ellátott sor</li>
+
+<li>"R3" - Szabálytalanul váltakozó refrén</li>
+
+<li>"R4" - Metrumot nem tudunk megállapítani, de a vers refrénes szerkezetû lehetett</li>
+
+<li>"I0" - Megismételt sor</li>
+</ul>
+
+<p><b>v164</b> - Echós szerkezetû-e a vers? (<b>ECHO</b>) Egyjegyû kódszám. Fejlesztés alatt álló
+rovat, az 1601 elõtti echós versek kicsiny száma miatt a késõbbi, 17. századi echós versek
+szerkezeti csoportosítását tervezzük figyelembe venni. Ha nincs kitöltve a rovat, akkor a vers nem
+echós szerkezetû. Egyébként a kódszámok lehetséges értékei és jelentésük a következõ:</p>
+
+<ul>
+<li>"1" - Echós szerkezetû vers, az echós rímek a strófák végén jelennek meg</li>
+
+<li>"2" - Echós szerkezetû vers, az echós rím a vers legvégén jelenik meg</li>
+</ul>
+
+<p><b>v165</b> - A vers adatlapjának belsõ hivatkozása (<b>BELSÕ CF.</b>). Míg a CF. ENCORE rovat
+azt a célt szolgálta, hogy a vers adatai mellett jelenjenek meg más adatlapokra történõ
+hivatkozások is, ez a rovat arra való, hogy a vers adatlapja kapcsolódjon más adatlapokhoz, de a
+megjelenítésnél ez a hivatkozás ne jelenjen meg. Például egy metrumváltó vers különbözõ metrumait
+csak külön adatlapokon tudjuk tárolni. Ilyenkor a fõlapon (RECTYP=0) a metrumtípusnál az áll, hogy
+a vers metrumváltó (Typme=15), és a BELSÕ CF. rovat mutatja meg, hogy hány és milyen azonosítójú
+mellékadatlap (RECTYP=6) kapcsolódik a vershez, amelyeken az egyes metrumok vannak feltüntetve.
+Hasonló módon történik a váltakozó nótajelzések adatainak tárolása is. Ezekrõl az esetekrõl a
+mellékadatlapok leírásánál (v91, RECTYP=6, RECTYP=8) volt szó részletesebben. A rovat ismételhetõ,
+hossza 200 betûhelynyi.</p>
+
+<h4><a name="122">1.2.2. Az adatûrlap mintával kitöltve</a></h4>
+
+<p>Amennyiben a versek adatlapjainak rovataiban szereplõ adatokat akarjuk megtekinteni vagy
+módosítani, azt egy három képernyõs ûrlapon tehetjük meg. Válasszuk Bornemisza Péter már említett,
+híres búcsúversét, és szolgáljanak ennek a mûnek az adatai például az ûrlap kitöltési módjára. Az
+ûrlap neve ALAP, a rovatok az alábbi sorrendben követik egymást:</p>
+
+<p><i>1. képernyõoldal</i></p>
+
+<pre>
+R 1233_ RECTYP 0 BELSÕ CF. _____________________________________________________
+INC Siralmas énnékem tetôled megváltom__________________________________________
+________________________________________________________________________________
+TITRE Cantio optima_____________________________________________________________
+________________________________________________________________________________
+AUT   ^1Bornemisza^2Péter______________________________________ TRAD 1 LANOR ___
+INCOR __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+TITOR __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+AUTET __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+HYMN. __________________________________________________________________________
+AN    1556_______________________________________________ PREC 4 CHANS 2 SIGNE 1
+GENRE 048,050,053,059,115%048,050,053,059,089___________________________________
+CF.   __________________________________________________________________________
+VIDE  __________________________________________________________________________
+________________________________________________________________________________
+</pre>
+
+<p><i>2. képernyõoldal</i></p>
+
+<pre>
+R 1233_
+DEDIE __________________________________________________________________________
+COLO  1 DONCOLO ^Ljó Husztnak várában^1Bornemisza Pétör az ô víg kedvében_______
+________________________________________________________________________________
+________________________________________________________________________________
+ACR   2 ACROST  ________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+DONACR _________________________________________________________________________
+INT    1 LON 6____________________________________________ PRE 1 ECHO _ TYPME 1_
+METR   A 12 6 6%A 12 6 6%X 13 6 7_______________________________________________
+RIME   AAX______________________________________________________________________
+SYLL   121213___________________________________________________________________
+REFRÉN ----R0___________________________________________________________________
+RMNY  __________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+MKÉVB 18:0027 P:0120-A__________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+ED-CR RMKT-7-207________________________________________________________________
+</pre>
+
+<p><i>3. képernyõoldal</i></p>
+
+<pre>
+R 1233_
+DAL-CON 0968____________________________________________________________________
+DAL-MOD 0968____________________________________________________________________
+ED-MEL  RMDT1 103SZ_____________________________________________________________
+RELSE   ^v1_____________________________________________________________________
+FACS    ________________________________________________________________________
+COMMENT ________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+________________________________________________________________________________
+</pre>
+
+<h4><a name="123">1.2.3. Az 1701 elõtti források (kéziratok és nyomtatványok) adatlapjainak
+felépítése</a></h4>
+
+<p><b>v101</b> - A dokumentum típusa (<b>TIPUS</b>). A rovat hossza 20 betûhelynyi. A dokumentum
+leírását tartalmazó bibliográfia rövidítése. A lehetséges jelölések és jelentésük a következõ:</p>
+
+<ul>
+<li>"MKÉVB0" - 1565 elõtti kéziratos forrás, vagy olyan kézirat, ill. kéziratos bejegyzés, amely
+nem található meg az MKÉVB1-gyel jelölt bibliográfiában. Ezeknek a forrásoknak a felsorolása
+megtalálható a repertórium alapján nyomtatott kötetben.</li>
+
+<li>"MKÉVB1" - Stoll Béla: A magyar kéziratos énekeskönyvek és versgyûjtemények bibliográfiája
+(1565-1840) címû bibliográfiájában szereplõ kézirat.</li>
+
+<li>"RMNY" - A Régi Magyarországi Nyomtatványok 1473-1600 címû bibliográfiában szereplõ
+nyomtatvány.</li>
+
+<li>"RMK1" - Szabó Károly: Régi magyar könyvtár I. címû bibliográfiájában szereplõ nyomtatvány,
+amely nem szerepel az RMNY rövidítéssel jelölt kötetben.</li>
+
+<li>"RMG" - Olyan nyomtatvány, amely nem szerepel sem az RMNY-nyel, sem az RMK1-gyel jelölt
+bibliográfiákban. Ezek felsorolása szintén megtalálható a repertórium nyomtatott változatában.</li>
+</ul>
+
+<p><b>v111</b> - A dokumentum bibliográfián belüli sorszáma (<b>SORSZÁM</b>). A TIPUS rovatban
+megjelölt bibliográfiában szereplõ tételszám szerepel itt 5 betûhelyen, amibõl az elsõ négy helyen
+kötelezõen négyjegyû számnak kell állnia (szükség szerint az elején nullákkal kiegészítve), az
+ötödik helyen pedig betû vagy számjegy is állhat, ha a bibliográfia tételszáma betûvel vagy számmal
+van kiegészítve. Tehát (az egyenlõségjelek jobb oldalán a TIPUS és SORSZÁM rovatok adatait
+szerepelnek kötõjellel elválasztva):</p>
+
+<pre>
+RMNY 353/2 = RMNY-03532 RMK I 256A = RMK1-0256A
+</pre>
+
+<p><b>v112</b> - A dokumentum szerzõje (<b>SZERZÕ</b>). Ha a szóban forgó nyomtatvány szerzõjét
+ismerjük, akkor ebben a rovatban szerepel a neve, nem a fõlapon megszokott alrovatos szerkezetben,
+hanem hagyományos alakban. Ha a kiadvány több mûvet tartalmaz (például két históriát), és a
+bibliográfia több szerzõt és címet is közöl, akkor minden esetben az elsõ szerzõt és címet vesszük
+figyelembe, még akkor is, ha a repertórium ezt a verset nem is tartalmazza, mert a kötet
+azonosíthatósága a fontos, és a SORSZÁM rovat 5. betûhelyén szereplõ jelölés eligazít a kiadvány
+részei között. A rovat hossza 80 betûhelynyi.</p>
+
+<p><b>v113</b> - A dokumentum fordítója (<b>FORDÍTÓ</b>). Amennyiben a kézirat vagy nyomtatvány nem
+eredeti, hanem fordítás, úgy a mû fordítójának neve szerepel itt, a SZERZÕ rovat névjelölési
+gyakorlatának megfelelõen. A rovat hossza 80 betûhelynyi.</p>
+
+<p><b>v121</b> - A dokumentum új címe (<b>CÍM_ÚJ</b>). A kézirat vagy nyomtatvány szakirodalomban
+használatos elnevezése. Ha a következõ, CÍM_ER rovat nincs kitöltve, akkor ez az adat jelenik meg a
+dokumentum megnevezéseként, címeként. Fejlesztés alatt álló rovat. A kéziratok megnevezése
+általában ebben a rovatban történik, mivel a kéziratoknak a legtöbbször valóban nincsen
+kiadványszerû címük, csupán a bennük szereplõ egyes mûveknek. Az adatbázis jelenlegi állapotában a
+francia nyelvû kötethez igazodóan ezek a megnevezések franciául szerepelnek, de ezt a jelölésmódot
+a késõbbiekben szeretnénk megváltoztatni, magyar nyelvû jelölést és többnyelvû, segédprogram által
+generált, választható megjelenítési módot tervezünk. A rovat hossza 200 betûhelynyi.</p>
+
+<p><b>v122</b> - A dokumentum eredeti címe (<b>CÍM_ER</b>). A kézirat vagy nyomtatvány eredeti
+címének betûhív leírásából az elsõ három szó. A tömör bibliográfiai hivatkozások érdekében a cím
+csonkolt formában jelenik meg, ez a rovat a cím azonosítására szolgál. Fejlesztés alatt álló rovat,
+a késõbbiekben a cím teljes alakját tartalmazza majd, és segédprogrammal oldjuk meg a tömör,
+háromszavas megjelenítést. Mivel a megjelenítés úgy történik, hogy a CÍM_ER rovat tartalma jelenik
+meg, ha a rovat ki van töltve, ilyenkor gyakran elõfordul, hogy a CÍM_ÚJ rovat a cím teljesebb
+alakját tartalmazza. Ha a kiadvány több mûvet tartalmaz (például két históriát), és a bibliográfia
+több szerzõt és címet is közöl, akkor minden esetben az elsõ szerzõt és címet vesszük figyelembe,
+még akkor is, ha a repertórium ezt a verset nem is tartalmazza, mert a kötet azonosíthatósága a
+fontos, és a SORSZÁM rovat 5. betûhelyén szereplõ jelölés eligazít a kiadvány részei között. A
+rovat hossza 200 betûhelynyi.</p>
+
+<p><b>v131</b> - A nyomtatvány nyomtatási helye (<b>NYOMDAHELY</b>). Értelemszerûen a kiadvány
+nyomtatási helyét jelöli, a város nevét magyaros alakban adjuk meg. Több város esetén vesszõkkel
+választjuk el a helyneveket. A rovat hossza 80 betûhelynyi.</p>
+
+<p><b>v132</b> - A dokumentum keletkezési ideje (<b>IDÕPONT</b>). A kézirat vagy nyomtatvány
+keletkezési idejét mutatja. Ha pontos évszámot tudunk, akkor ez áll itt, egyébként az idõadat
+magyar nyelvû kiegészítéssel szerepel. A szöveges rész szigorúan kötött, mivel a rovat adatait
+segédprogram fordítja idegen nyelvre (a megjelent kötet esetében franciára). A rovat hossza 80
+betûhelynyi.</p>
+
+<p><b>v133</b> - A nyomtatványt elõállító nyomdász (<b>NYOMDÁSZ</b>). Fejlesztés alatt álló rovat.
+Esetenként már most is kitöltött. Értelemszerûen a nyomdász neve szerepelhet itt 200 betûhelynyi
+hosszan.</p>
+
+<p><b>v141</b> - A dokumentum mûfaja (<b>MÛFAJ</b>). Fejlesztés alatt álló rovat. Esetenként már
+most is kitöltött. Értelemszerûen a kézirat vagy nyomtatvány egészének mûfaját lehet itt
+feltüntetni, szövegesen, 80 betûhelynyi hosszan.</p>
+
+<p><b>v142</b> - A dokumentum felekezeti hovatartozása (<b>FELEKEZET</b>). Ha a kézirat vagy
+nyomtatvány felekezetileg besorolható, akkor a felekezet magyar megnevezése (katolikus, protestáns,
+református, evangélikus, szombatos, unitárius, mohamedán, világi) szerepel itt, egyébként
+kitöltetlen. A versek adatlapjain szereplõ RELSE rovat a forrásoknak ezt az adatát tartalmazza
+összesítve. A rovat hossza 80 betûhelynyi.</p>
+
+<p><b>v151</b> - A dokumentum õrzési helye (<b>VÁROS</b>). Ha a forrás kézirat vagy egypéldányos
+nyomtatvány, akkor itt adjuk meg annak a városnak a nevét eredeti helyesírással, ahol a példányt
+õrzik. A rovat hossza 80 betûhelynyi.</p>
+
+<p><b>v152</b> - A dokumentumot õrzõ könyvtár neve (<b>KÖNYVTÁR</b>). A kéziratot vagy egypéldányos
+nyomtatványt õrzõ könyvtár neve eredeti helyesírással. A város neve után szerepelhet az (olim.)
+jelzés, mutatva, hogy a szóban forgó dokumentum ma nem lelhetõ fel a megadott helyen. A rovat
+hossza 80 betûhelynyi.</p>
+
+<p><b>v153</b> - A dokumentumot tartalmazó gyûjtemény (<b>GYÛJTEMÉNY</b>). Ha az elõzõ rovatban
+megnevezett könyvtáron belül a dokumentum külön gyûjteményben szerepel, akkor ennek a neve szerepel
+itt eredeti helyesírással. A rovat hossza 80 betûhelynyi.</p>
+
+<p><b>v154</b> - A dokumentumot tartalmazó kötet jelzete (<b>KÖTET JELZET</b>). Nyomtatványba
+bejegyzett kézírásos forrásoknál a nyomtatvány bibliográfiai leírására utaló hivatkozás (Például a
+Székely István világkrónikájának lapjaira bejegyzett vers esetén: RMNY 156). A rovat hossza 80
+betûhelynyi.</p>
+
+<p><b>v155</b> - A dokumentumot tartalmazó kötet megnevezése (<b>SZÖVEGES FELOLDÁSA</b>). Az elõzõ
+rovatban megjelölt nyomtatvány szöveges megnevezése, az adatok sorrendje: szerzõ, cím, megjelenési
+hely, megjelenési idõ, a kéziratos rész helye a köteten belül. A rovat hossza 200 betûhelynyi.</p>
+
+<p><b>v156</b> - A dokumentum raktári jelzete (<b>RAKTÁRI JELZET</b>). A könyvtáron, illetve a
+gyûjteményen belüli raktári jelzet szerepelhet itt (ha tudjuk), 12 betûhelynyi hosszon. Ha a jelzet
+ennél hosszabb, akkor az adat esetleg a következõ, MEGJEGYZÉS rovatban szerepelhet.</p>
+
+<p><b>v160</b> - Megjegyzések (<b>MEGJEGYZÉS</b>). További esetleges információk helye. Itt
+szerepelhet a hosszabb raktári jelzeten kívül, hogy mely azonosítójú, esetleg kezdõsorú vers
+szerepel a forrásban, hogy hiányos-e a leírásunk, illetve, hogy miért hiányos. A megjegyzés hossza
+200 betûnyi lehet.</p>
+
+<h4><a name="124">1.2.4. A forrásûrlap mintával kitöltve</a></h4>
+
+<p>A fent ismertetett a rovatokból állnak tehát a források adatlapjai. Amikor a rovatok adatait
+akarjuk megtekinteni vagy módosítani, akkor ezt a FORR elnevezésû képernyõs ûrlapon tehetjük meg. A
+rovatok az alábbi sorrendben követik egymást:</p>
+
+<pre>
+típus MKEVB1______________ sorszám 0027_
+szerzõ  ________________________________________________________________
+fordító ________________________________________________________________
+cím_új _________________________________________________________________
+cím_er Vasady-kódex_____________________________________________________
+nyomdahely _____________________________________________________________
+idõpont    1613-1615 körül______________________________________________
+nyomdász   _____________________________________________________________
+mûfaj      _____________________________________________________________
+felekezet  világi_______________________________________________________
+város      _____________________________________________________________
+könyvtár   _____________________________________________________________
+gyûjtemény _____________________________________________________________
+köt.jelzet _____________________________________________________________
+feloldása  _____________________________________________________________
+rak.jelzet ____________ facs ___________________________________________
+megjegyzés _____________________________________________________________
+</pre>
+
+<h3><a name="13">1.3. A mûfajfa</a></h3>
+
+<p>Repertóriumunk az egyes versek mûfajait nem mint önálló mûfajneveket tárolja, hanem egy
+fastruktúrában helyezi el. Mivel egy vers több mûfajba is sorolható, a mûfaji besorolást leíró mezõ
+ismételhetõ (lásd még: 1.2.1-es fejezet, a <b>v28</b> leírása). A fa alapvetõen két ágú, az egyik
+ág a vallásos, a másik a világi mûfajokat tartalmazza. Kialakításánál a fõ támpont "A magyar
+irodalom története" akadémiai kézikönyv által vázolt mûfajrendszer volt, ezt módosítva, kiegészítve
+jött létre az alábbi struktúra.</p>
+
+<h4><a name="131">1.3.1. A vallásos ág</a></h4>
+
+<pre>
+[<b>001</b>] vallásos
+  |
+  +---[<b>002</b>] história
+  |     |
+  |     +---[<b>004</b>] elbeszélõ
+  |     |     |
+  |     |     +---[<b>009</b>] bibliai
+  |     |     +---[<b>134</b>] világkrónika
+  |     |     +---[<b>300</b>] egyháztörténeti kivonat
+  |     |           |
+  |     |           +---[<b>301</b>] közel kortársi
+  |     |           +---[<b>302</b>] régi
+  |     |
+  |     +---[<b>005</b>] leíró v. értekezõ
+  |           |
+  |           +---[<b>010</b>] prédikációs ének
+  |
+  +---[<b>003</b>] nem história
+        |
+        +---[<b>006</b>] bibliai
+        |     |
+        |     +---[<b>013</b>] zsoltár
+        |     +---[<b>014</b>] jeremiád
+        |     +---[<b>015</b>] rövid foglalat
+        |     +---[<b>201</b>] dráma
+        |     +---[<b>258</b>] Énekek éneke
+        |
+        +---[<b>008</b>] liturgikus vagy paraliturgikus eredetû
+        |     |
+        |     +---[<b>016</b>] himnusz
+        |     |     |
+        |     |     +---[<b>124</b>] Szent királyról
+        |     |
+        |     +---[<b>017</b>] antifona
+        |     +---[<b>018</b>] szekvencia
+        |     +---[<b>100</b>] benedicamus
+        |     +---[<b>102</b>] imádság
+        |     +---[<b>104</b>] szerzetesi regula
+        |     +---[<b>125</b>] legenda
+        |     +---[<b>126</b>] Mária-siralom
+        |     +---[<b>130</b>] Mária-ének
+        |     +---[<b>200</b>] cantio
+        |     +---[<b>255</b>] úrfelmutatási ének
+        |     +---[<b>256</b>] benedicamus parafrázis
+        |
+        +---[<b>023</b>] dogmatika
+        |     |
+        |     +---[<b>027</b>] káté-ének
+        |           |
+        |           +---[<b>028</b>] Szentháromság-ének
+        |           +---[<b>026</b>] úrvacsora-ének
+        |           +---[<b>029</b>] credo magyarázat
+        |           +---[<b>030</b>] Miatyánk-ének
+        |           +---[<b>031</b>] Tízparancsolat-ének
+        |           +---[<b>039</b>] vallástétel
+        |           +---[<b>107</b>] hitvita
+        |           +---[<b>202</b>] doxológia
+        |
+        +---[<b>024</b>] alkalmi ének
+        |     |
+        |     +---[<b>032</b>] házasének
+        |     +---[<b>033</b>] keresztelési ének
+        |     +---[<b>034</b>] bölcsõdal
+        |     +---[<b>035</b>] temetési ének
+        |     +---[<b>257</b>] asztali áldás
+        |     +---[<b>259</b>] útonjárók éneke
+        |
+        +---[<b>025</b>] mindennapi v. ünnepi lelki ének
+        |     |
+        |     +---[<b>036</b>] dicséret
+        |     +---[<b>037</b>] hálaadó ének
+        |     +---[<b>038</b>] könyörgés
+        |     +---[<b>043</b>] hívõk biztatása
+        |     +---[<b>040</b>] Szentlélek invokáció
+        |     +---[<b>041</b>] tanulság
+        |     +---[<b>044</b>] siralom
+        |     +---[<b>101</b>] halálrakészítõ
+        |     +---[<b>042</b>] jó keresztényi cselekedetre intõ ének
+        |     +---[<b>045</b>] hívõk vigasztalása
+        |     +---[<b>047</b>] a világ hiábavalóságáról
+        |     +---[<b>260</b>] rabének
+        |
+        +---[<b>103</b>] muzulmán
+        +---[<b>123</b>] bájoló, varázsige
+        +---[<b>203</b>] embléma
+</pre>
+
+<h4><a name="132">1.3.2. A világi ág</a></h4>
+
+<pre>
+[<b>048</b>] világi
+  |
+  +---[<b>049</b>] história
+  |     |
+  |     +---[<b>051</b>] elbeszélõ
+  |     |     |
+  |     |     +---[<b>056</b>] nem fiktív
+  |     |     |     |
+  |     |     |     +---[<b>068</b>] történelmi
+  |     |     |     +---[<b>069</b>] kortársi, tudósító
+  |     |     |
+  |     |     +---[<b>057</b>] fiktív
+  |     |
+  |     +---[<b>052</b>] leíró v. értekezõ
+  |
+  +---[<b>050</b>] nem história
+        |
+        +---[<b>053</b>] morális v. politikai
+        |      |
+        |      +---[<b>058</b>] arisztokratikus regiszter
+        |      |     |
+        |      |     +---[<b>086</b>] katonaének
+        |      |
+        |      +---[<b>059</b>] populáris v. vágáns regiszter
+        |      |     |
+        |      |     +---[<b>074</b>] naptárvers
+        |      |     +---[<b>087</b>] hegedõs ének
+        |      |     +---[<b>088</b>] vágáns szatíra
+        |      |     +---[<b>089</b>] politikai propaganda
+        |      |     +---[<b>115</b>] utazási vers
+        |      |     +---[<b>127</b>] jogszabály
+        |      |     +---[<b>128</b>] játék
+        |      |     +---[<b>129</b>] csízió
+        |      |     +---[<b>212</b>] mezõgazdasági költemény
+        |      |
+        |      +---[<b>061</b>] humanista iskolai regiszter
+        |            |
+        |            +---[<b>090</b>] episztola dedicatoria
+        |            +---[<b>091</b>] tanulság, fabula
+        |            +---[<b>092</b>] idézet
+        |            +---[<b>093</b>] epigramma[R], sententia[I]
+        |            +---[<b>095</b>] epicédium
+        |            +---[<b>109</b>] embléma
+        |            +---[<b>120</b>] Horatius-paródia
+        |
+        +---[<b>054</b>] szerelmes, erotikus
+              |
+              +---[<b>063</b>] arisztokratikus regiszter - udvari
+              |     |
+              |     +---[<b>076</b>] partimen
+              |     +---[<b>077</b>] embléma
+              |     +---[<b>078</b>] szerelmi köszöntés
+              |     +---[<b>080</b>] török bejt fordítása
+              |     +---[<b>081</b>] aenigma
+              |     +---[<b>118</b>] misszilis levél
+              |     +---[<b>210</b>] epigramma
+              |     +---[<b>211</b>] udvari dráma
+              |
+              +---[<b>064</b>] populáris regiszter
+              |     |
+              |     +---[<b>082</b>] nõi dal
+              |     +---[<b>083</b>] latrikánus vers
+              |     +---[<b>084</b>] gab
+              |     +---[<b>119</b>] alba
+              |     +---[<b>121</b>] táncdal
+              |
+              +---[<b>066</b>] humanista iskolai
+</pre>
+
+<h2><a name="2">2. Keresés</a></h2>
+
+<p>Az ûrlapok adatait egyesével a képernyõn is megtekinthetjük, de akárcsak a repertórium könyvbeli
+változatában, csakis egyfajta rend szerint felsorolva. A könyvben az incipitek ábécérendje a vezetõ
+szempont, a számítógépes változatban az ûrlapok belsõ azonosítószáma (MFN). Ahhoz, hogy egy vers
+ûrlapját elõkeressük, vagy hogy adott módon kitöltött rovatú versek egy csoportját kiválogassuk, az
+ISIS keresési eljárásait kell használnunk. Ennek részletes ismertetése az ISIS felhasználói
+kézikönyvében található. Lényegében két, egymástól fõként a végrehajtás sebességében különbözõ
+módszert használhatunk. A szabad szöveges keresés ugyan lassú, de az adatbázisban található minden
+információ kereshetõ vele; az inverz fájl használatával történõ keresés csak a keresésre
+elõkészített rovatokra alkalmazható, majdnem minden rovat ilyen, és ez az eljárás kellõképpen gyors
+is. Példákon keresztül mutatjuk be mindkét módszert, kiegészítve még a keresõelemek szótárának
+használatával is.</p>
+
+<h3><a name="21">2.1. Szabad szöveges keresés</a></h3>
+
+<p>Az elõzõ fejezetben felsoroltuk a versek, illetve a dokumentumok adatlapjainak rovatait. A
+felsorolás tartalmazta a rovatok azonosító számát is. Ha az ISIS keresõmenüjében a Search (S)
+pontot választjuk, akkor az azonosító számok segítségével rákérdezhetünk bármelyik rovat
+tartalmára. A szabad szöveges keresést mindig egy kérdõjellel (?) kezdjük, majd a kérdéses rovat
+azonosítóját írjuk le. Egy kettõspontot (:) követõen aposztrófok (') között megadhatjuk a kérdéses
+jelsorozatot, akár betûkrõl, akár számokról van szó. Korábbi példánkban Bornemisza Péter búcsúverse
+szerepelt. Tegyük fel tehát, hogy ennek adatai alapján arra vagyunk kíváncsiak, hogy mely verseket
+szerezték még Huszton. Arra gondolva, hogy ezt az információt a kolofon adatai tartalmazzák,
+megkérdezhetjük, hogy mely adatlapok DONCOLO rovatában fordul elõ a 'Huszt' betûsorozat. A keresési
+ûrlapra ekkor a következõ kérdés kerül:</p>
+
+<pre>
+? v32:'Huszt'
+</pre>
+
+<p>A számítógép ekkor elõkeresi a belsõ azonosítók rendjében az összes adatlapot, és összeveti a
+szóban forgó rovat tartalmát a keresett jelsorozattal. Ha talál megfelelõ adatlapot, akkor ezt
+kijelzi. Miután a gép a keresést befejezte (ez az adatbázis mérete miatt lassú gépen percekbe
+telhet), a keresés folyamán megtalált adatlapokat megjeleníthetjük képernyõn (D), kinyomtathatjuk,
+vagy tárolhatjuk késõbbi nyomtatás céljára (P). Választott példánkban a számítógép három verset fog
+kiválasztani. A teljes adatlap megjelenítése helyett a tömörebb és áttekinthetõbb nyomtatási képet
+eredményezõ<br>
+<br>
+ <tt>v1,x1,v2,c6,v5^1," "v5^2,': ',v3,c6,v32^l</tt><br>
+<br>
+ megjelenítõ formátumot használjuk. Ennek felépítésérõl a következõ fejezet szól. A három vers
+adatai a következõképpen jelennek meg a képernyõn:</p>
+
+<blockquote>
+<p><tt>0332 Én mostan beszélem a rómaiakat Huszti Péter: Aeneis 1171 Panaszolkodunk most
+országunknak ily nagy pusztaságán Bornemisza Péter: Cantio Szent János látásáról Husztnak várában
+1233 Siralmas énnékem tetõled megváltom Bornemisza Péter: Cantio optima jó Husztnak
+várában</tt></p>
+</blockquote>
+
+<p>Amint láthatjuk, bekerült egy olyan vers is a három közé, amelyet nem Huszton szereztek, de a
+kolofonban mégis szerepel a 'Huszt' betûsorozat, a szerzõ nevének részeként. Vagyis nem kérdeztünk
+kellõen pontosan. A nem kívánt vers szerepeltetését a válaszban kiküszöbölhettük volna, ha a
+keresõkérdésben v32 helyett v32^l alakot írunk. A példa azt is mutatja, hogy a szabad szöveges
+keresésnél az ISIS formátumnyelvén megfogalmazva bármilyen kérdést feltehetünk. Kérdéseinket
+kombinálhatjuk, használhatjuk a logikai 'és' (*), 'vagy' (+), 'nem' (^) mûveleteket. A rovat
+szûkítésére (alrovat használatára) láttunk példát, megfordítva is eljárhatunk, az S-függvény
+segítségével tetszõleges rovatokat össze is vonhatunk. Egy-egy kérdés megválaszolására jól
+használható a bemutatott eljárás, sokszoros ismétlése azonban nagyon hosszadalmas, mivel a
+számítógép minden újabb kérdésnél elõröl kezdi az adatlapok vizsgálatát. A gyorsabb kereséshez az
+inverz file használata szükséges.</p>
+
+<h3><a name="22">2.2. Keresés az inverz file használatával</a></h3>
+
+<p>Az adatbázisra vonatkozó kérdéseink általában egy-egy rovat tartalmára vonatkoznak, vagy ilyen
+kérdések logikai mûveletekkel való összekapcsolásával állíthatóak elõ. Ha tehát a rovatok
+tartalmából különbözõ mutatókat készítünk, akkor a kérdezéskor elegendõ ezek alapján elõkeresni a
+megfelelõ adatlapokat, és nem szükséges újból és újból az összeset átvizsgálni. Az ISIS által
+használt inverz file nem más, mint egy ilyen, sokszempontú mutató. Tulajdonképpen minden rovat
+szerint el lehetne készíteni a keresést segítõ táblázatot, de erre valójában nincs szükség. A
+COMMENT rovat ábécébe rendezése például nyilván teljesen felesleges. A felhasználóra van bízva,
+hogy mit ítél fontos és ezért keresõtáblázatba foglalandó rovatnak. A repertórium felépítésekor
+szinte minden rovatot ilyennek tekintettünk. Az ISIS a különbözõ táblázatokat egyetlen nagy
+listában, az inverz file-ban tárolja. Hogy a különbözõ szempontokat elkülöníthessük, a különbözõ
+rovatok adatait más és más bevezetõ betûsorral jelöltük. Például a vers szerzõjének a neve elõtt az
+AUT= jel áll, a vers forrásául szolgáló mû szerzõjének neve elõtt AUTET=, a dedikációban szereplõ
+személyek neve elõtt pedig a DEDIE=. Ezeket a bevezetõ jeleket az ISIS-ben prefix-nek nevezik. Ezek
+a legtöbbször megegyeznek a rovatok ûrlapokon szereplõ elnevezéseivel, de nem mindig, és nem
+pontosan ugyanaz az információ áll mögöttük. Az eltérés oka egyrészt az, hogy a kérdezés
+természetes szempontjai nem egyeznek meg mindig a tárolásnál követett elvekkel, másrészt kérdéseink
+több rovat adatára vagy egy rovatnál kisebb részre is vonatkozhatnak. Az alábbiakban felsoroljuk az
+általunk használt prefixeket:</p>
+
+<ul>
+<li><b>INC</b> -- A versek kezdõsorai elõtt áll. Nem azonos teljesen a v2 rovat tartalmával, mert a
+könnyebb kereshetõség végett a központozást megszüntettük. Csak a fõadatlapok incipit-rovatai
+tartoznak ide, a nótajelzések, mellékadatlapok kezdõsorai nem. Ha egy versnek nincsen incipitje,
+akkor a keresõtáblázatban a címével szerepel.</li>
+
+<li><b>TITRE</b> -- A versek címeit vezeti be. Csak a fõlapok címrovatai tartoznak ide, a
+mellékadatlapoké nem. A központozást itt is megszüntettük.</li>
+
+<li><b>AUT</b> -- A versek szerzõinek neve elõtt szerepel. A nevet itt hagyományos alakban
+tüntetjük fel, vezetéknév, keresztnév sorrendben. A bizonytalanságra utaló kérdõjelet a névvel
+együtt nem szerepeltetjük (az egyértelmû kérdezhetõség végett), viszont külön kérdezhetõ a
+bizonytalanságra utaló jel név nélkül (AUT=?). A többszerzõs mûvek szerzõi külün-külön
+kérdezhetõek.</li>
+
+<li><b>NJ</b> -- A csak nótajelzésben szereplõ kezdõsorok elõtt áll. Amennyiben a szóban forgó
+versnek nem ismert a kezdõsora, úgy a cím követi a jelet. A központozást megszüntettük.</li>
+
+<li><b>TRAD</b> -- A fordításra utaló kódszám prefixe.</li>
+
+<li><b>INCOR</b> -- A mintául szolgáló mûvek kezdõsorai elõtt szerepel.</li>
+
+<li><b>TITOR</b> -- A mintául szolgáló mûvek címei elõtt áll.</li>
+
+<li><b>HYMNUS</b> -- A himnuszkatalógusok adatait vezeti be.</li>
+
+<li><b>AUTET</b> -- A mintául szolgáló mûvek szerzõinek neve elõtt áll. A nevet hagyományos
+alakban, vezetéknév, keresztnév sorrendben kereshetjük. A bizonytalanságra utaló kérdõjelet a
+névvel együtt nem szerepeltetjük (az egyértelmû kérdezhetõség miatt), viszont külön kérdezhetõ a
+bizonytalanságra utaló jel név nélkül (AUTET=?). Többszerzõs mûvek esetén a szerzõk nevei
+külün-külön kérdezhetõek.</li>
+
+<li><b>LANOR</b> -- A fordítás alapjául szolgáló nyelv rövidítései elõtt áll.</li>
+
+<li><b>AN</b> -- A versek szereztetési dátumában szereplõ évszámok elõtt áll. Ezt az információt a
+következõ, pontosító adattal együtt célszerû kezelni, és a lekérdezésnél is összetett kérdést kell
+megfogalmazni.</li>
+
+<li><b>PREC</b> -- A szereztetési dátumhoz kapcsolódó, pontosító meghatározás kódjai elõtt
+áll.</li>
+
+<li><b>CHANS</b> -- Az énekeltségre vonatkozó kódszám prefixe.</li>
+
+<li><b>SIGNE</b> -- A szignáltság módjára vonatkozó kódszámok elõtt szerepel.</li>
+
+<li><b>LEVEL</b> -- A versek mûfajt leíró kódláncainak záró kódszámai elõtt áll. Vagyis külön
+kérdezhetõek a legalacsonyabb szintû mûfaji összetevõk kódjai, a mûfajfa levelei.</li>
+
+<li><b>GENRE</b> -- A versek mûfajt leíró kódláncaiban tetszõleges helyen szereplõ kódszámok elõtt
+szerepel. Vagyis a mûfajleírásban használt bármely összetevõ kódja külön kérdezhetõ, a mûfajfa
+gyökere, elágazási pontjai és levelei egyaránt.</li>
+
+<li><b>COLO</b> -- A kolofon létezésre utaló kódszám elõtt áll. A kolofon adatira csak szabad
+szöveges kérdéseket tehetünk fel, mert a nagyon eltérõ szerkezetû információkat nincs értelme
+táblázatosan összegyûjteni.</li>
+
+<li><b>DEDIE</b> -- A dedikációban szereplõ nevek prefixe.</li>
+
+<li><b>ACR</b> -- Az akrosztichon meglétére utaló kódszám elõtt szerepel. Az akrosztichon szövege
+és a benne található adatok (hely, idõ, szerzõ) csak szabad szöveges kereséssel érhetõek el, mert
+eltérõ szerkezetük miatt a táblázatos tárolásnak nincsen értelme.</li>
+
+<li><b>INT</b> -- A szöveg teljességére utaló kódszám elõtt áll.</li>
+
+<li><b>LON</b> -- A vers terjedelmét jelzõ mérõszámok elõtt szerepel. Csak a következõ,
+mértékegységet jelölõ adattal együtt alkot korrekt információt, összetett kérdéssel
+kérdezhetõ.</li>
+
+<li><b>PRE</b> -- A terjedelem mértékegységét jelzõ kódszámok elõtt szerepel.</li>
+
+<li><b>TYPME</b> -- A metrumtípusok kódszámai elõtt áll. A metrumok, különbözõ szerkezetû
+jelölésmódjuk miatt egészükben nem kérdezhetõek. Ha a metrumtípusból következõen van rím- és
+szótagszám-jelölés (metrumképlet), akkor a következõ két adatra kérdezhetünk, és logikai 'és'
+mûvelettel kapjuk meg a versek kívánt csoportját.</li>
+
+<li><b>RIME</b> -- A versek metrumképletében elõforduló rímjelölõ betûsorok elõtt áll.</li>
+
+<li><b>SYLL</b> -- A versek metrumképletében elõforduló szótagszámjelölõ számsorok elõtt
+szerepel.</li>
+
+<li><b>MEL</b> -- A versek dallamkiadására vonatkozó adatok elõtt szerepel.</li>
+
+<li><b>CR</b> -- A versek modern kiadását jelzõ adatok elõtt áll.</li>
+
+<li><b>FACS</b> -- A versek vagy a dokumentumok fakszimile kiadására utaló bibliográfiai adatok
+elõtt szerepel.</li>
+
+<li><b>DAL-CON</b> -- A nótajelzésként elõforduló 1601 elõtti versek R-számai elõtt áll.</li>
+
+<li><b>RECTYP</b> -- Az adatlap típusát jelölõ kódszám prefixe. Nagyon fontos kérdezési szempont! A
+0 érték lekérdezésével tudjuk elkülöníteni a fõadatlapokat a többitõl. Ez egyrészt a korrekt
+válaszok miatt fontos, másrészt idõtakarékosság is, hiszen felére csökkenti a vizsgálatba vont
+ûrlapok számát. Ugyanígy vonatkoztathatjuk kérdéseinket például a dokumentumok ûrlapjaira,
+stb.</li>
+
+<li><b>TIP</b> -- A dokumentum típusának rövidítései elõtt áll.</li>
+
+<li><b>HELY</b> -- A dokumentumok keletkezési helye elõtt áll.</li>
+
+<li><b>IDO</b> -- A dokumentumok keletkezési ideje elõtt áll.</li>
+
+<li><b>FEL</b> -- A dokumentumok felekezeti hovatartozásának jelölését vezeti be.</li>
+
+<li><b>CF.</b> -- A versek CF. ENCORE rovataiban szereplõ, rész-egész viszonyra utaló R-számok
+elõtt szerepel.</li>
+
+<li><b>VIDE</b> -- A versek VIDE rovatában szereplõ, azonos forrásra utaló R-számok elõtt
+szerepel.</li>
+
+<li><b>REFR</b> -- A versek refrénes voltát jelölõ kódszám elõtt áll.</li>
+
+<li><b>ECHO</b> -- A versek ekhós voltát jelölõ kódszám elõtt szerepel.</li>
+
+<li><b>BCF.</b> -- A több ûrlapon nyilvántartott versek azonosító R-számai elõtt szerepel.</li>
+</ul>
+
+<p>Egyáltalán nem kapnak prefix jelölést a versek R-számai. Az inverz file szótárában szerepelnek,
+de mindenféle bevezetõ jelölés nélkül, csupán a v1 rovat értékét feltüntetve. Azért célszerû így
+kezelni az azonosítókat, mert ez a leggyakrabban kérdezett rovat; az ûrlapok más rovataiban is az
+R-számokat használjuk rövid utalóként, különbözõ listákon, felsorolásokban is az R-számokat adjuk
+meg. A megjelenítést végzõ segédprogramok különbözõ utalásoknál (CF.ENCORE, BCF., VIDE),
+nótajelzéseknél (DAL-MOD, DAL-CON) fordulnak az inverz file-hoz, és R-szám szerinti keresést
+végeznek. Hasonlóképpen bevezetõ betûsor nélkül kerültek invertálásra a versek elõfordulásának
+bibliográfiai adatai, és a dokumentumok azonosítására szolgáló típus- és sorszám-adatok. Ezeket
+fõként a megjelenítõ segédprogramok használják, az inverz file-on keresztül teremtenek kapcsolatot
+a versek és a dokumentumok között. Itt említjük meg, hogy a gyors keresést (pl. az R-szám szerinti
+kiválasztást) elõsegítendõ, két speciális billentyû is használható az adatbázist kezelõ programban.
+Bármelyik menüben állva, az F9 billentyû lenyomásával a Keresõkérdés megfogalmazása ûrlapjára
+kerülünk, s ezt kitöltve az F10 billentyûvel a keresett ûrlapok válnak szerkeszthetõvé.</p>
+
+<p>Az inverz file tartalma három módon is megtekinthetõ. Az Inverzfile kezelése menüben kérhetünk
+listát róla, de ez nem célszerû, mert a teljes lista nagyon hosszú, és jórészt érdektelen adatokat
+tartalmaz a felhasználó számára. Praktikusabb a Keresés, megjelenítés menü szótárt megjelenítõ
+pontját (T) használni. Itt a prefix megadása után lapozhatunk a szótárban, megtekinthetjük az
+elõforduló kódokat, illetve szöveges részeket, természetesen csupán 30 betûhelynyi hosszan (ez
+indokolta a viszonylag rövid prefixek alkalmazását). Az ISIS felhasználói kézikönyvében leírt módon
+keresõkérdések megfogalmazására is használhatjuk a szótárt. A harmadik lehetõség egy speciális
+segédprogram használata.</p>
+
+<h3><a name="23">2.3. A SYLL program használata</a></h3>
+
+<p>A SYLL nevû program indításához az ISIS fõmenüjében a Felhasználói segédprogramok pontot kell
+választanunk (A), majd a Futtatás funkciót (R), és a SYLL nevet kell megadnunk. Ekkor az elõbbi
+pontban felsorolt prefixek közül választhatunk, és ennek megfelelõen a gép a képernyõre listázza a
+inverz file szótár-részét, és minden szótári elem után grafikusan is ábrázolja az adott tételhez
+kapcsolódó ûrlapok mennyiségét. Öt-öt verset vagy dokumentumot szimbolizál egy-egy vonal az ábrán,
+így a különbözõ szótári egységek aránya szemléletesen, oszlopgrafikon formájában tekinthetõ meg.
+Érdemes kipróbálni, mert noha mindig csupán egyetlen szempont szerinti böngészést tesz lehetõvé a
+program, sokkal gyorsabb, mint a keresõkérdések megfogalmazás útján való tájékozódás. Könnyen
+válaszolhatunk olyan típusú kérdésekre így, amik azt tudakolják, hogy egy adott szempont szerint
+milyen fajta versbõl van a legtöbb. Például: Melyik a legnépszerûbb rímképlet, szótagszámforma? Ki
+írta a legtöbb verset? Kitõl fordítottak, és kitõl a legtöbbet? Melyik a leghosszabb vers? És így
+tovább... A program használata során ügyelnünk kell arra, hogy az egy-egy szempont szerinti keresés
+nem mindig korrekt módszer, például a versek keletkezési idõpontjának áttekintésekor (prefix: AN=)
+vegyesen kapjuk meg a különbözõ pontosító kódokkal együtt érvényes évszámokat. Egy-egy áttekintés
+után, vagy közben az X billentyûvel szakíthatjuk meg a grafikonrajzolást, és így fejezhetjük be a
+program használatát is. <a name="_Toc457265000"></a></p>
+
+<h3><a name="24">2.4. Többszempontú keresések</a></h3>
+
+<p>Az adatbázis igazi felhasználási formája a célirányos, többszempontú keresés. Ilyenkor a kérdezõ
+megpróbál olyan kérdéssorozatot megfogalmazni, amely egyre szûkíti a megfelelõ versek csoportját,
+míg végül kellõen kis számú vershez nem jut. Ezer vers adatait nehéz áttekinteni, de még húsz vers
+is sok lehet, ha nem csupán egyetlen szempontot vizsgálunk. Az a válasz azonban, amely egy jól
+megfogalmazott keresési sorozat végén csupán néhány verset eredményez, nagyon beszédes lehet.
+Numerikus adatok esetén egy statisztikai korreláció-vizsgálat jellemezhet egy adatbázist. Vegyes és
+szöveges adatok esetén, mint amilyen ez is, az összefüggések feltárása sokkal összetettebb feladat.
+Az imént megfogalmazott szûkítõ keresés a nem nyilvánvaló (nem triviális) gyenge összefüggések
+feltárása. Két példát mutatunk be kedvcsinálónak, és ezzel egészítjük ki az ISIS felhasználói
+kézikönyvének keresési stratégiákat bemutató részét. Tudjuk, hogy az 1601 elõtti magyar versek
+körében a hymnus mûfaj nagyon gyakori. A mûfaj kódjára rákérdezve (LEVEL=016) kideríthetõ, hogy
+repertóriumunkban 137 db verset minõsítettünk így. Azt is tudjuk, hogy e mûfajnak legnépszerûbb
+versformája a négysarkú 8-as. Ilyen formájú vers (NUMSE= 8 8 8 8) 119 db van az adatbázisban. Olyan
+vers, ami mindkét ismérvnek eleget tesz (#1 * #2) 74 db. Ez a szám igen magas, a korreláció
+nagyfokú, az információ elõre sejthetõ, nem túl izgalmas, mondhatni: érdektelen. Ám ha a fordított
+kérdést tesszük fel, hogy hány olyan hymnus van, ami nem ilyen versformájú, hanem mondjuk négysarkú
+12-es (NUMSE=12121212), akkor rögtön izgalmas eredményhez jutunk. A négysarkú 12-esek száma (115
+db) ugyancsak magas, hiszen például a históriás énekek egyik kedvelt formája. A hymnusok és a
+négysarkú 12-esek halmaza azonban alig érintkezik! Tegyük fel a<br>
+<br>
+ <tt>LEVEL=016 * NUMSE=12121212</tt><br>
+<br>
+ kérdést, és a számítógép azonnal jelzi, hogy csupán egyetlen(!) ilyen 1601 elõtti magyar verset
+ismerünk. Hogy melyik ez a vers, az a D billentyû lenyomása után megtekinthetõ. Második példánkban
+szintén a szótagszámok játsszák a fõszerepet. Vegyük szemügyre Balassi Bálint egyik kedvelt
+versformáját, a Palkó nótáját. Ennek szótagszámai 12, 12, 6, 12. Mivel tudjuk, hogy Balassi több
+verset is írt ebben a formában, kérdezzünk úgy, hogy ezek a versek eleve hiányozzanak a
+listáról:<br>
+<br>
+ <tt>NUMSE=1212 612 ^AUT=Balassi Bálint</tt><br>
+<br>
+ A válaszként kapott verseket szemügyre véve megállapítható, hogy a Palkó nótáján kívül, melyet épp
+Balassi verseinek nótajelzéseibõl ismerünk, csupán két helyrõl bukkan elõ ez a forma, Rimay János
+költészetébõl, és Újváry Mihályéból. Az elsõ név várható volt, a második, ezek szerint talán
+szintén Balassi-követõ poéta neve azonban egyáltalán nem. A két példa csupán ízelítõ, további, ma
+még rejtett összefüggések versek, szerzõk, mûfajok és formák között feltárásra várnak, a
+felhasználón múlik csupán, hogy milyen módon kérdez.</p>
+
+<h2><a name="3">3. Az adatok megjelenítése, rendezése, nyomtatása</a></h2>
+
+<h3><a name="31">3.1. Megjelenítés</a></h3>
+
+<p>A repertóriumban található adatok legegyszerûbben a képernyõn tekinthetõek meg, az ISIS
+adatbeviteli ûrlapjain. Ezek leírását az elõzõ pontban részleteztük. Ez a mód ugyan gyors, de az
+adatok nyersen, nem olvasható módon kerülnek elénk. Megnézhetjük a versek adatait abban a formában
+is, ahogyan a repertórium nyomtatott változatában szerepelnek. Ehhez a Keresés, megjelenítés
+menüben kell a D, ill. B funkciót választanunk. Ha nem módosítottuk elõzõleg a megjelenítési
+formátumot, akkor az ALAP nevû formátum van érvényben, és ez a versek közel teljes leírását adja,
+francia nyelven, tagolva, szerkesztett alakban. A korábbiaknak megfelelõen legyen most is
+Bornemisza Péter búcsúverse a példánk, ez a következõ alakban jelenik meg a képernyõn:</p>
+
+<pre>
+1233 Siralmas énnékem tetõled megváltom -- Cantio optima
+
+                   H i s t o i r e   l i t t é r a i r e
+
+Signé par Bornemisza Péter, sans dédicace. Sans acrostiche. Colophon
+registrant les circonstances de la composition; le lieu: jó Husztnak várában;
+l'auteur: Bornemisza Pétör az õ víg kedvében. Composé environ 1556.
+
+                        M è t r e   e t   g e n r e
+
+Mètre strophique syllabo-tonique, chanté. Son modèle mélodique: Mindenek
+meghallják és jól megtanulják (968). Modèle mélodique du poème suivant:
+Mindenek meghallják és jól megtanulják (968). Texte intégral comprenant 6
+strophes. Refrain. Structure strophique:
+
+                   a12(6,6), a12(6,6), X13(6,7)
+
+Qualifications postériures: poème profane -- non présenté comme histoire --
+moral ou politique -- du registre popularisant ou vagant -- d'un réfugié ou
+d'un pèlerin; poème profane -- non présenté comme histoire -- moral ou
+politique -- du registre popularisant ou vagant -- de propagande politique.
+
+                         B i b l i o g r a p h i e
+
+Source manuscrite: Vasady-kódex, environ 1613-1615 {profane} (S 27) p. 120.
+Édition moderne: RMKT-7-207.
+Édition de la mélodie: RMDT1 #103.
+</pre>
+
+<p>Ez a forma képernyõn jelenik meg, de az ISIS ugyanezt nyomtatóra is küldheti, vagy a nyomtatási
+képnek megfelelõen lemezre teheti, vagyis más szövegszerkesztõ programmal is folytatható a munka,
+ill. a nyomtatás. Ehhez a Nyomtatás/Rendezés menüben a nyomtatási ûrlap rovatban a @ALAP nevet kell
+megadni, és az ISIS nyomtatási eljárását követni. Eltekintve attól, hogy az így megjelenõ
+információ esetleg túlságosan is bõséges (bár ez is lehet zavaró), az ilyen megjelenítés nehézkes
+is lehet. Az összes adat elõkeresése, kiváltképpen az adatlapok közötti kapcsolatra épülõ
+információknál (nótajelzések, forrás dokumentumok, mellékadatlapok rovatai) lassú mûvelet, sok vers
+esetében jelentõs idõmegtakarítás érhetõ el a megjelenítési mód egyszerûsítésével. Másrészt sok
+vers esetében a felsorolás jellegû nyomtatási kép a megfelelõ, olyan lista praktikus, amin csupán
+néhány rovat tartalma van feltüntetve. Ezért most azt mutatjuk be, hogyan állítható elõ olyan
+megjelenítési formátum, amely az adatlapok részleges megjelenítésére való. Tegyük fel, hogy a vers
+adatainak megjelenítésekor csupán a következõ információkra van szükségünk: azonosító szám,
+kezdõsor, akrosztichon. Ezeket az adatokat a v1, v2, v34 rovatok tartalmazzák, vagyis az R, INC, és
+ACR nevû rovatok. Elsõként lépjünk a Keresés, megjelenítés menübe, majd válasszuk a Megjelenítõ
+formátum váltás menüpontot. Töröljük le a képernyõn látható ALAP nevû formátumot (F6), és írjunk
+helyette másikat:</p>
+
+<pre>
+v1,x1,v2/,v34//
+</pre>
+
+<p>Ebben a jelölésben felsoroltuk a megjeleníteni kívánt mezõket, az x1 egy szóköz kihagyását, a
+törtjel (/) új sor kezdését jelenti. Az új megjelenítési formátum hatására az ISIS ezek után csak a
+kívánt rovatok tartalmát küldi képernyõre vagy nyomtatóra. Például Balassi Bálint Csak búbánat,
+immár kezdetû verse esetében ez szerepel majd a képernyõn:</p>
+
+<pre>
+0220 Csak búbánat immár hagyatott énnekem, kiben elfogy életem CHAK BORBALAERT
+</pre>
+
+<p>Természetesen a példa a lehetõ legegyszerûbb volt. Azoknak az adatoknak a megjelenítését
+ugyanis, ahol kódszámok, rövidítések szerepelnek, speciális megjelenítõ programok végzik. Ezek
+mûködését itt nem tárgyalhatjuk, felhasználásuk módja megvizsgálható az ALAP nevû formátum
+vizsgálatával. Ezek a programok a PROG alkönyvtárban találhatók, Pascal nyelven készültek. Itt most
+csupán felsorolásukra, és a paraméterek ismertetésére vállalkozhatunk. Használatukkor ügyelni kell
+arra, hogy csak kitöltött rovat esetén adnak értelmes eredményt, tehát a programok hívása elõtt a
+formátumban ellenõrizni kell a rovat létezését.</p>
+
+<p><b>BOOKD</b> -- A v51 (RMNY) és v52 (MKEVB) rovatok kódszámai alapján elõkeresi a megfelelõ
+forrásadatlapot, és annak alapján a dokumentum rövid címét, keletkezési helyét és idejét,
+felekezeti besorolását, oldalszámjelölését és a fakszimile kiadásra való esetleges utalást
+tartalmazó bibliográfiai tételleírást állít elõ. Mivel a dokumentumok adatait két rovat
+tartalmazhatja (RMNY, MKEVB), és ezek ismételhetõ rovatok, a programot mindkét mezõre és minden
+elõfordulásra meg kell hívni. A program hívásakor át kell adni az aktuális adatlap ISIS-ben
+használt azonosítóját (MFN), a szóban forgó rovat jelölését és a rovat szóban forgó tételének elsõ
+19 betûhelynyi tartalmát. Javasolt alkalmazási mód (az elsõ sor a kéziratok, a második a
+nyomtatványok bibliográfiai hivatkozását állítja elõ):</p>
+
+<pre>
+(|, |+d52,&amp;bookd(mfn(4),|v52=|v52.19))
+(|, |+d51,&amp;bookd(mfn(4),|v51=|v51.19))
+</pre>
+
+<p><b>CODED</b> -- Általános kódfeloldó segédprogram. A v22 (PREC), v23 (CHANS), v24 (SIGNE), v30
+(COLO), v33 (ACR), v41 (TEXT), v44 (TYPME) rovatok kódszámait alakítja francia nyelvû szöveggé. A
+programok az ALAP nevû formátum igényeiihez igazodnak, tehát az ott megkívánt alakot produkálják
+(kis/nagybetûs kezdés, szövegrész utáni írásjel, esetleg grammatikailag hiányos szerkezet, stb.).
+Hsználatukkor vagy az ALAP formátumhoz igazodjunk, vagy a programot alakítsuk át. A program
+hívásakor át kell adni a szóbanforgó rovat jelölését és a rovat tartalmát. Javasolt alkalmazási
+mód:</p>
+
+<pre>
+&amp;coded('v24='v24)
+</pre>
+
+<p><b>HYMND</b> -- A v14 (HYMN) rovat jelölésének alapján a himnuszrepertóriumok nyomtatásban
+szokásos rövidített jelölésmódjára tér át. Mivel a rovat ismételhetõ, minden elõfordulásra meg kell
+hívni. Javasolt használati mód:</p>
+
+<pre>
+(|, |+d14,&amp;hymnd(v14))
+</pre>
+
+<p><b>MEGOD</b> -- A v48 rovat (RELSE) adatai alapján a források felekezeti megoszlását ismertetõ
+francia nyelvû mondatot készít, ha a források száma nagyobb egynél. A forrásprogram szöveges részét
+átírva, majd a programot az ISIS szabályainak megfelelõen újrafordítva ez a mondat más nyelvre
+ültethetõ. Javasolt használati mód:</p>
+
+<pre>
+&amp;megod(v48)
+</pre>
+
+<p><b>METRD</b> -- A v45 (METR) rovat metrumképlet jelölése alapján a szokásos (kisbetûs,
+vesszõkkel elválasztott, ütemezést zárójelben elkülönítõ) jelölést alakítja ki. A program
+figyelembe veszi a v163 (REFR) rovat adatait is, ha a vers refrénes, akkor a jelölésben a megfelelõ
+helyeken a szokásos nagybetûs jelölésmódra tér át. A program használatakor ügyelni kell arra, hogy
+a METR rovat nem csak olyankor nincs kitöltve, ha nem adtunk metrumképletet, az is elõfordulhat,
+hogy a vers metrumváltó és így a metrumjelölések a fõadatlap helyett a mellékadatlapokon vannak. A
+teljes diszkusszió az ALAP nevû formátumban tekinthetõ meg. Létezõ metrumjelölés egyszerû
+megjelenítésére javasolt forma:</p>
+
+<pre>
+&amp;metrd(v45)
+</pre>
+
+<p><b>MUF1D</b> -- A v28 (GENRE) rovat egy mûfajláncának dekódolását végzi a vallásos mûfajláncok
+esetében (ezek elsõ kódszáma mindig 001). Mivel a v28 ismételhetõ rovat, annak minden
+elõfordulására meg kell hívni az elsõ kódszám megvizsgálása után. Javasol használatát lásd a MUF2D
+programnál!</p>
+
+<p><b>MUF2D</b> -- A v28 (GENRE) rovat egy mûfajláncának dekódolását végzi a világi mûfajláncok
+esetében (ezek elsõ kódszáma mindig 048). Mivel a v28 ismételhetõ rovat, annak minden
+elõfordulására meg kell hívni az elsõ kódszám megvizsgálása után. Javasolt használati mód:</p>
+
+<pre>
+(|; |+d28, if v28.2='00' then &amp;muf1d(v28) else &amp;muf2d(v28) fi)
+</pre>
+
+<p><b>RMDT</b> -- A v53 rovat (ED-MEL) sorszám, ill. lapszám jelölésének feloldását végzi. Mivel a
+rovat ismételhetõ, minden elõfordulásra meg kell hívni. Javasolt használati mód:</p>
+
+<pre>
+(|, |+d53,&amp;rmdt(v53))
+</pre>
+
+<p>A többi PROG alkönyvtárban található program részben az ISIS standard formátum-programja
+(CENTER, CHKPWD, DBSSEL, DISPL, FDSPL, KEYB, NUMBER, PFTSEL, SRCHLP, TEXT, THES, WSNSEL, WSTSEL),
+részben az adatlapok feltöltéséhez, módosításához és az inverz-file elkészítéséhez használt program
+(ATIR, COMMA, CSERE, DALMO, DEKOD, HAJT, LIST, PICI, UTALO). A megjelenítést segítõ programok egy
+részének neve végén D-betû utal a képernyõn (Display) való megjelenítésre. Erre azért volt szükség,
+mert a Repertórium nyomtatott változatához ugyanezen programok módosított változatát használtuk,
+ezek neveinek végén P-betû utal a nyomtatásra (Printer). Megjegyzendõ azonban, hogy a nyomtatáshoz
+használt programok csak a Repertórium elkészítésének voltak célszerû segédeszközei, teljesen ahhoz
+igazodnak (opcionális francia szóelválasztási jeleket, tipográfiai utasításokat, szövegszerkesztõ
+program használatához szükséges utasításokat szúrnak a szövegbe), ezért használatuk ellenjavallt.
+Ezeket a programokat az ALAP formátum nem is használja, a nyomtatáshoz a PRINT nevû formátum
+szolgált (valamint a PRINT1 és PRINT2). Az ISIS formátumnyelvének minimális ismeretével és az ALAP
+formátum részeinek felhasználásával (akár csak kis részletek onnan való kiemelésével) a versek
+adatainak részleges megjelenítés megoldható. Amennyiben ez mégsem bizonyulna járható útnak, még
+mindig elfogadható eredményt ad az a módszer, hogy az adatokat, kódokat, rövidítéseket eredeti
+formájukban, abban az alakban szerepeltetjük, ahogyan a rovatokban szerepelnek, és az átalakítást,
+értelmezést a felhasználóra, ill. annak szövegszerkesztõjére bízzuk. A rovatok részletes leírása az
+elsõ pontban ezt a célt is szolgálta.</p>
+
+<h3><a name="32">3.2. Rendezés</a></h3>
+
+<p>Az adatok rendezése, és különbözõ szempontok szerinti listás nyomtatása az ISIS-en belül elég
+nehézkes feladat. A program felhasználói kézikönyve ismerteti az erre vonatkozó legszükségesebb
+tudnivalókat. Az eddig leírt ismertetés alapján a rendezési szempontok tetszõlegesen
+megtervezhetõk, bár az összetett adatstruktúra miatt ez nem egyszerû feladat. A munkánk során
+használt rendezési ûrlapok az MENU alkönyvtárban megtalálhatók, tanulmányozásuk segíthet saját
+ûrlapok kialakításában.<br>
+ A PRINT menüben felhasználói ûrlapot kérve megadható:<br>
+ EYNYO fõlap nyomtatásához, automatikusan hívja az EYREN nevû incipit szerint rendezõ maszkot.
+EYMUT mutató készítéséhez, automatikusan hívja az EYMUF nevû mûfaj szerint rendezõ maszkot, ez
+átírható.<br>
+ Az EYMUT maszk rendezési ûrlap mezõjében állhat:<br>
+ EYMUF mûfaj szerint rendez (sajnos nullákkal) EYAUO idegen szerzõ szerint rendez (vesszõk nélkül)
+EYAU2 idegen szerzõ szerint rendez (vesszõkkel) EYTIO idegen cím szerint rendez EYMET
+rímképlet/szótagszám szerint rendez EYME1 rímképlet szerint rendez EYME2 szótagszám/rímképlet
+szerint rendez EYME3 szótagszám szerint rendez EYME4 szótagszám/ütemezés szerint rendez EYME5
+ütemezés szerint rendez<br>
+ A magyar ékezetes ábécé használata szintén megoldható az ISIS-en belül, a szükséges
+segédtáblázatot ugyancsak mellékeltük (ISISUC.HUN, ISISAC.HUN).</p>
+
+<h2><a name="4">4. Repertórium-bibliográfia</a></h2>
+
+<ul>
+<li>GÁL György, <i>A "Répertoire de la poesie hongroise ancienne" adatmodellje</i>, ItK, 1989,
+272.</li>
+
+<li>GOLDEN Dániel, <i>TexTexT</i>, ELTE szakdolgozat, 1998</li>
+
+<li>HORVÁTH Iván, <i>Balassi Bálint költészete történeti poétikai megközelítésben</i>, Bp.,
+Akadémiai Kiadó, 1982</li>
+
+<li>HORVÁTH Iván, <i>A vers</i>, Bp., Gondolat Kiadó, 1991</li>
+
+<li>HORVÁTH Iván, <i>A régi magyar vers készülõ kézikönyve</i>, A magyar vers (BÉLÁDI Miklós - JANKOVICS József - NYERGES Judit szerk.) Bp. 1985.</li>
+
+<li>HORVÁTH Iván, <i>Szöveg</i>, 2000, 1994. november, 45.</li>
+
+<li>HORVÁTH Iván - FONT Zsuzsa - HERNER János - HUBERT Gabriella - SZÕNYI Etelka, <i>Szegedi kisérlet a XVI. századi magyar vers gépi feldolgozására</i> ItK, 1980, 633.
+
+<li>HORVÁTH Iván - FONT Zsuzsa - GÁL György - HERNER János - H. HUBERT Gabriella - RUTTNER Tamás - SZÕNYI Etelka - VADAI István: <i>Répertoire de la poésie hongroise ancienne</i>, Paris, 1992.</li>
+
+<li>TÓTH Tünde, <i>Irodalomtörténészek a bábeli könyvtárból (A régi magyar vers repertóriuma)</i>,
+ItK, 1997, 133.</li>
+
+<li>TURI László, <i>Számítógép az irodalomtudományban</i>, ELTE szakdolgozat, 1993</li>
+
+<li>VADAI István, <i>+1 (Metrikai határjelölések a régi magyar versben)</i>, ItK, 1991, 351.</li>
+</ul>
+
+</body>
+</html>
+
